@@ -1,0 +1,4632 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product, architecture, and engineering documentation for EduSync">
+      
+      
+        <meta name="author" content="EduSync Team">
+      
+      
+        <link rel="canonical" href="https://example.com/edusync-docs/01-Vision/vision/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../02-Business-Requirements/business-requirements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Vision - EduSync Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edusync-vision-document" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduSync Documentation" class="md-header__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduSync Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vision
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduSync Documentation" class="md-nav__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduSync Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-value-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Value Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-opportunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Opportunity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Opportunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opportunity-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opportunity Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Goals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-capability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Capability Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stakeholders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stakeholders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stakeholder-interaction-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stakeholder Interaction Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Drivers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Segments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-entry-thesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Entry Thesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competitor-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Competitor Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#competitor-positioning-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Positioning Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-differentiators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Differentiators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-strategy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitive Strategy Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swot-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWOT Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWOT Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strengths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weaknesses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opportunities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revenue-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pricing-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-pricing-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed Pricing Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roadmap-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-foundation-and-core-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Foundation and Core Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-academic-and-financial-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Academic and Financial Depth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-engagement-automation-and-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Engagement, Automation, and Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-enterprise-and-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Enterprise and Ecosystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Success Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customer-adoption-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Adoption Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-and-security-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust and Security Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-and-engineering-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product and Engineering Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Vision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-digital-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Digital Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-connected-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Connected Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-ai-assisted-institution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: AI-Assisted Institution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Business-Requirements/business-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Stories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Software-Requirements/software-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-UI-UX/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UI/UX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-UI-UX/Figma-Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06-Architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C4 Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C4 Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-1-System-Context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 - System Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-2-Container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 - Container Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-3-Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 - Component Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../07-Database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-Database/Database-Schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-Backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-DevOps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-Roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-value-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Value Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-opportunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Opportunity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Opportunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opportunity-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opportunity Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Goals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-capability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Capability Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stakeholders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stakeholders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stakeholder-interaction-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stakeholder Interaction Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demand-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demand Drivers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-segments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Segments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-entry-thesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Entry Thesis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competitor-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Competitor Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#competitor-positioning-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitor Positioning Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-differentiators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Differentiators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-strategy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Competitive Strategy Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swot-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SWOT Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SWOT Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strengths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weaknesses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opportunities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revenue-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revenue Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pricing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pricing-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing Philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposed-pricing-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed Pricing Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Pricing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pricing-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pricing Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roadmap-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-foundation-and-core-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Foundation and Core Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-academic-and-financial-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Academic and Financial Depth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-engagement-automation-and-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Engagement, Automation, and Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-enterprise-and-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Enterprise and Ecosystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadmap-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Timeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Success Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customer-adoption-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer Adoption Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trust-and-security-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trust and Security Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategic Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-and-engineering-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product and Engineering Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Vision
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-1-digital-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 1: Digital Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-2-connected-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 2: Connected Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-3-ai-assisted-institution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level 3: AI-Assisted Institution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="edusync-vision-document">EduSync Vision Document<a class="headerlink" href="#edusync-vision-document" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>EduSync</td>
+</tr>
+<tr>
+<td>Document Type</td>
+<td>Vision Document</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Draft for Strategic Review</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>EduSync Product, Architecture, and Technology Office</td>
+</tr>
+<tr>
+<td>Target Market</td>
+<td>India; global expansion in future phases</td>
+</tr>
+<tr>
+<td>Primary Audience</td>
+<td>Founders, investors, product leadership, engineering leadership, school management, implementation partners, and strategic advisors</td>
+</tr>
+<tr>
+<td>Last Updated</td>
+<td>2026-07-02</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>EduSync is a cloud-native, multi-tenant School Management SaaS platform designed for private schools, CBSE schools, ICSE schools, state board schools, and coaching institutes serving approximately 200 to 5,000 students. The product vision is to build a modern, secure, scalable, AI-powered operating system for school administration, academic operations, stakeholder communication, financial workflows, and institutional intelligence.</p>
+<p>This vision document defines the strategic direction, market opportunity, product intent, business model, competitive stance, roadmap, success metrics, assumptions, risks, and future expansion path for EduSync. It is written as a production SaaS planning document, not as a prototype brief or academic exercise. Every product and technology decision must support enterprise-grade reliability, tenant isolation, data protection, operational efficiency, extensibility, and long-term maintainability.</p>
+<p>EduSync is positioned as a unified platform that reduces operational fragmentation inside schools. Instead of forcing schools to operate separate tools for admissions, student records, fees, attendance, examinations, staff workflows, parent communication, payments, and reports, EduSync will provide a coherent system of record with role-aware workflows, secure access, automated communication, integrated analytics, and AI-assisted productivity.</p>
+<h3 id="strategic-value-flow">Strategic Value Flow<a class="headerlink" href="#strategic-value-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Strategy[Vision and Strategy] --&gt; Platform[Unified School Platform]
+    Platform --&gt; Schools[Schools and Institutions]
+    Schools --&gt; Outcomes[Better Operations and Trust]</code></pre>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>The purpose of this document is to establish a complete strategic foundation for EduSync before detailed product requirements, architecture specifications, module-level requirements, and implementation plans are created. It provides shared direction for business, product, design, engineering, security, operations, sales, and customer success teams.</p>
+<p>This document serves the following purposes:</p>
+<ul>
+<li>Define the business and product vision for EduSync.</li>
+<li>Clarify the market problem EduSync is designed to solve.</li>
+<li>Establish the target customer profile and stakeholder needs.</li>
+<li>Identify strategic opportunities in the Indian school management SaaS market.</li>
+<li>Describe competitive positioning and differentiation.</li>
+<li>Define product, business, revenue, pricing, roadmap, and success metric direction.</li>
+<li>Record strategic assumptions, dependencies, and risks.</li>
+<li>Create a durable reference for future product requirement documents, software requirement specifications, architecture documents, and go-to-market plans.</li>
+</ul>
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>This document covers the strategic vision for EduSync as a cloud-native school management SaaS platform. It includes product positioning, business opportunity, market context, core objectives, target stakeholders, strategic modules, revenue model, pricing approach, roadmap, success metrics, risks, assumptions, dependencies, and future vision.</p>
+<p>This document does not define detailed user stories, database schema, API contracts, UI screen specifications, deployment topology, detailed security controls, or module-level acceptance criteria. Those items must be produced in separate dedicated documents after this vision document is approved.</p>
+<p>The product scope includes the following core domains:</p>
+<ul>
+<li>Authentication and identity management.</li>
+<li>School and tenant administration.</li>
+<li>Student, guardian, teacher, and employee management.</li>
+<li>Attendance, homework, assignments, examinations, and academic operations.</li>
+<li>Fees, payments, finance workflows, and reports.</li>
+<li>Dashboards and institutional analytics.</li>
+<li>Notifications through SMS, WhatsApp, email, and in-app channels.</li>
+<li>Subscription management and super admin operations.</li>
+<li>Audit logging, security controls, and AI-assisted workflows.</li>
+</ul>
+<h2 id="executive-summary">Executive Summary<a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h2>
+<p>Indian schools are under increasing pressure to operate with the speed, transparency, and reliability expected from modern digital organizations. Parents expect timely communication, digital fee payment, attendance visibility, academic progress updates, and mobile access. Teachers need practical tools that reduce administrative burden rather than adding another layer of work. School leadership needs accurate operational data, compliance readiness, fee collection visibility, and confidence that institutional data is secure. Administrators need workflows that replace spreadsheets, paper registers, duplicate data entry, and disconnected software.</p>
+<p>The current school software landscape remains fragmented. Many institutions use legacy ERP systems, custom local software, spreadsheets, messaging groups, payment links, paper files, and manual processes simultaneously. Even when a school has an ERP, adoption is often uneven because systems are difficult to configure, slow to use, weak on mobile experience, or poorly aligned with real school workflows. The result is operational leakage: delayed collections, inaccurate records, manual reconciliation, inconsistent parent communication, avoidable staff workload, weak reporting, and limited decision intelligence.</p>
+<p>EduSync addresses this opportunity by building a modern SaaS platform that treats a school as a complex operating environment rather than a collection of isolated modules. The platform will use a shared-database multi-tenant model with strict <code>school_id</code> isolation, modern role-based access control, secure audit trails, scalable cloud architecture, and AI capabilities that improve productivity without compromising trust. The product must be simple enough for small private schools and coaching institutes, while structured enough for larger institutions and multi-branch school groups.</p>
+<p>EduSync will compete by combining enterprise discipline with practical usability. It will avoid the common trap of becoming a feature-heavy but difficult ERP. The strategic product direction is to deliver high-quality core operations first, then expand into intelligence, automation, ecosystem integrations, and global readiness. The initial market focus is India because of the scale of private schooling, continued digital adoption, strong parent mobile usage, UPI-based payment maturity, and the operational complexity of multiple education boards and school formats.</p>
+<p>The business opportunity is recurring subscription revenue from schools, usage-based revenue from communication and payment workflows, premium AI capabilities, implementation services, and future marketplace integrations. Pricing must be transparent enough for small and mid-sized institutions while supporting enterprise contracts for larger school chains. EduSync should be built with a long-term vision of becoming the trusted system of record and intelligence layer for K-12 and coaching education operations.</p>
+<h2 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h2>
+<p>EduSync will become the most trusted AI-powered school management SaaS platform for modern schools, beginning in India and expanding globally.</p>
+<p>The product vision is to create a unified digital operating system where every school can manage people, academics, communication, finance, compliance, and institutional decisions through one secure platform. EduSync will not merely digitize registers and forms. It will transform daily school operations into reliable, measurable, connected workflows.</p>
+<p>The long-term vision is built on five strategic beliefs:</p>
+<ol>
+<li>Schools need a reliable system of record before they can benefit from advanced automation.</li>
+<li>Administrative simplicity is as important as feature completeness.</li>
+<li>Tenant isolation and data security are foundational product features, not technical afterthoughts.</li>
+<li>AI must assist school stakeholders in practical, auditable, privacy-conscious ways.</li>
+<li>The winning platform will combine academic, operational, financial, communication, and analytics workflows into a coherent product experience.</li>
+</ol>
+<p>EduSync must be designed as a production SaaS platform from the beginning. It must support secure multi-tenancy, modular growth, clean architecture, performance at institutional scale, observability, maintainability, API readiness, and future migration paths toward service decomposition when business scale requires it.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[EduSync Vision] --&gt; B[Unified School Operations]
+    A --&gt; C[Secure Multi-Tenant SaaS]
+    A --&gt; D[AI-Assisted Productivity]
+    A --&gt; E[Data-Driven Leadership]
+    A --&gt; F[Parent and Student Engagement]
+
+    B --&gt; B1[Admissions]
+    B --&gt; B2[Attendance]
+    B --&gt; B3[Academics]
+    B --&gt; B4[Fees and Payments]
+    B --&gt; B5[Staff Workflows]
+
+    C --&gt; C1[Tenant Isolation]
+    C --&gt; C2[Role-Based Access]
+    C --&gt; C3[Audit Logs]
+    C --&gt; C4[Secure APIs]
+
+    D --&gt; D1[Drafting Assistance]
+    D --&gt; D2[Operational Insights]
+    D --&gt; D3[Risk Signals]
+    D --&gt; D4[Workflow Recommendations]
+
+    E --&gt; E1[Dashboards]
+    E --&gt; E2[Reports]
+    E --&gt; E3[Forecasting]
+    E --&gt; E4[Compliance Visibility]
+
+    F --&gt; F1[Mobile Access]
+    F --&gt; F2[Notifications]
+    F --&gt; F3[Fee Transparency]
+    F --&gt; F4[Academic Updates]</code></pre>
+<h2 id="mission">Mission<a class="headerlink" href="#mission" title="Permanent link">&para;</a></h2>
+<p>EduSync's mission is to help schools operate with clarity, speed, accountability, and trust by providing a secure, intelligent, and easy-to-adopt SaaS platform for every major school workflow.</p>
+<p>The mission translates into the following operating commitments:</p>
+<ul>
+<li>Reduce manual administrative workload for school staff.</li>
+<li>Improve communication reliability between schools and families.</li>
+<li>Provide accurate, real-time operational visibility to school leadership.</li>
+<li>Improve fee collection discipline through integrated billing, reminders, and payments.</li>
+<li>Give teachers tools that save time and support academic execution.</li>
+<li>Protect student, parent, staff, and institutional data through secure architecture.</li>
+<li>Provide AI capabilities that are useful, explainable, controlled, and aligned with school policies.</li>
+<li>Support Indian education realities while keeping the architecture globally extensible.</li>
+</ul>
+<p>EduSync must make a school more organized without making its people feel controlled by software. The platform should reduce friction in daily work and strengthen institutional discipline through thoughtful workflows.</p>
+<h2 id="business-opportunity">Business Opportunity<a class="headerlink" href="#business-opportunity" title="Permanent link">&para;</a></h2>
+<p>India has one of the largest school education ecosystems in the world, with significant diversity across private schools, public schools, aided schools, board affiliations, languages, infrastructure maturity, fee structures, and regional operating practices. Private and unaided schools, in particular, face competitive pressure to provide better parent experience, stronger academic outcomes, transparent communication, and digital convenience.</p>
+<p>Several structural trends create a strong opportunity for EduSync:</p>
+<ul>
+<li>Parents increasingly expect mobile-first access to school communication, fee status, attendance, announcements, homework, marks, and events.</li>
+<li>Digital payments have become mainstream in India, making integrated school fee workflows more acceptable.</li>
+<li>Schools need stronger reporting for management decisions, compliance, academic planning, and financial discipline.</li>
+<li>Teachers and administrators face growing administrative workload and need practical automation.</li>
+<li>School groups and coaching networks require centralized visibility across branches.</li>
+<li>AI adoption is becoming visible in consumer and business workflows, creating expectations for intelligent assistance.</li>
+<li>Many existing school ERP products are module-rich but experience-poor, creating room for a modern product with strong usability and implementation discipline.</li>
+</ul>
+<p>The opportunity is not only software replacement. It is institutional operating transformation. EduSync can become the platform that schools use daily for their operational truth.</p>
+<h3 id="opportunity-map">Opportunity Map<a class="headerlink" href="#opportunity-map" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    A[Market Forces] --&gt; B[School Pain]
+    B --&gt; C[EduSync Capability]
+    C --&gt; D[Business Outcome]
+
+    A1[Mobile Parent Expectations] --&gt; B1[Communication Fragmentation]
+    B1 --&gt; C1[Unified Notifications]
+    C1 --&gt; D1[Higher Parent Trust]
+
+    A2[Digital Payments] --&gt; B2[Manual Fee Collection]
+    B2 --&gt; C2[Integrated Billing and Payment]
+    C2 --&gt; D2[Improved Cash Flow]
+
+    A3[Board and Compliance Complexity] --&gt; B3[Reporting Burden]
+    B3 --&gt; C3[Structured Reports]
+    C3 --&gt; D3[Management Readiness]
+
+    A4[AI Adoption] --&gt; B4[Administrative Overload]
+    B4 --&gt; C4[AI-Assisted Workflows]
+    C4 --&gt; D4[Productivity Gains]
+
+    A5[School Chain Growth] --&gt; B5[Branch Visibility Gap]
+    B5 --&gt; C5[Multi-Branch Dashboards]
+    C5 --&gt; D5[Scalable Governance]</code></pre>
+<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
+<p>Schools operate many high-frequency processes that are still managed through disconnected systems, manual registers, messaging apps, spreadsheets, paper documents, standalone payment tools, and fragmented ERP modules. This fragmentation creates inaccurate data, duplicate work, delayed communication, weak accountability, and limited visibility for leadership.</p>
+<p>The problem is experienced differently by each stakeholder group:</p>
+<ul>
+<li>School owners and principals lack a single reliable view of admissions, fee collections, attendance, academic performance, staff workload, parent engagement, and operational risks.</li>
+<li>Administrators repeatedly enter the same data across files, registers, software modules, and communication channels.</li>
+<li>Teachers lose time on attendance, homework tracking, exam entry, parent communication, and manual reporting.</li>
+<li>Parents receive inconsistent updates and often need to call or message the school for basic information.</li>
+<li>Students receive fragmented academic support and limited visibility into learning tasks.</li>
+<li>Finance teams struggle with fee plans, discounts, partial payments, reconciliation, reminders, dues reports, and management reporting.</li>
+<li>IT teams and vendors struggle with customizations, data migration, uptime, security, and support.</li>
+</ul>
+<p>The core problem is not the absence of software. The core problem is the absence of a trusted, usable, integrated, secure, and intelligent school operations platform that aligns with real Indian school workflows.</p>
+<h2 id="objectives">Objectives<a class="headerlink" href="#objectives" title="Permanent link">&para;</a></h2>
+<p>EduSync must pursue objectives that balance market relevance, product quality, security, and business viability.</p>
+<h3 id="strategic-objectives">Strategic Objectives<a class="headerlink" href="#strategic-objectives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Establish EduSync as a trusted SaaS platform for private schools and coaching institutes in India.</li>
+<li>Provide a complete operational foundation across students, staff, academics, fees, payments, communication, reports, and administration.</li>
+<li>Build strong tenant isolation and security controls from the first production release.</li>
+<li>Deliver a modern web and mobile experience for school staff, teachers, parents, and students.</li>
+<li>Introduce AI capabilities where they produce measurable operational value.</li>
+<li>Create a modular architecture that can evolve from modular monolith to microservice-ready deployment when scale requires.</li>
+<li>Build implementation, migration, onboarding, and support processes that reduce adoption risk.</li>
+<li>Develop revenue expansion paths through premium modules, communication usage, payment workflows, AI, and enterprise features.</li>
+</ul>
+<h3 id="product-objectives">Product Objectives<a class="headerlink" href="#product-objectives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reduce administrative data duplication across core school workflows.</li>
+<li>Improve fee collection visibility and parent payment convenience.</li>
+<li>Standardize student, guardian, teacher, and employee records.</li>
+<li>Provide role-specific dashboards for owners, principals, administrators, teachers, finance teams, parents, and super admins.</li>
+<li>Automate routine communication through in-app, email, SMS, and WhatsApp channels.</li>
+<li>Enable configurable academic structures for Indian school contexts.</li>
+<li>Provide auditable actions for sensitive workflows.</li>
+<li>Support reporting that helps leadership make operational decisions.</li>
+</ul>
+<h3 id="technology-objectives">Technology Objectives<a class="headerlink" href="#technology-objectives" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use Java 21 and Spring Boot for backend services.</li>
+<li>Use React, TypeScript, Vite, Tailwind, Shadcn, React Query, React Hook Form, and Zustand for the frontend.</li>
+<li>Use React Native and Expo for mobile applications.</li>
+<li>Use PostgreSQL as the primary relational database.</li>
+<li>Use Redis for caching and performance-sensitive workloads.</li>
+<li>Use RabbitMQ for asynchronous messaging and notification workflows.</li>
+<li>Use Docker, AWS, GitHub Actions, and Nginx for deployment and operations.</li>
+<li>Use AWS S3 for file storage.</li>
+<li>Use REST APIs with clean domain boundaries and consistent security enforcement.</li>
+<li>Use shared-database multi-tenancy with <code>school_id</code> on every tenant-owned table.</li>
+</ul>
+<h2 id="product-goals">Product Goals<a class="headerlink" href="#product-goals" title="Permanent link">&para;</a></h2>
+<p>EduSync's product goals define what the platform must become for customers.</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Description</th>
+<th>Expected Customer Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unified system of record</td>
+<td>Maintain authoritative school data for students, guardians, staff, classes, fees, attendance, exams, and communication.</td>
+<td>Less duplication, fewer errors, better governance.</td>
+</tr>
+<tr>
+<td>Operational workflow engine</td>
+<td>Provide practical workflows for daily school administration.</td>
+<td>Faster work completion and consistent execution.</td>
+</tr>
+<tr>
+<td>Parent engagement platform</td>
+<td>Provide timely communication, fee visibility, academic updates, and mobile access.</td>
+<td>Higher parent satisfaction and fewer repetitive inquiries.</td>
+</tr>
+<tr>
+<td>Teacher productivity platform</td>
+<td>Reduce routine administrative workload for teachers.</td>
+<td>More teaching time and improved compliance with school processes.</td>
+</tr>
+<tr>
+<td>Financial control platform</td>
+<td>Manage fee structures, invoices, dues, payments, discounts, and reports.</td>
+<td>Improved collections and transparent reconciliation.</td>
+</tr>
+<tr>
+<td>Leadership intelligence platform</td>
+<td>Provide dashboards, metrics, reports, alerts, and trend analysis.</td>
+<td>Better decisions and faster risk detection.</td>
+</tr>
+<tr>
+<td>Secure SaaS foundation</td>
+<td>Protect tenant data and provide reliable cloud operations.</td>
+<td>Trust, scalability, and enterprise readiness.</td>
+</tr>
+<tr>
+<td>AI-assisted operations</td>
+<td>Use AI to reduce manual drafting, summarize insights, and recommend actions.</td>
+<td>Productivity gains without sacrificing control.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-capability-model">Product Capability Model<a class="headerlink" href="#product-capability-model" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>mindmap
+  root((EduSync))
+    People
+      Students
+      Guardians
+      Teachers
+      Employees
+    Academics
+      Attendance
+      Homework
+      Assignments
+      Examinations
+      Reports
+    Finance
+      Fees
+      Payments
+      Discounts
+      Reconciliation
+    Communication
+      Notifications
+      SMS
+      WhatsApp
+      Email
+    Administration
+      School Setup
+      Subscriptions
+      Super Admin
+      Audit Logs
+    Intelligence
+      Dashboards
+      AI Assistance
+      Risk Signals
+      Forecasts</code></pre>
+<h2 id="business-goals">Business Goals<a class="headerlink" href="#business-goals" title="Permanent link">&para;</a></h2>
+<p>EduSync's business goals must convert product value into a sustainable SaaS company.</p>
+<table>
+<thead>
+<tr>
+<th>Business Goal</th>
+<th>Target Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recurring revenue</td>
+<td>Build predictable monthly and annual subscription revenue from schools.</td>
+</tr>
+<tr>
+<td>Low churn</td>
+<td>Create operational dependency through reliable daily workflows and strong customer success.</td>
+</tr>
+<tr>
+<td>Expansion revenue</td>
+<td>Add premium modules, AI capabilities, communication usage, payment features, and enterprise controls.</td>
+</tr>
+<tr>
+<td>Efficient implementation</td>
+<td>Develop repeatable onboarding, migration, training, and support playbooks.</td>
+</tr>
+<tr>
+<td>Strong gross margin</td>
+<td>Use cloud-native architecture, automation, and reusable tenant infrastructure.</td>
+</tr>
+<tr>
+<td>Enterprise readiness</td>
+<td>Support larger school groups with multi-branch reporting, access controls, auditability, and SLAs.</td>
+</tr>
+<tr>
+<td>Brand trust</td>
+<td>Position EduSync as secure, professional, reliable, and practical for real schools.</td>
+</tr>
+<tr>
+<td>Geographic expansion</td>
+<td>Start with India and design for future global compliance, localization, currencies, and academic structures.</td>
+</tr>
+</tbody>
+</table>
+<p>The business must avoid growth that depends heavily on one-off customization. Custom work should become configuration, extension points, templates, integrations, or carefully managed enterprise services. The core product must remain scalable and maintainable.</p>
+<h2 id="stakeholders">Stakeholders<a class="headerlink" href="#stakeholders" title="Permanent link">&para;</a></h2>
+<p>EduSync must satisfy a broad stakeholder ecosystem. The product succeeds only when it serves the daily needs of operational users while also delivering governance and business value to decision makers.</p>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Primary Needs</th>
+<th>EduSync Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>School owner or trust management</td>
+<td>Financial visibility, admissions visibility, reputation, compliance, branch performance.</td>
+<td>Executive dashboards, reports, revenue tracking, audit logs, multi-branch controls.</td>
+</tr>
+<tr>
+<td>Principal</td>
+<td>Academic quality, attendance, discipline, teacher performance, parent satisfaction.</td>
+<td>Academic dashboards, attendance reports, examination insights, communication controls.</td>
+</tr>
+<tr>
+<td>Administrator</td>
+<td>Student records, documents, certificates, workflows, communication, daily operations.</td>
+<td>Centralized records, configurable workflows, automated communication, reduced manual work.</td>
+</tr>
+<tr>
+<td>Finance team</td>
+<td>Fee setup, collections, dues, receipts, discounts, reconciliation, reports.</td>
+<td>Fee engine, payment integration, dues tracking, finance reports, audit history.</td>
+</tr>
+<tr>
+<td>Teacher</td>
+<td>Attendance, homework, assignments, marks, class communication, workload management.</td>
+<td>Teacher portal, mobile access, fast entry workflows, AI drafting assistance.</td>
+</tr>
+<tr>
+<td>Student</td>
+<td>Tasks, schedules, academic updates, notices, results, learning support.</td>
+<td>Student portal, assignments, exam results, notifications, future AI support.</td>
+</tr>
+<tr>
+<td>Guardian or parent</td>
+<td>Attendance visibility, fee payment, communication, academic progress, school announcements.</td>
+<td>Parent app, payment access, alerts, reports, messages, calendar visibility.</td>
+</tr>
+<tr>
+<td>IT administrator</td>
+<td>Security, access, uptime, data export, integrations, support.</td>
+<td>Role-based access, secure APIs, audit logs, observability, integration controls.</td>
+</tr>
+<tr>
+<td>Super admin</td>
+<td>Tenant provisioning, subscriptions, support, platform monitoring.</td>
+<td>Internal administration, subscription management, operational tooling.</td>
+</tr>
+<tr>
+<td>Sales and customer success</td>
+<td>Demos, onboarding, adoption, renewals, support quality.</td>
+<td>Standardized setup, usage analytics, implementation playbooks, customer health metrics.</td>
+</tr>
+<tr>
+<td>Regulators and auditors</td>
+<td>Data accuracy, traceability, compliance, student safety.</td>
+<td>Reports, audit trails, role restrictions, retention policies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stakeholder-interaction-model">Stakeholder Interaction Model<a class="headerlink" href="#stakeholder-interaction-model" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    EduSync[(EduSync Platform)]
+
+    Owner[School Owner or Trust]
+    Principal[Principal]
+    Admin[Administrator]
+    Finance[Finance Team]
+    Teacher[Teacher]
+    Parent[Guardian or Parent]
+    Student[Student]
+    SuperAdmin[EduSync Super Admin]
+
+    Owner --&gt; EduSync
+    Principal --&gt; EduSync
+    Admin --&gt; EduSync
+    Finance --&gt; EduSync
+    Teacher --&gt; EduSync
+    Parent --&gt; EduSync
+    Student --&gt; EduSync
+    SuperAdmin --&gt; EduSync
+
+    EduSync --&gt; Reports[Dashboards and Reports]
+    EduSync --&gt; Communications[Notifications]
+    EduSync --&gt; Payments[Payments]
+    EduSync --&gt; Records[Institutional Records]
+    EduSync --&gt; Audit[Audit Logs]</code></pre>
+<h2 id="business-rules">Business Rules<a class="headerlink" href="#business-rules" title="Permanent link">&para;</a></h2>
+<p>The following business rules define foundational constraints for EduSync's product direction:</p>
+<ul>
+<li>Every school must operate as an isolated tenant.</li>
+<li>Every tenant-owned table must include <code>school_id</code>.</li>
+<li>Every tenant-owned query must be tenant-isolated.</li>
+<li>No user may access another school's data unless explicitly authorized through a controlled platform-level support or super admin workflow.</li>
+<li>Roles and permissions must be configurable but must include secure defaults.</li>
+<li>Financial transactions must be auditable and traceable.</li>
+<li>Student, guardian, employee, fee, payment, attendance, examination, and notification records must preserve history where required for accountability.</li>
+<li>AI features must not override institutional authority; they must assist, recommend, draft, summarize, or flag.</li>
+<li>Sensitive actions must be logged through audit logs.</li>
+<li>Communication preferences and consent requirements must be respected where applicable.</li>
+<li>Fee calculations must be deterministic, explainable, and reversible through controlled correction workflows.</li>
+<li>Reports must derive from authoritative domain records, not duplicated spreadsheet-like stores.</li>
+<li>Data export must be governed by role, scope, and auditability.</li>
+<li>Configuration must be tenant-specific unless designed as a platform-level default.</li>
+<li>Subscription status must influence feature access according to defined commercial rules.</li>
+</ul>
+<h2 id="functional-requirements">Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permanent link">&para;</a></h2>
+<p>At the vision level, EduSync must support the following high-level functional capabilities:</p>
+<ul>
+<li>Tenant onboarding, school setup, academic year setup, classes, sections, subjects, and role configuration.</li>
+<li>User authentication, authorization, password management, session management, and secure account recovery.</li>
+<li>Student lifecycle management from enquiry or admission through active enrollment, transfer, alumni status, or exit.</li>
+<li>Guardian profile management with relationship mapping, contact details, and communication preferences.</li>
+<li>Teacher and employee management with role, department, employment, and access details.</li>
+<li>Attendance capture and reporting for students and staff.</li>
+<li>Homework and assignment creation, distribution, tracking, and reporting.</li>
+<li>Examination setup, marks entry, grade processing, report cards, and result publication.</li>
+<li>Fee structure configuration, invoices, discounts, dues, receipts, payment status, and reconciliation.</li>
+<li>Payment gateway integration and payment status synchronization.</li>
+<li>Notifications through in-app, email, SMS, and WhatsApp channels.</li>
+<li>Dashboards for role-specific operational visibility.</li>
+<li>Report generation and export according to permissions.</li>
+<li>Subscription and plan management for SaaS operations.</li>
+<li>Super admin workflows for tenant management and support operations.</li>
+<li>Audit logs for sensitive actions and platform accountability.</li>
+<li>AI-assisted workflows for drafting, summarization, insights, and operational recommendations.</li>
+</ul>
+<h2 id="non-functional-requirements">Non Functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Permanent link">&para;</a></h2>
+<p>EduSync must meet enterprise SaaS non-functional requirements from the beginning:</p>
+<ul>
+<li>Security: Strong authentication, authorization, input validation, secure password storage, least privilege access, audit logging, secure API design, and tenant isolation.</li>
+<li>Privacy: Purpose-limited data processing, access control, retention policies, and secure handling of student and guardian data.</li>
+<li>Availability: Production infrastructure must support reliable daily school operations with clearly defined uptime targets.</li>
+<li>Performance: Common workflows such as login, dashboard loading, attendance marking, fee lookup, and notification creation must remain responsive under expected tenant load.</li>
+<li>Scalability: The architecture must support growth in number of schools, users, records, notifications, payments, and files.</li>
+<li>Maintainability: Code must follow clean architecture, domain-driven design, SOLID principles, and modular boundaries.</li>
+<li>Observability: Logs, metrics, traces, alerts, and operational dashboards must support production support.</li>
+<li>Extensibility: Modules must be designed for future integrations, workflows, localization, and premium features.</li>
+<li>Usability: Interfaces must be simple, role-specific, accessible, and suitable for repeated daily use.</li>
+<li>Reliability: Financial, attendance, and examination workflows must preserve consistency and recover from partial failures.</li>
+<li>Compliance readiness: The platform must be designed to support applicable Indian data protection, school compliance, and future global privacy requirements.</li>
+<li>Portability: Infrastructure should use Dockerized deployments and cloud-native patterns that avoid unnecessary vendor lock-in.</li>
+</ul>
+<h2 id="market-analysis">Market Analysis<a class="headerlink" href="#market-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="market-context">Market Context<a class="headerlink" href="#market-context" title="Permanent link">&para;</a></h3>
+<p>India's school education ecosystem is large, diverse, and operationally complex. Schools operate across multiple boards, languages, fee models, infrastructure levels, and parent expectations. Private schools and coaching institutes face strong pressure to differentiate through academic outcomes, communication quality, convenience, transparency, safety, and digital maturity.</p>
+<p>Public reporting from India's school data ecosystem shows that school operations are becoming more digitally aware, but digital infrastructure and process maturity remain uneven. UDISE+ reporting covered by major Indian business and education publications in 2025 indicated that the number of school teachers crossed one crore, while digital infrastructure still had significant gaps, including incomplete computer and internet access across schools. This creates a dual opportunity: schools are more ready for digital systems than before, yet many still need practical, usable, and affordable tools that fit their operating reality.</p>
+<p>EduSync's primary initial market is not every school in India. The immediate beachhead is fee-paying private schools, CBSE schools, ICSE schools, state board private schools, and coaching institutes with 200 to 5,000 students. These institutions usually have a stronger ability to pay, clearer parent experience pressure, recurring fee workflows, and a greater need for management visibility.</p>
+<h3 id="demand-drivers">Demand Drivers<a class="headerlink" href="#demand-drivers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Demand Driver</th>
+<th>Market Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parent mobile adoption</td>
+<td>Schools need reliable apps, notifications, fee payment, and academic updates.</td>
+</tr>
+<tr>
+<td>Digital payments maturity</td>
+<td>Integrated fee collection and reconciliation can become a high-value workflow.</td>
+</tr>
+<tr>
+<td>Competitive school positioning</td>
+<td>Schools use digital experience as a trust and brand signal.</td>
+</tr>
+<tr>
+<td>Administrative workload</td>
+<td>Staff need automation, templates, workflows, and fewer duplicate entries.</td>
+</tr>
+<tr>
+<td>Compliance and reporting pressure</td>
+<td>Structured data and auditable records become more important.</td>
+</tr>
+<tr>
+<td>Multi-branch school groups</td>
+<td>Owners need consolidated reporting and controls.</td>
+</tr>
+<tr>
+<td>AI awareness</td>
+<td>Schools will expect practical AI assistance, but with governance and safety.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="market-segments">Market Segments<a class="headerlink" href="#market-segments" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th style="text-align: right;">Student Size</th>
+<th>Pain Intensity</th>
+<th>Willingness to Pay</th>
+<th>Product Fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small private schools</td>
+<td style="text-align: right;">200-800</td>
+<td>High manual workload, limited IT staff.</td>
+<td>Moderate.</td>
+<td>Strong if onboarding is simple and pricing is accessible.</td>
+</tr>
+<tr>
+<td>Mid-sized private schools</td>
+<td style="text-align: right;">800-2,500</td>
+<td>Strong need for fee, academic, communication, and reporting workflows.</td>
+<td>High.</td>
+<td>Primary target segment.</td>
+</tr>
+<tr>
+<td>Large private schools</td>
+<td style="text-align: right;">2,500-5,000</td>
+<td>Complex operations, governance, integrations, custom reporting.</td>
+<td>High.</td>
+<td>Strong with enterprise controls and implementation support.</td>
+</tr>
+<tr>
+<td>School chains</td>
+<td style="text-align: right;">Multi-branch</td>
+<td>Central visibility, standardization, branch comparison.</td>
+<td>High to very high.</td>
+<td>Strategic expansion segment.</td>
+</tr>
+<tr>
+<td>Coaching institutes</td>
+<td style="text-align: right;">200-5,000</td>
+<td>Batch management, attendance, fees, communication, tests.</td>
+<td>Moderate to high.</td>
+<td>Good fit with adapted academic workflows.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="market-entry-thesis">Market Entry Thesis<a class="headerlink" href="#market-entry-thesis" title="Permanent link">&para;</a></h3>
+<p>EduSync should enter through a focused core workflow bundle rather than a broad but shallow ERP. The highest-value entry wedge is the combination of student records, attendance, fees, payments, parent communication, and dashboards. These workflows are frequent, visible, and measurable. Once the school relies on EduSync for daily operations and fee visibility, expansion into examinations, homework, assignments, AI, advanced reports, and premium modules becomes more natural.</p>
+<h2 id="competitor-analysis">Competitor Analysis<a class="headerlink" href="#competitor-analysis" title="Permanent link">&para;</a></h2>
+<p>The Indian school ERP market includes established vendors, regional providers, open-source influenced products, and newer SaaS-first platforms. Competitors often emphasize large module catalogs, mobile apps, communication tools, finance modules, LMS capabilities, or enterprise implementation experience.</p>
+<p>Public competitor signals show several patterns:</p>
+<ul>
+<li>MyClassboard presents a broad product suite across ERP, finance, admissions, HR, LMS, connect, mobile apps, safety, payments, WhatsApp, and AI-related examination support.</li>
+<li>Entab emphasizes secure, compliant school ERP deployments and case studies for institutional networks.</li>
+<li>Fedena has a long history in school ERP and is known for open-source roots and education institution management.</li>
+<li>Teachmint has been known for digital classroom and school management positioning, especially in a SaaS and mobile-led context.</li>
+<li>Regional ERP vendors compete through local relationships, implementation customization, and price flexibility.</li>
+</ul>
+<p>EduSync must respect these competitors. The market is not empty. The strategic opportunity is to compete with a sharper product experience, modern architecture, secure multi-tenancy, clear pricing, implementation quality, AI-enabled productivity, and a disciplined roadmap.</p>
+<h3 id="competitor-positioning-matrix">Competitor Positioning Matrix<a class="headerlink" href="#competitor-positioning-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Competitor Type</th>
+<th>Strengths</th>
+<th>Weaknesses or Openings</th>
+<th>EduSync Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Established ERP suites</td>
+<td>Many modules, market familiarity, references.</td>
+<td>Can feel complex, legacy, implementation-heavy, or uneven in UX.</td>
+<td>Deliver modern UX, focused workflows, faster adoption, and strong support.</td>
+</tr>
+<tr>
+<td>Regional school ERP vendors</td>
+<td>Local relationships, low-cost customization, familiarity with regional practices.</td>
+<td>Limited scalability, inconsistent security, weak mobile experience, limited product discipline.</td>
+<td>Provide configurable product depth with enterprise security and professional onboarding.</td>
+</tr>
+<tr>
+<td>Digital classroom platforms</td>
+<td>Teacher and student engagement, online learning familiarity.</td>
+<td>May not fully solve finance, administration, and governance workflows.</td>
+<td>Combine academic engagement with administrative system-of-record strength.</td>
+</tr>
+<tr>
+<td>Open-source or low-cost systems</td>
+<td>Lower upfront cost, basic workflows.</td>
+<td>Higher support burden, weak SaaS operations, limited accountability.</td>
+<td>Offer managed SaaS reliability, security, upgrades, and support.</td>
+</tr>
+<tr>
+<td>Large enterprise vendors</td>
+<td>Brand trust, broad enterprise capabilities.</td>
+<td>Expensive, slower implementation, less suitable for mid-market schools.</td>
+<td>Optimize for the 200-5,000 student segment with practical pricing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="strategic-differentiators">Strategic Differentiators<a class="headerlink" href="#strategic-differentiators" title="Permanent link">&para;</a></h3>
+<p>EduSync's differentiation must be concrete:</p>
+<ul>
+<li>Tenant isolation by design, not by convention.</li>
+<li>Fast, modern, role-aware product experience.</li>
+<li>Strong fee and payment workflow with reconciliation discipline.</li>
+<li>Parent and teacher mobile experience built for daily use.</li>
+<li>AI features that solve real administrative and academic workload problems.</li>
+<li>Implementation playbooks for Indian school contexts.</li>
+<li>Clean architecture that supports long-term product quality.</li>
+<li>Reporting and dashboards that leadership can trust.</li>
+<li>Security-first engineering and auditability.</li>
+<li>Transparent subscription model that scales with institution size.</li>
+</ul>
+<h3 id="competitive-strategy-diagram">Competitive Strategy Diagram<a class="headerlink" href="#competitive-strategy-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>quadrantChart
+    title EduSync Competitive Positioning
+    x-axis Low Operational Depth --&gt; High Operational Depth
+    y-axis Legacy Experience --&gt; Modern Experience
+    quadrant-1 Modern Operating Platform
+    quadrant-2 Modern Point Solution
+    quadrant-3 Basic or Local Tool
+    quadrant-4 Legacy ERP Suite
+    EduSync: [0.82, 0.86]
+    Established ERP Suites: [0.78, 0.42]
+    Regional Vendors: [0.48, 0.38]
+    Classroom Platforms: [0.42, 0.76]
+    Low-Cost Tools: [0.28, 0.34]</code></pre>
+<h2 id="swot-analysis">SWOT Analysis<a class="headerlink" href="#swot-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="strengths">Strengths<a class="headerlink" href="#strengths" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Clear positioning as a cloud-native, AI-powered, multi-tenant SaaS platform.</li>
+<li>Modern technology stack suitable for secure, scalable product development.</li>
+<li>Focused target segment of 200-5,000 student institutions with strong operational pain.</li>
+<li>Modular monolith architecture can support disciplined delivery while remaining microservice-ready.</li>
+<li>Multi-tenant shared database model can support efficient SaaS economics when correctly isolated.</li>
+<li>Broad product domain coverage across academics, finance, communication, administration, and intelligence.</li>
+<li>Opportunity to design product experience from first principles rather than inherit legacy UX.</li>
+</ul>
+<h3 id="weaknesses">Weaknesses<a class="headerlink" href="#weaknesses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>New entrant status means limited initial brand trust, references, and migration proof.</li>
+<li>School ERP adoption requires training, data migration, change management, and support.</li>
+<li>Broad module scope can create execution risk if not phased carefully.</li>
+<li>AI positioning requires governance and credibility to avoid appearing superficial.</li>
+<li>Payment, SMS, WhatsApp, and email integrations add operational dependencies and support complexity.</li>
+<li>Pricing must balance affordability for schools with sustainable SaaS economics.</li>
+</ul>
+<h3 id="opportunities">Opportunities<a class="headerlink" href="#opportunities" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Schools are increasingly open to cloud tools, mobile access, digital payments, and parent communication apps.</li>
+<li>Mid-market schools need modern alternatives to heavy legacy ERP systems.</li>
+<li>AI can reduce real administrative workload in notices, reports, summaries, analysis, and support workflows.</li>
+<li>Multi-branch school groups need centralized controls and analytics.</li>
+<li>Coaching institutes provide adjacent expansion potential.</li>
+<li>Strong implementation methodology can become a market differentiator.</li>
+<li>Future global expansion can reuse core architecture with localization.</li>
+</ul>
+<h3 id="threats">Threats<a class="headerlink" href="#threats" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Established vendors may lower pricing or bundle additional features.</li>
+<li>Schools may resist migration due to historical data, staff habits, or fear of disruption.</li>
+<li>Data privacy or security incidents could damage trust.</li>
+<li>Communication channel policy changes may affect WhatsApp, SMS, or email delivery economics.</li>
+<li>Payment gateway issues may affect fee collection experience.</li>
+<li>Customization demands could slow product development if not governed.</li>
+<li>AI regulation, parent concerns, or school policies may limit AI feature adoption.</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    SWOT[EduSync SWOT] --&gt; S[Strengths]
+    SWOT --&gt; W[Weaknesses]
+    SWOT --&gt; O[Opportunities]
+    SWOT --&gt; T[Threats]
+
+    S --&gt; S1[Modern SaaS Architecture]
+    S --&gt; S2[AI-Powered Direction]
+    S --&gt; S3[Unified Platform Scope]
+    S --&gt; S4[Security-First Multi-Tenancy]
+
+    W --&gt; W1[New Brand]
+    W --&gt; W2[Implementation Complexity]
+    W --&gt; W3[Large Module Scope]
+
+    O --&gt; O1[Digital Payments]
+    O --&gt; O2[Parent Mobile Expectations]
+    O --&gt; O3[School Group Expansion]
+    O --&gt; O4[AI Productivity]
+
+    T --&gt; T1[Established ERP Vendors]
+    T --&gt; T2[Migration Resistance]
+    T --&gt; T3[Security and Privacy Risk]
+    T --&gt; T4[Integration Policy Changes]</code></pre>
+<h2 id="revenue-model">Revenue Model<a class="headerlink" href="#revenue-model" title="Permanent link">&para;</a></h2>
+<p>EduSync should use a hybrid SaaS revenue model that combines predictable subscription revenue with controlled usage-based and value-added revenue.</p>
+<h3 id="revenue-streams">Revenue Streams<a class="headerlink" href="#revenue-streams" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Revenue Stream</th>
+<th>Description</th>
+<th>Strategic Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Core subscription</td>
+<td>Monthly or annual platform subscription based on school size and plan.</td>
+<td>Primary recurring revenue.</td>
+</tr>
+<tr>
+<td>Per-student pricing</td>
+<td>Pricing tied to active enrolled students.</td>
+<td>Aligns revenue with customer scale.</td>
+</tr>
+<tr>
+<td>Premium modules</td>
+<td>Advanced examinations, AI, analytics, admissions CRM, HR, advanced finance, and integrations.</td>
+<td>Expansion revenue.</td>
+</tr>
+<tr>
+<td>Communication usage</td>
+<td>SMS, WhatsApp, and high-volume email usage billed by consumption or bundle.</td>
+<td>Cost recovery and margin opportunity.</td>
+</tr>
+<tr>
+<td>Payment processing revenue</td>
+<td>Platform fee, convenience fee, or revenue share where commercially and legally appropriate.</td>
+<td>Transaction-linked revenue.</td>
+</tr>
+<tr>
+<td>Implementation services</td>
+<td>Data migration, setup, training, and onboarding packages.</td>
+<td>Reduces activation risk and covers onboarding effort.</td>
+</tr>
+<tr>
+<td>Enterprise support</td>
+<td>SLA, dedicated success manager, custom reporting, and priority support.</td>
+<td>Enterprise monetization.</td>
+</tr>
+<tr>
+<td>Marketplace integrations</td>
+<td>Future third-party tools, content, finance, transport, learning, and assessment integrations.</td>
+<td>Ecosystem expansion.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="revenue-principles">Revenue Principles<a class="headerlink" href="#revenue-principles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Core pricing must be understandable to school owners and administrators.</li>
+<li>Communication and payment costs must be transparent because these depend on external providers.</li>
+<li>Implementation fees should not become the main profit center; they should enable successful adoption.</li>
+<li>Discounts must be governed to avoid damaging long-term SaaS economics.</li>
+<li>Annual plans should be encouraged through pricing incentives because schools operate on annual academic and budget cycles.</li>
+<li>Enterprise plans should allow custom contracts without fragmenting the core product.</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    A[EduSync Revenue] --&gt; B[Subscription]
+    A --&gt; C[Usage]
+    A --&gt; D[Services]
+    A --&gt; E[Expansion]
+
+    B --&gt; B1[Per School]
+    B --&gt; B2[Per Student]
+    B --&gt; B3[Annual Contract]
+
+    C --&gt; C1[SMS]
+    C --&gt; C2[WhatsApp]
+    C --&gt; C3[Payment Workflows]
+
+    D --&gt; D1[Implementation]
+    D --&gt; D2[Migration]
+    D --&gt; D3[Training]
+
+    E --&gt; E1[AI]
+    E --&gt; E2[Advanced Analytics]
+    E --&gt; E3[Enterprise SLA]
+    E --&gt; E4[Integrations]</code></pre>
+<h2 id="pricing">Pricing<a class="headerlink" href="#pricing" title="Permanent link">&para;</a></h2>
+<p>EduSync pricing should support adoption by small and mid-sized schools while preserving room for enterprise expansion. The recommended model is a tiered annual SaaS subscription with student bands, optional monthly billing, implementation packages, and usage-based communication charges.</p>
+<h3 id="pricing-philosophy">Pricing Philosophy<a class="headerlink" href="#pricing-philosophy" title="Permanent link">&para;</a></h3>
+<p>The pricing model must be:</p>
+<ul>
+<li>Predictable for schools.</li>
+<li>Aligned with student count and module value.</li>
+<li>Flexible enough for small schools without undervaluing the product.</li>
+<li>Capable of supporting enterprise contracts for school groups.</li>
+<li>Transparent about external costs such as SMS, WhatsApp, and payment gateway charges.</li>
+<li>Designed around annual academic planning cycles.</li>
+</ul>
+<h3 id="proposed-pricing-tiers">Proposed Pricing Tiers<a class="headerlink" href="#proposed-pricing-tiers" title="Permanent link">&para;</a></h3>
+<p>The following pricing structure is a strategic model and must be validated through customer discovery, sales experiments, competitor benchmarking, and unit economics analysis before commercial launch.</p>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Target Customer</th>
+<th>Included Scope</th>
+<th>Pricing Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td>Schools with 200-800 students needing core digitization.</td>
+<td>Student records, guardian records, attendance, basic fees, basic communication, standard reports.</td>
+<td>Entry annual subscription with student-band pricing.</td>
+</tr>
+<tr>
+<td>Professional</td>
+<td>Schools with 800-2,500 students needing full operations.</td>
+<td>Starter plus homework, assignments, examinations, payments, advanced dashboards, role controls.</td>
+<td>Primary revenue plan.</td>
+</tr>
+<tr>
+<td>Growth</td>
+<td>Schools with 2,500-5,000 students or high process complexity.</td>
+<td>Professional plus advanced finance, workflows, analytics, priority support, integrations.</td>
+<td>Premium mid-market plan.</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td>School groups, large schools, and networks.</td>
+<td>Growth plus multi-branch controls, SLA, dedicated success, custom reports, advanced audit, enterprise integrations.</td>
+<td>Custom annual contract.</td>
+</tr>
+<tr>
+<td>AI Add-on</td>
+<td>Schools ready for AI-assisted productivity.</td>
+<td>AI drafting, summaries, insights, recommendations, controlled assistant features.</td>
+<td>Add-on per school or per active staff user.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-pricing">Implementation Pricing<a class="headerlink" href="#implementation-pricing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Customer Fit</th>
+<th>Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Onboarding</td>
+<td>Small and mid-sized schools with clean data.</td>
+<td>Tenant setup, configuration, basic migration, admin training.</td>
+</tr>
+<tr>
+<td>Advanced Migration</td>
+<td>Schools moving from legacy ERP or spreadsheets.</td>
+<td>Data cleaning support, historical data migration, validation, staff training.</td>
+</tr>
+<tr>
+<td>Enterprise Rollout</td>
+<td>Multi-branch or large institutions.</td>
+<td>Rollout planning, branch templates, phased migration, governance workshops, success plan.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-risks">Pricing Risks<a class="headerlink" href="#pricing-risks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Pricing too low may increase adoption but weaken support economics.</li>
+<li>Pricing too high may slow adoption in smaller schools.</li>
+<li>Bundling all modules too early may reduce expansion revenue.</li>
+<li>Excessive customization included in subscription can destroy margins.</li>
+<li>Communication costs may fluctuate and should be separated from core subscription where appropriate.</li>
+</ul>
+<h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
+<p>EduSync's roadmap must prioritize operational foundations before advanced intelligence. Schools will not trust AI insights if core data is incomplete, inconsistent, or difficult to maintain.</p>
+<h3 id="roadmap-principles">Roadmap Principles<a class="headerlink" href="#roadmap-principles" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Build foundational data models first.</li>
+<li>Release modules in adoption-ready increments.</li>
+<li>Prioritize workflows used daily or weekly.</li>
+<li>Avoid deep customization before product-market fit.</li>
+<li>Build tenant isolation, auditability, and security from the first release.</li>
+<li>Use analytics and AI only when supported by reliable domain data.</li>
+<li>Validate each major module with real school workflows before broad release.</li>
+</ul>
+<h3 id="phase-1-foundation-and-core-operations">Phase 1: Foundation and Core Operations<a class="headerlink" href="#phase-1-foundation-and-core-operations" title="Permanent link">&para;</a></h3>
+<p>Primary objective: Establish EduSync as a usable school system of record.</p>
+<p>Scope:</p>
+<ul>
+<li>Authentication and role-based access.</li>
+<li>School setup and academic year configuration.</li>
+<li>Student, guardian, teacher, and employee records.</li>
+<li>Class, section, subject, and basic academic configuration.</li>
+<li>Attendance workflows.</li>
+<li>Basic fee structure, invoices, dues, and receipts.</li>
+<li>Basic notifications.</li>
+<li>Admin and principal dashboards.</li>
+<li>Audit log foundation.</li>
+<li>Super admin tenant provisioning.</li>
+</ul>
+<h3 id="phase-2-academic-and-financial-depth">Phase 2: Academic and Financial Depth<a class="headerlink" href="#phase-2-academic-and-financial-depth" title="Permanent link">&para;</a></h3>
+<p>Primary objective: Expand daily operational value.</p>
+<p>Scope:</p>
+<ul>
+<li>Homework and assignments.</li>
+<li>Examination setup, marks entry, grading, and report cards.</li>
+<li>Payment gateway integration.</li>
+<li>Fee reminders and reconciliation workflows.</li>
+<li>Advanced reports.</li>
+<li>Teacher dashboard.</li>
+<li>Parent portal and mobile app.</li>
+<li>Student portal.</li>
+<li>Communication templates.</li>
+</ul>
+<h3 id="phase-3-engagement-automation-and-intelligence">Phase 3: Engagement, Automation, and Intelligence<a class="headerlink" href="#phase-3-engagement-automation-and-intelligence" title="Permanent link">&para;</a></h3>
+<p>Primary objective: Improve productivity and decision visibility.</p>
+<p>Scope:</p>
+<ul>
+<li>SMS, WhatsApp, and email orchestration.</li>
+<li>Advanced dashboards for leadership.</li>
+<li>AI-assisted notice drafting, report summaries, and operational recommendations.</li>
+<li>Attendance risk signals.</li>
+<li>Fee collection forecasting.</li>
+<li>Staff workload insights.</li>
+<li>Admission pipeline workflows.</li>
+<li>Subscription management enhancements.</li>
+</ul>
+<h3 id="phase-4-enterprise-and-ecosystem">Phase 4: Enterprise and Ecosystem<a class="headerlink" href="#phase-4-enterprise-and-ecosystem" title="Permanent link">&para;</a></h3>
+<p>Primary objective: Support larger institutions and integrations.</p>
+<p>Scope:</p>
+<ul>
+<li>Multi-branch school group management.</li>
+<li>Advanced audit and compliance reporting.</li>
+<li>Enterprise SLA and support tooling.</li>
+<li>Integration APIs.</li>
+<li>Marketplace foundation.</li>
+<li>Advanced AI governance.</li>
+<li>Localization framework.</li>
+<li>Global readiness for additional curricula, currencies, and regulatory patterns.</li>
+</ul>
+<h3 id="roadmap-timeline">Roadmap Timeline<a class="headerlink" href="#roadmap-timeline" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>gantt
+    title EduSync Strategic Roadmap
+    dateFormat  YYYY-MM
+    axisFormat  %b %Y
+
+    section Phase 1 Foundation
+    Tenant and Identity Foundation        :p1a, 2026-07, 2M
+    School Setup and Core Records         :p1b, after p1a, 2M
+    Attendance and Basic Fees             :p1c, after p1b, 2M
+    Dashboards and Audit Foundation       :p1d, after p1c, 1M
+
+    section Phase 2 Depth
+    Homework and Assignments              :p2a, after p1d, 2M
+    Examinations and Report Cards         :p2b, after p2a, 3M
+    Payments and Reconciliation           :p2c, after p2a, 3M
+    Parent and Teacher Mobile Experience  :p2d, after p2b, 3M
+
+    section Phase 3 Intelligence
+    Communication Orchestration           :p3a, after p2d, 2M
+    AI-Assisted Operations                :p3b, after p3a, 3M
+    Advanced Analytics                    :p3c, after p3a, 3M
+
+    section Phase 4 Enterprise
+    Multi-Branch Controls                 :p4a, after p3c, 3M
+    Integration Platform                  :p4b, after p4a, 3M
+    Global Readiness                      :p4c, after p4b, 4M</code></pre>
+<h2 id="success-metrics">Success Metrics<a class="headerlink" href="#success-metrics" title="Permanent link">&para;</a></h2>
+<p>EduSync success must be measured across customer value, product adoption, business performance, operational quality, and trust.</p>
+<h3 id="customer-adoption-metrics">Customer Adoption Metrics<a class="headerlink" href="#customer-adoption-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Direction</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>School activation rate</td>
+<td>Increase month over month.</td>
+<td>Shows onboarding effectiveness.</td>
+</tr>
+<tr>
+<td>Time to first live workflow</td>
+<td>Decrease.</td>
+<td>Indicates implementation speed.</td>
+</tr>
+<tr>
+<td>Weekly active staff users</td>
+<td>Increase.</td>
+<td>Measures operational adoption.</td>
+</tr>
+<tr>
+<td>Parent app activation</td>
+<td>Increase.</td>
+<td>Measures parent engagement value.</td>
+</tr>
+<tr>
+<td>Teacher attendance usage</td>
+<td>High consistency.</td>
+<td>Indicates daily workflow dependency.</td>
+</tr>
+<tr>
+<td>Fee workflow adoption</td>
+<td>High percentage of schools using invoices, dues, and receipts.</td>
+<td>Confirms financial module value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="business-metrics">Business Metrics<a class="headerlink" href="#business-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Direction</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual recurring revenue</td>
+<td>Increase predictably.</td>
+<td>Primary SaaS growth indicator.</td>
+</tr>
+<tr>
+<td>Net revenue retention</td>
+<td>Above 100% over time.</td>
+<td>Shows expansion and low churn.</td>
+</tr>
+<tr>
+<td>Gross margin</td>
+<td>Improve with scale.</td>
+<td>Indicates SaaS operating health.</td>
+</tr>
+<tr>
+<td>Customer acquisition cost payback</td>
+<td>Decrease.</td>
+<td>Improves growth efficiency.</td>
+</tr>
+<tr>
+<td>Churn rate</td>
+<td>Low and declining.</td>
+<td>Indicates durable customer value.</td>
+</tr>
+<tr>
+<td>Expansion revenue</td>
+<td>Increase from premium modules and AI.</td>
+<td>Shows product depth.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operational-metrics">Operational Metrics<a class="headerlink" href="#operational-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Direction</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uptime</td>
+<td>Meet or exceed SLA targets.</td>
+<td>Schools depend on daily availability.</td>
+</tr>
+<tr>
+<td>Critical incident count</td>
+<td>Low and declining.</td>
+<td>Indicates platform maturity.</td>
+</tr>
+<tr>
+<td>Average response time</td>
+<td>Within defined performance budgets.</td>
+<td>Supports usability.</td>
+</tr>
+<tr>
+<td>Support ticket volume per school</td>
+<td>Decline after onboarding.</td>
+<td>Shows usability and training quality.</td>
+</tr>
+<tr>
+<td>Data migration defect rate</td>
+<td>Low.</td>
+<td>Builds trust during onboarding.</td>
+</tr>
+<tr>
+<td>Notification delivery success</td>
+<td>High.</td>
+<td>Communication reliability matters.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trust-and-security-metrics">Trust and Security Metrics<a class="headerlink" href="#trust-and-security-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Direction</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenant data isolation incidents</td>
+<td>Zero.</td>
+<td>Non-negotiable trust requirement.</td>
+</tr>
+<tr>
+<td>Unauthorized access incidents</td>
+<td>Zero.</td>
+<td>Security foundation.</td>
+</tr>
+<tr>
+<td>Audit coverage for sensitive actions</td>
+<td>Complete.</td>
+<td>Enables accountability.</td>
+</tr>
+<tr>
+<td>Vulnerability remediation time</td>
+<td>Within severity SLA.</td>
+<td>Maintains security posture.</td>
+</tr>
+<tr>
+<td>Backup restore test success</td>
+<td>100% in scheduled tests.</td>
+<td>Ensures recoverability.</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    A[Success Metrics] --&gt; B[Customer Value]
+    A --&gt; C[Business Health]
+    A --&gt; D[Operational Quality]
+    A --&gt; E[Trust and Security]
+
+    B --&gt; B1[Activation]
+    B --&gt; B2[Usage]
+    B --&gt; B3[Parent Engagement]
+
+    C --&gt; C1[ARR]
+    C --&gt; C2[Retention]
+    C --&gt; C3[Expansion]
+
+    D --&gt; D1[Uptime]
+    D --&gt; D2[Performance]
+    D --&gt; D3[Support]
+
+    E --&gt; E1[Tenant Isolation]
+    E --&gt; E2[Audit Coverage]
+    E --&gt; E3[Incident Response]</code></pre>
+<h2 id="risks">Risks<a class="headerlink" href="#risks" title="Permanent link">&para;</a></h2>
+<h3 id="strategic-risks">Strategic Risks<a class="headerlink" href="#strategic-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overbuilding before product-market fit</td>
+<td>Slow delivery and confusing product.</td>
+<td>Phase roadmap around high-frequency workflows and customer validation.</td>
+</tr>
+<tr>
+<td>Competing against entrenched vendors</td>
+<td>Longer sales cycles and pricing pressure.</td>
+<td>Differentiate through UX, implementation quality, security, AI, and transparent pricing.</td>
+</tr>
+<tr>
+<td>Weak implementation experience</td>
+<td>Customer dissatisfaction and churn.</td>
+<td>Build onboarding playbooks, migration tools, training material, and success checkpoints.</td>
+</tr>
+<tr>
+<td>Excessive customization</td>
+<td>Product complexity and margin erosion.</td>
+<td>Use configuration-first approach and strict enterprise customization governance.</td>
+</tr>
+<tr>
+<td>AI overpromising</td>
+<td>Loss of credibility.</td>
+<td>Ship practical, controlled AI features with measurable value and human review.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-risks">Product Risks<a class="headerlink" href="#product-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poor teacher adoption</td>
+<td>Incomplete data and weak school value.</td>
+<td>Build fast teacher workflows and mobile-friendly interactions.</td>
+</tr>
+<tr>
+<td>Parent app underuse</td>
+<td>Reduced engagement value.</td>
+<td>Make payments, attendance, announcements, and results immediately useful.</td>
+</tr>
+<tr>
+<td>Fee calculation defects</td>
+<td>Trust loss and operational disruption.</td>
+<td>Use deterministic fee engine, test coverage, approval flows, and audit logs.</td>
+</tr>
+<tr>
+<td>Notification failures</td>
+<td>Communication breakdown.</td>
+<td>Use queue-based delivery, retries, provider monitoring, and fallback channels.</td>
+</tr>
+<tr>
+<td>Report inaccuracies</td>
+<td>Leadership distrust.</td>
+<td>Use authoritative domain data and reconciliation checks.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="technology-risks">Technology Risks<a class="headerlink" href="#technology-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tenant isolation failure</td>
+<td>Severe trust and legal risk.</td>
+<td>Enforce <code>school_id</code> across schema, query layer, tests, and code reviews.</td>
+</tr>
+<tr>
+<td>Performance bottlenecks</td>
+<td>Poor daily usability.</td>
+<td>Use indexing, caching, pagination, async processing, and performance budgets.</td>
+</tr>
+<tr>
+<td>Integration dependency failure</td>
+<td>Payment or notification disruption.</td>
+<td>Use resilient integration patterns, retries, webhooks, idempotency, and provider monitoring.</td>
+</tr>
+<tr>
+<td>Data migration defects</td>
+<td>Adoption delays and trust issues.</td>
+<td>Build migration validation tools and staged sign-off process.</td>
+</tr>
+<tr>
+<td>Security vulnerabilities</td>
+<td>Data exposure and reputational damage.</td>
+<td>Secure SDLC, scanning, penetration testing, least privilege, and incident response.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="business-risks">Business Risks<a class="headerlink" href="#business-risks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price sensitivity</td>
+<td>Slower sales conversion.</td>
+<td>Use student-band pricing and clear ROI messaging.</td>
+</tr>
+<tr>
+<td>Long school sales cycles</td>
+<td>Cash flow pressure.</td>
+<td>Offer pilot programs, annual academic-cycle planning, and founder-led sales initially.</td>
+</tr>
+<tr>
+<td>Support cost escalation</td>
+<td>Lower margins.</td>
+<td>Invest in product usability, self-service help, training, and operational tooling.</td>
+</tr>
+<tr>
+<td>Churn during academic-year transitions</td>
+<td>Revenue instability.</td>
+<td>Provide renewal planning and end-of-year support workflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
+<p>This vision is based on the following assumptions:</p>
+<ul>
+<li>Target schools have enough digital readiness to use web and mobile SaaS workflows.</li>
+<li>School leadership values fee visibility, parent communication, and operational reporting enough to pay for reliable software.</li>
+<li>Schools prefer configurable SaaS over heavily custom software when product fit is strong.</li>
+<li>Indian private schools will continue adopting digital payments and parent communication tools.</li>
+<li>AI adoption in schools will be gradual and must be governed, explainable, and optional.</li>
+<li>Shared-database multi-tenancy is appropriate for the early and mid-scale SaaS model when implemented with strict tenant isolation.</li>
+<li>Implementation quality will be a major driver of customer satisfaction and retention.</li>
+<li>The first strong market wedge will come from core operations rather than advanced LMS-only workflows.</li>
+<li>Annual subscriptions will fit school budgeting better than purely monthly usage contracts.</li>
+<li>Future global expansion will require localization, currency, compliance, and curriculum flexibility.</li>
+</ul>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<p>EduSync's success depends on multiple internal and external dependencies.</p>
+<h3 id="product-and-engineering-dependencies">Product and Engineering Dependencies<a class="headerlink" href="#product-and-engineering-dependencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reliable backend architecture using Java 21, Spring Boot, PostgreSQL, Redis, RabbitMQ, and AWS.</li>
+<li>Strong frontend and mobile implementation using React, TypeScript, Vite, Tailwind, Shadcn, React Query, React Hook Form, Zustand, React Native, and Expo.</li>
+<li>Clean domain boundaries that prevent module coupling from becoming unmanageable.</li>
+<li>Automated tests for tenant isolation, fee calculations, access control, and critical workflows.</li>
+<li>CI/CD pipelines through GitHub Actions.</li>
+<li>Observability for production operations.</li>
+<li>Documentation discipline across product, architecture, APIs, security, and deployment.</li>
+</ul>
+<h3 id="external-dependencies">External Dependencies<a class="headerlink" href="#external-dependencies" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Payment gateway providers for online fee collection.</li>
+<li>SMS providers for transactional and informational messaging.</li>
+<li>WhatsApp Business Platform providers for approved communication workflows.</li>
+<li>Email delivery providers.</li>
+<li>AWS services for compute, storage, networking, security, and monitoring.</li>
+<li>School-provided data quality during onboarding and migration.</li>
+<li>Applicable legal and regulatory requirements for data protection and education operations.</li>
+</ul>
+<h2 id="future-scope">Future Scope<a class="headerlink" href="#future-scope" title="Permanent link">&para;</a></h2>
+<p>Future scope must extend EduSync from school management SaaS into a broader education operations and intelligence platform.</p>
+<p>Potential future capabilities include:</p>
+<ul>
+<li>Advanced admissions CRM with lead scoring, campaign tracking, counsellor workflows, and conversion analytics.</li>
+<li>Transport management with route planning, vehicle tracking integration, driver records, and parent alerts.</li>
+<li>Library, inventory, hostel, canteen, visitor, and facility management.</li>
+<li>Payroll and HR compliance workflows.</li>
+<li>Advanced LMS integration and digital content marketplace.</li>
+<li>AI-assisted teacher planning, question paper creation, individualized student support, and parent communication insights.</li>
+<li>Predictive analytics for fee default risk, attendance risk, dropout risk, and academic intervention.</li>
+<li>Multi-school group benchmarking and executive governance dashboards.</li>
+<li>API marketplace for partners.</li>
+<li>Global localization for academic structures, language, currency, date formats, and regional compliance.</li>
+<li>Data warehouse and business intelligence layer for large customers.</li>
+<li>Offline-capable mobile workflows for low-connectivity contexts.</li>
+</ul>
+<h2 id="future-vision">Future Vision<a class="headerlink" href="#future-vision" title="Permanent link">&para;</a></h2>
+<p>The long-term future of EduSync is to become the intelligent institutional operating layer for schools. In this future, EduSync does not merely store data; it helps schools understand their operations, anticipate risks, communicate better, reduce administrative work, and improve stakeholder trust.</p>
+<p>The future platform should support three levels of maturity.</p>
+<h3 id="level-1-digital-operations">Level 1: Digital Operations<a class="headerlink" href="#level-1-digital-operations" title="Permanent link">&para;</a></h3>
+<p>At this level, EduSync replaces scattered manual processes with reliable digital workflows. Schools manage records, attendance, fees, communication, examinations, and reports through a unified platform.</p>
+<h3 id="level-2-connected-intelligence">Level 2: Connected Intelligence<a class="headerlink" href="#level-2-connected-intelligence" title="Permanent link">&para;</a></h3>
+<p>At this level, EduSync connects operational data across modules. Leadership can see patterns in attendance, fee collection, academic performance, communication engagement, and staff workflows. Reports become decision tools rather than end-of-month administrative outputs.</p>
+<h3 id="level-3-ai-assisted-institution">Level 3: AI-Assisted Institution<a class="headerlink" href="#level-3-ai-assisted-institution" title="Permanent link">&para;</a></h3>
+<p>At this level, EduSync uses AI to assist school operations responsibly. The platform can draft communication, summarize reports, flag operational anomalies, suggest interventions, answer authorized user questions over school data, and support teachers and administrators in routine work. Human approval remains central. AI must never become an uncontrolled decision maker over student welfare, financial actions, or institutional governance.</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; DigitalOperations
+    DigitalOperations --&gt; ConnectedIntelligence
+    ConnectedIntelligence --&gt; AIAssistedInstitution
+    AIAssistedInstitution --&gt; GlobalEducationPlatform
+
+    DigitalOperations: Records, attendance, fees, exams, communication
+    ConnectedIntelligence: Dashboards, reports, trends, risk visibility
+    AIAssistedInstitution: Drafting, summaries, recommendations, assistants
+    GlobalEducationPlatform: Localization, marketplace, integrations, global scale</code></pre>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>The following references informed the market and competitive context. They must be revalidated during detailed business planning because market data, competitor offerings, and pricing can change.</p>
+<ul>
+<li>Ministry of Education school data reporting through UDISE+ and related public reporting on India's school infrastructure, teachers, retention, and digital readiness.</li>
+<li>Economic Times coverage of UDISE+ 2024-25 findings on teachers, school infrastructure, and digital access: <a href="https://economictimes.indiatimes.com/industry/services/education/indias-school-teacher-count-crosses-1-crore-in-2024-25-udise-data/articleshow/123571593.cms">https://economictimes.indiatimes.com/industry/services/education/indias-school-teacher-count-crosses-1-crore-in-2024-25-udise-data/articleshow/123571593.cms</a></li>
+<li>Times of India coverage of UDISE+ 2024-25 digital infrastructure gaps and regional school indicators: <a href="https://timesofindia.indiatimes.com/education/news/the-missing-link-why-indias-digital-infrastructure-in-schools-must-catch-up/articleshow/123581177.cms">https://timesofindia.indiatimes.com/education/news/the-missing-link-why-indias-digital-infrastructure-in-schools-must-catch-up/articleshow/123581177.cms</a></li>
+<li>MyClassboard public product information, including ERP, finance, admission, HR, LMS, connect, WhatsApp, payment, mobile, and AI-related module positioning: <a href="https://www.myclassboard.com/">https://www.myclassboard.com/</a></li>
+<li>Entab public school ERP positioning and institutional case study messaging: <a href="https://www.entab.in/">https://www.entab.in/</a></li>
+<li>Fedena and Foradian public product history and school ERP positioning: <a href="https://fedena.com/">https://fedena.com/</a></li>
+<li>Teachmint public school management and digital education positioning: <a href="https://www.teachmint.com/">https://www.teachmint.com/</a></li>
+<li>IAMAI and Kantar public reporting on India's internet adoption trends, used as contextual support for mobile-first and digital adoption assumptions.</li>
+</ul>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Status</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2026-07-02</td>
+<td>EduSync Product, Architecture, and Technology Office</td>
+<td>Draft for Strategic Review</td>
+<td>Initial production-quality vision document created for EduSync.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/your-org/edusync-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

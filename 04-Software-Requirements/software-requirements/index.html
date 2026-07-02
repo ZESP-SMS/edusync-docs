@@ -1,0 +1,4804 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product, architecture, and engineering documentation for EduSync">
+      
+      
+        <meta name="author" content="EduSync Team">
+      
+      
+        <link rel="canonical" href="https://example.com/edusync-docs/04-Software-Requirements/software-requirements/">
+      
+      
+        <link rel="prev" href="../../03-Product-Requirements/use-cases/">
+      
+      
+        <link rel="next" href="../../05-UI-UX/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Software Requirements - EduSync Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edusync-software-requirements-specification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduSync Documentation" class="md-header__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduSync Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software Requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduSync Documentation" class="md-nav__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduSync Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Vision/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Business-Requirements/business-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Stories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Requirements
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-delivery-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Delivery Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-isolation-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tenant Isolation Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scalability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-control-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Control Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintainability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintainability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintainability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintainability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reliability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reliability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessibility-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disaster Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-recovery-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Recovery Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compliance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST API Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Error Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coding Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment-architecture-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Architecture Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Browser Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-support-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Support Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mobile-application-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Application Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-web-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Web Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-UI-UX/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UI/UX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-UI-UX/Figma-Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06-Architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C4 Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C4 Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-1-System-Context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 - System Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-2-Container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 - Container Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-3-Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 - Component Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../07-Database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-Database/Database-Schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-Backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-DevOps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-Roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-delivery-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Delivery Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenant-isolation-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tenant Isolation Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scalability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-control-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Control Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintainability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintainability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintainability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintainability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reliability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reliability-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessibility-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disaster-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disaster Recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disaster-recovery-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disaster Recovery Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-recovery-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Recovery Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compliance-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rest-api-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REST API Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-error-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Error Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coding Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Coding Standards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment-architecture-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Architecture Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Browser Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-support-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Support Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browser-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Compatibility
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Compatibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mobile-application-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Application Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-web-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Web Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="edusync-software-requirements-specification">EduSync Software Requirements Specification<a class="headerlink" href="#edusync-software-requirements-specification" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>EduSync</td>
+</tr>
+<tr>
+<td>Document Type</td>
+<td>Software Requirements Specification</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Draft for Architecture and Engineering Review</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>EduSync Product, Architecture, Engineering, Security, DevOps, and QA Office</td>
+</tr>
+<tr>
+<td>Target Market</td>
+<td>India</td>
+</tr>
+<tr>
+<td>Future Market</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>Last Updated</td>
+<td>2026-07-02</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>EduSync is a cloud-native, multi-tenant School Management SaaS platform for private schools, CBSE schools, ICSE schools, state board schools, and coaching institutes with approximately 200 to 5,000 students. The platform must support secure school operations across authentication, school setup, student records, guardian records, teacher records, attendance, homework, examinations, fees, payments, reports, dashboards, notifications, subscriptions, super administration, audit logs, and AI-assisted workflows.</p>
+<p>This Software Requirements Specification defines the enterprise-level software requirements for EduSync. It translates business and product expectations into system-level functional and non-functional requirements that engineering, architecture, QA, security, DevOps, and operations teams must satisfy.</p>
+<p>EduSync must be designed as production SaaS software from the beginning. The system must enforce tenant isolation, protect sensitive school data, support reliable daily workflows, scale across many institutions, and remain maintainable as product modules expand.</p>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>The purpose of this document is to define the software requirements that govern how EduSync must be built, operated, secured, monitored, deployed, and maintained.</p>
+<p>This document must be used to:</p>
+<ul>
+<li>Guide architecture and implementation decisions.</li>
+<li>Define system-wide functional requirements.</li>
+<li>Define non-functional quality attributes.</li>
+<li>Establish performance, scalability, availability, security, reliability, accessibility, and disaster recovery expectations.</li>
+<li>Define API, coding, deployment, browser, and mobile compatibility standards.</li>
+<li>Provide acceptance criteria for engineering readiness, release readiness, and operational readiness.</li>
+</ul>
+<h3 id="system-delivery-flow">System Delivery Flow<a class="headerlink" href="#system-delivery-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Requirements[Software Requirements] --&gt; Platform[Backend, Web, Mobile, and Data Services]
+    Platform --&gt; Quality[Security, Performance, and Reliability]
+    Quality --&gt; Release[Deployable and Observable SaaS Platform]</code></pre>
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>This specification applies to the EduSync web application, mobile application, backend services, REST APIs, database, cache, messaging, file storage, integrations, CI/CD, deployment infrastructure, observability stack, backup processes, disaster recovery processes, and operational support workflows.</p>
+<p>The scope includes:</p>
+<ul>
+<li>React, TypeScript, Vite, Tailwind, Shadcn, React Query, React Hook Form, and Zustand frontend requirements.</li>
+<li>React Native and Expo mobile application requirements.</li>
+<li>Java 21, Spring Boot, Spring Security, Spring Data JPA, Hibernate, MapStruct, Validation, and Lombok backend requirements.</li>
+<li>PostgreSQL database requirements.</li>
+<li>Redis cache requirements.</li>
+<li>RabbitMQ messaging requirements.</li>
+<li>Docker, AWS, GitHub Actions, and Nginx deployment requirements.</li>
+<li>AWS S3 storage requirements.</li>
+<li>REST API standards.</li>
+<li>Tenant isolation, security, audit logging, monitoring, backup, disaster recovery, and compliance requirements.</li>
+</ul>
+<p>This document does not define individual UI designs, database physical schema, API endpoint-by-endpoint contracts, or implementation task breakdowns. Those artifacts must be created separately and must comply with this specification.</p>
+<h2 id="system-context">System Context<a class="headerlink" href="#system-context" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    Browser[Web Browser] --&gt; WebApp[React Web Application]
+    Mobile[Mobile Device] --&gt; MobileApp[React Native Expo Application]
+    WebApp --&gt; Nginx[Nginx]
+    MobileApp --&gt; Nginx
+    Nginx --&gt; API[Spring Boot REST API]
+
+    API --&gt; Auth[Spring Security]
+    API --&gt; Domain[Domain Modules]
+    API --&gt; Postgres[(PostgreSQL)]
+    API --&gt; Redis[(Redis)]
+    API --&gt; RabbitMQ[(RabbitMQ)]
+    API --&gt; S3[(AWS S3)]
+
+    RabbitMQ --&gt; NotificationWorkers[Notification Workers]
+    NotificationWorkers --&gt; SMS[SMS Provider]
+    NotificationWorkers --&gt; WhatsApp[WhatsApp Provider]
+    NotificationWorkers --&gt; Email[Email Provider]
+    API --&gt; PaymentGateway[Payment Gateway]
+
+    API --&gt; Logs[Centralized Logs]
+    API --&gt; Metrics[Metrics]
+    API --&gt; Traces[Distributed Traces]
+    Metrics --&gt; Alerts[Alerts]</code></pre>
+<h2 id="business-rules">Business Rules<a class="headerlink" href="#business-rules" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Business Rule</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRS-BR-001</td>
+<td>Every school must operate as an isolated tenant.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-002</td>
+<td>Every tenant-owned database table must include <code>school_id</code>.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-003</td>
+<td>Every tenant-owned query must enforce tenant isolation.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-004</td>
+<td>No school user may access another school's data.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-005</td>
+<td>Every protected API must enforce authentication and authorization server-side.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-006</td>
+<td>Sensitive actions must create audit log records.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-007</td>
+<td>Financial records must preserve immutable transaction history and controlled corrections.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-008</td>
+<td>Academic and attendance records must preserve historical context across academic years.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-BR-009</td>
+<td>Subscription status must control feature access and channel entitlements.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-BR-010</td>
+<td>External integration failures must not corrupt internal system state.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-BR-011</td>
+<td>AI-assisted outputs must remain reviewable and must not bypass authorization rules.</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functional-requirements">Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="core-functional-requirements">Core Functional Requirements<a class="headerlink" href="#core-functional-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRS-FR-001</td>
+<td>The system must authenticate users before allowing access to protected resources.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-002</td>
+<td>The system must authorize every protected action using role and permission rules.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-003</td>
+<td>The system must resolve tenant context for every authenticated school user.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-004</td>
+<td>The system must support school tenant setup and configuration.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-005</td>
+<td>The system must manage student, guardian, teacher, and employee records.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-006</td>
+<td>The system must support attendance capture, correction, reporting, and guardian notification.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-007</td>
+<td>The system must support homework and assignment workflows.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-FR-008</td>
+<td>The system must support examination setup, marks entry, approval, result publication, and report cards.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-009</td>
+<td>The system must support fee structure configuration, invoice generation, discounts, dues, receipts, and reports.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-010</td>
+<td>The system must support payment initiation, payment confirmation, manual payment recording, receipt generation, and reconciliation.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-011</td>
+<td>The system must generate operational, academic, financial, and administrative reports.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-012</td>
+<td>The system must provide role-specific dashboards.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-FR-013</td>
+<td>The system must send notifications through in-app, SMS, WhatsApp, and email channels where configured.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-FR-014</td>
+<td>The system must manage subscription plans, entitlements, tenant lifecycle states, and feature access.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-015</td>
+<td>The system must maintain audit logs for sensitive actions.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-FR-016</td>
+<td>The system must support platform super admin workflows for tenant and subscription administration.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-FR-017</td>
+<td>The system must support secure file upload and retrieval through configured storage.</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>SRS-FR-018</td>
+<td>The system must expose REST APIs for frontend and mobile clients.</td>
+<td>Critical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tenant-isolation-functional-requirements">Tenant Isolation Functional Requirements<a class="headerlink" href="#tenant-isolation-functional-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRS-TENANT-001</td>
+<td>The backend must derive tenant context from authenticated server-side context, not from untrusted client input.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-TENANT-002</td>
+<td>Repository, service, and query layers must enforce <code>school_id</code> filtering for tenant-owned records.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-TENANT-003</td>
+<td>Reports, dashboards, exports, and background jobs must enforce tenant isolation.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-TENANT-004</td>
+<td>Administrative support access must use explicit platform authorization and audit logs.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-TENANT-005</td>
+<td>Automated tests must verify cross-tenant access denial for all modules.</td>
+<td>Critical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-functional-requirements">Integration Functional Requirements<a class="headerlink" href="#integration-functional-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRS-INT-001</td>
+<td>Payment gateway callbacks must be authenticated, validated, and idempotent.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-INT-002</td>
+<td>SMS, WhatsApp, and email delivery must be processed asynchronously through queues where appropriate.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-INT-003</td>
+<td>Integration failures must be captured with retry status and failure reason.</td>
+<td>High</td>
+</tr>
+<tr>
+<td>SRS-INT-004</td>
+<td>External provider credentials must be stored securely and never committed to source control.</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>SRS-INT-005</td>
+<td>File storage operations must validate file type, size, tenant ownership, and access permissions.</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="non-functional-requirements">Non Functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirement Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Performance</td>
+<td>Common user workflows must respond quickly under expected school and platform load.</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>The system must scale across schools, users, students, transactions, messages, reports, and files.</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>The platform must remain available for daily school operations with clear uptime targets.</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>The platform must protect student, guardian, staff, financial, and institutional data.</td>
+</tr>
+<tr>
+<td>Maintainability</td>
+<td>The codebase must follow clean architecture, domain-driven design, SOLID principles, and modular boundaries.</td>
+</tr>
+<tr>
+<td>Reliability</td>
+<td>Critical workflows must handle failures without data corruption.</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td>Web and mobile interfaces must support accessible use by school stakeholders.</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>Logs, metrics, traces, dashboards, alerts, and audit records must support production operations.</td>
+</tr>
+<tr>
+<td>Recoverability</td>
+<td>Backup and disaster recovery procedures must support business continuity.</td>
+</tr>
+<tr>
+<td>Compliance</td>
+<td>The system must be designed for applicable Indian privacy, contractual, audit, and future global compliance needs.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<h3 id="performance-targets">Performance Targets<a class="headerlink" href="#performance-targets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Requirement</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>Authenticate valid users and load initial role context.</td>
+<td>P95 under 2 seconds under normal load.</td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>Load role-specific dashboard summary.</td>
+<td>P95 under 3 seconds for common dashboard views.</td>
+</tr>
+<tr>
+<td>Attendance</td>
+<td>Load class attendance roster.</td>
+<td>P95 under 2 seconds for typical class size.</td>
+</tr>
+<tr>
+<td>Attendance submission</td>
+<td>Submit attendance for a class-section.</td>
+<td>P95 under 2 seconds excluding notification delivery.</td>
+</tr>
+<tr>
+<td>Student search</td>
+<td>Search students by common filters.</td>
+<td>P95 under 2 seconds for indexed filters.</td>
+</tr>
+<tr>
+<td>Fee lookup</td>
+<td>Load student fee summary and dues.</td>
+<td>P95 under 3 seconds.</td>
+</tr>
+<tr>
+<td>Payment callback</td>
+<td>Process idempotent payment callback.</td>
+<td>P95 under 2 seconds after provider delivery.</td>
+</tr>
+<tr>
+<td>Report preview</td>
+<td>Load common filtered report.</td>
+<td>P95 under 5 seconds for standard date ranges.</td>
+</tr>
+<tr>
+<td>Large export</td>
+<td>Generate large exports asynchronously where needed.</td>
+<td>Completion time based on report size with visible status.</td>
+</tr>
+<tr>
+<td>Notification enqueue</td>
+<td>Queue notification request.</td>
+<td>P95 under 1 second for accepted messages.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-requirements">Performance Requirements<a class="headerlink" href="#performance-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PERF-001</td>
+<td>API endpoints must use pagination for list responses that can grow beyond one page.</td>
+</tr>
+<tr>
+<td>PERF-002</td>
+<td>Database queries must use appropriate indexes for tenant, date, status, class, student, and invoice lookup patterns.</td>
+</tr>
+<tr>
+<td>PERF-003</td>
+<td>Dashboard and report queries must avoid unbounded scans.</td>
+</tr>
+<tr>
+<td>PERF-004</td>
+<td>Expensive exports must run asynchronously when synchronous response time would exceed acceptable limits.</td>
+</tr>
+<tr>
+<td>PERF-005</td>
+<td>Caching must be used for stable reference data and high-read workloads where correctness permits.</td>
+</tr>
+<tr>
+<td>PERF-006</td>
+<td>File upload and download operations must not block unrelated core workflows.</td>
+</tr>
+<tr>
+<td>PERF-007</td>
+<td>Notification delivery must be decoupled from user-facing transaction completion where immediate delivery is not required.</td>
+</tr>
+<tr>
+<td>PERF-008</td>
+<td>Performance tests must cover high-volume tenant data and concurrent school workflows.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">&para;</a></h2>
+<p>EduSync must scale at two levels: within a single school tenant and across many school tenants.</p>
+<h3 id="scalability-requirements">Scalability Requirements<a class="headerlink" href="#scalability-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCALE-001</td>
+<td>The architecture must support horizontal scaling of stateless backend application instances.</td>
+</tr>
+<tr>
+<td>SCALE-002</td>
+<td>The frontend must be deployable as static assets behind a web server or CDN-compatible hosting model.</td>
+</tr>
+<tr>
+<td>SCALE-003</td>
+<td>The database design must support tenant-scoped indexing and query partitioning strategies where needed.</td>
+</tr>
+<tr>
+<td>SCALE-004</td>
+<td>Asynchronous workloads such as notifications, exports, and integration retries must scale through RabbitMQ workers.</td>
+</tr>
+<tr>
+<td>SCALE-005</td>
+<td>Redis must be used for cache and transient coordination patterns where appropriate.</td>
+</tr>
+<tr>
+<td>SCALE-006</td>
+<td>File storage must use AWS S3 or equivalent object storage rather than local application disk.</td>
+</tr>
+<tr>
+<td>SCALE-007</td>
+<td>The system must avoid tenant-specific application deployments for standard SaaS customers.</td>
+</tr>
+<tr>
+<td>SCALE-008</td>
+<td>The modular monolith must preserve domain boundaries so high-scale domains can be extracted later if required.</td>
+</tr>
+<tr>
+<td>SCALE-009</td>
+<td>The system must support growth in active schools, users, students, attendance records, invoices, payments, notifications, and report data.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scaling-model">Scaling Model<a class="headerlink" href="#scaling-model" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Users[More Users and Schools] --&gt; WebScale[Scale Web Delivery]
+    Users --&gt; ApiScale[Scale API Instances]
+    Users --&gt; WorkerScale[Scale Workers]
+
+    ApiScale --&gt; Database[(PostgreSQL)]
+    WorkerScale --&gt; Queue[(RabbitMQ)]
+    ApiScale --&gt; Cache[(Redis)]
+    ApiScale --&gt; Storage[(S3)]
+
+    Database --&gt; Indexing[Tenant-Scoped Indexing]
+    Queue --&gt; Async[Async Processing]
+    Cache --&gt; FastReads[Fast Reference Reads]
+    Storage --&gt; Files[Scalable File Storage]</code></pre>
+<h2 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h2>
+<h3 id="availability-requirements">Availability Requirements<a class="headerlink" href="#availability-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AVAIL-001</td>
+<td>The production platform must target high availability for daily school operations.</td>
+</tr>
+<tr>
+<td>AVAIL-002</td>
+<td>Planned maintenance must be communicated in advance where customer impact is expected.</td>
+</tr>
+<tr>
+<td>AVAIL-003</td>
+<td>Application instances must be replaceable without manual server reconstruction.</td>
+</tr>
+<tr>
+<td>AVAIL-004</td>
+<td>Health checks must be exposed for load balancer and monitoring systems.</td>
+</tr>
+<tr>
+<td>AVAIL-005</td>
+<td>Critical dependencies such as PostgreSQL, Redis, RabbitMQ, S3, payment gateway, and communication providers must be monitored.</td>
+</tr>
+<tr>
+<td>AVAIL-006</td>
+<td>Degraded external provider state must not make unrelated internal workflows unavailable.</td>
+</tr>
+<tr>
+<td>AVAIL-007</td>
+<td>The system must provide graceful error messages when a dependent service is unavailable.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="availability-targets">Availability Targets<a class="headerlink" href="#availability-targets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production</td>
+<td>Minimum 99.5% monthly availability for core application access during initial production maturity, with a roadmap toward 99.9%.</td>
+</tr>
+<tr>
+<td>Staging</td>
+<td>Best effort availability suitable for release validation.</td>
+</tr>
+<tr>
+<td>Development</td>
+<td>Best effort availability for engineering usage.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h2>
+<p>Security is a foundational requirement for EduSync because the system handles student data, guardian data, employee data, academic records, fee data, payment data, documents, and institutional operational information.</p>
+<h3 id="security-requirements">Security Requirements<a class="headerlink" href="#security-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEC-001</td>
+<td>All protected APIs must require authentication.</td>
+</tr>
+<tr>
+<td>SEC-002</td>
+<td>Authorization must be enforced server-side using roles, permissions, tenant context, and record scope.</td>
+</tr>
+<tr>
+<td>SEC-003</td>
+<td>Passwords must be stored using strong one-way hashing.</td>
+</tr>
+<tr>
+<td>SEC-004</td>
+<td>Authentication tokens must be signed, time-bound, and protected from client-side misuse.</td>
+</tr>
+<tr>
+<td>SEC-005</td>
+<td>Tenant isolation must be enforced in service and data access layers.</td>
+</tr>
+<tr>
+<td>SEC-006</td>
+<td>Sensitive configuration and credentials must be stored in secure environment or secret management systems.</td>
+</tr>
+<tr>
+<td>SEC-007</td>
+<td>APIs must validate all input using server-side validation.</td>
+</tr>
+<tr>
+<td>SEC-008</td>
+<td>The system must protect against common web vulnerabilities including injection, broken access control, XSS, CSRF where applicable, insecure deserialization, and security misconfiguration.</td>
+</tr>
+<tr>
+<td>SEC-009</td>
+<td>File uploads must validate type, size, ownership, and malware scanning strategy where available.</td>
+</tr>
+<tr>
+<td>SEC-010</td>
+<td>Payment callbacks must use provider signature validation or equivalent authenticity checks.</td>
+</tr>
+<tr>
+<td>SEC-011</td>
+<td>Administrative and financial actions must be auditable.</td>
+</tr>
+<tr>
+<td>SEC-012</td>
+<td>Production logs must not contain passwords, secrets, full payment credentials, or unnecessary sensitive personal data.</td>
+</tr>
+<tr>
+<td>SEC-013</td>
+<td>HTTPS must be required for production traffic.</td>
+</tr>
+<tr>
+<td>SEC-014</td>
+<td>CORS must be restricted to approved origins.</td>
+</tr>
+<tr>
+<td>SEC-015</td>
+<td>Security tests and dependency scans must be part of CI/CD readiness.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-control-diagram">Security Control Diagram<a class="headerlink" href="#security-control-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    Request[Incoming Request] --&gt; TLS[TLS Termination]
+    TLS --&gt; AuthN[Authentication]
+    AuthN --&gt; Tenant[Tenant Context Resolution]
+    Tenant --&gt; AuthZ[Authorization]
+    AuthZ --&gt; Validation[Input Validation]
+    Validation --&gt; Service[Domain Service]
+    Service --&gt; DataAccess[Tenant-Scoped Data Access]
+    DataAccess --&gt; Audit[Audit Sensitive Actions]
+    Audit --&gt; Response[Secure Response]</code></pre>
+<h2 id="maintainability">Maintainability<a class="headerlink" href="#maintainability" title="Permanent link">&para;</a></h2>
+<h3 id="maintainability-requirements">Maintainability Requirements<a class="headerlink" href="#maintainability-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAINT-001</td>
+<td>Backend code must follow clean architecture with clear Controller, Service, Repository, DTO, Mapper, Entity, Validation, Exception, Configuration, and Security responsibilities.</td>
+</tr>
+<tr>
+<td>MAINT-002</td>
+<td>Domain logic must be placed in service or domain layers, not controllers.</td>
+</tr>
+<tr>
+<td>MAINT-003</td>
+<td>Controllers must handle request mapping, validation delegation, authorization context, and response shaping.</td>
+</tr>
+<tr>
+<td>MAINT-004</td>
+<td>Repositories must encapsulate persistence access and must enforce tenant-scoped queries where applicable.</td>
+</tr>
+<tr>
+<td>MAINT-005</td>
+<td>DTOs must be used for API input and output; entities must not be exposed directly to clients.</td>
+</tr>
+<tr>
+<td>MAINT-006</td>
+<td>MapStruct must be used for repeatable mapping patterns where appropriate.</td>
+</tr>
+<tr>
+<td>MAINT-007</td>
+<td>Validation must use Bean Validation and explicit business validation where needed.</td>
+</tr>
+<tr>
+<td>MAINT-008</td>
+<td>Exceptions must use consistent error response formats.</td>
+</tr>
+<tr>
+<td>MAINT-009</td>
+<td>Frontend code must use TypeScript, component boundaries, typed API clients, React Query for server state, React Hook Form for forms, and Zustand for client state where appropriate.</td>
+</tr>
+<tr>
+<td>MAINT-010</td>
+<td>Modules must be organized to reduce coupling and support future extraction.</td>
+</tr>
+<tr>
+<td>MAINT-011</td>
+<td>Code must include tests for critical business rules, tenant isolation, authorization, fee calculations, payments, and reports.</td>
+</tr>
+<tr>
+<td>MAINT-012</td>
+<td>Documentation must be updated when product behavior, APIs, architecture, or operational procedures change.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reliability">Reliability<a class="headerlink" href="#reliability" title="Permanent link">&para;</a></h2>
+<h3 id="reliability-requirements">Reliability Requirements<a class="headerlink" href="#reliability-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REL-001</td>
+<td>Critical write operations must be transactional where consistency is required.</td>
+</tr>
+<tr>
+<td>REL-002</td>
+<td>Payment processing must be idempotent.</td>
+</tr>
+<tr>
+<td>REL-003</td>
+<td>Notification processing must use retries and failure recording.</td>
+</tr>
+<tr>
+<td>REL-004</td>
+<td>Background jobs must be safe to retry.</td>
+</tr>
+<tr>
+<td>REL-005</td>
+<td>Partial failures must be visible through logs, metrics, and user-facing status where appropriate.</td>
+</tr>
+<tr>
+<td>REL-006</td>
+<td>Fee and payment calculations must be deterministic and test-covered.</td>
+</tr>
+<tr>
+<td>REL-007</td>
+<td>Attendance and examination corrections must preserve history and audit context.</td>
+</tr>
+<tr>
+<td>REL-008</td>
+<td>Database migrations must be versioned, repeatable, and validated before production deployment.</td>
+</tr>
+<tr>
+<td>REL-009</td>
+<td>The system must fail safely when external providers are unavailable.</td>
+</tr>
+<tr>
+<td>REL-010</td>
+<td>Support teams must have enough diagnostic information to investigate production incidents without direct database manipulation as the default path.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">&para;</a></h2>
+<p>EduSync must be usable by administrators, teachers, finance staff, principals, parents, and students with varying levels of technical comfort.</p>
+<h3 id="accessibility-requirements">Accessibility Requirements<a class="headerlink" href="#accessibility-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A11Y-001</td>
+<td>Web UI must follow WCAG 2.1 AA-aligned design practices where feasible for production release.</td>
+</tr>
+<tr>
+<td>A11Y-002</td>
+<td>Forms must provide labels, validation messages, and keyboard-accessible controls.</td>
+</tr>
+<tr>
+<td>A11Y-003</td>
+<td>Color must not be the only way to communicate status.</td>
+</tr>
+<tr>
+<td>A11Y-004</td>
+<td>Text contrast must be sufficient for normal and compact operational UI.</td>
+</tr>
+<tr>
+<td>A11Y-005</td>
+<td>Navigation must be usable by keyboard for web workflows.</td>
+</tr>
+<tr>
+<td>A11Y-006</td>
+<td>Error messages must be understandable and actionable.</td>
+</tr>
+<tr>
+<td>A11Y-007</td>
+<td>Mobile UI must support platform accessibility features such as scalable text and screen reader labels where practical.</td>
+</tr>
+<tr>
+<td>A11Y-008</td>
+<td>Tables and reports must remain readable and navigable on supported devices.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
+<h3 id="logging-requirements">Logging Requirements<a class="headerlink" href="#logging-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOG-001</td>
+<td>Backend services must produce structured logs.</td>
+</tr>
+<tr>
+<td>LOG-002</td>
+<td>Logs must include correlation IDs or request IDs for tracing user journeys.</td>
+</tr>
+<tr>
+<td>LOG-003</td>
+<td>Logs must include tenant context where safe and appropriate.</td>
+</tr>
+<tr>
+<td>LOG-004</td>
+<td>Logs must record integration failures, background job failures, and security-relevant events.</td>
+</tr>
+<tr>
+<td>LOG-005</td>
+<td>Logs must not include passwords, secrets, tokens, full payment credentials, or unnecessary sensitive personal data.</td>
+</tr>
+<tr>
+<td>LOG-006</td>
+<td>Error logs must include enough context for diagnosis without exposing private data.</td>
+</tr>
+<tr>
+<td>LOG-007</td>
+<td>Production logs must be centrally searchable by authorized support and engineering users.</td>
+</tr>
+<tr>
+<td>LOG-008</td>
+<td>Log retention must follow operational, security, cost, and compliance requirements.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link">&para;</a></h2>
+<h3 id="monitoring-requirements">Monitoring Requirements<a class="headerlink" href="#monitoring-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MON-001</td>
+<td>The platform must monitor API availability, latency, error rate, and throughput.</td>
+</tr>
+<tr>
+<td>MON-002</td>
+<td>The platform must monitor database health, connection usage, slow queries, and storage utilization.</td>
+</tr>
+<tr>
+<td>MON-003</td>
+<td>The platform must monitor Redis health and cache availability.</td>
+</tr>
+<tr>
+<td>MON-004</td>
+<td>The platform must monitor RabbitMQ queue depth, consumer health, retry counts, and dead-letter queues.</td>
+</tr>
+<tr>
+<td>MON-005</td>
+<td>The platform must monitor notification delivery success and failure rates by channel.</td>
+</tr>
+<tr>
+<td>MON-006</td>
+<td>The platform must monitor payment callback failures and reconciliation mismatches.</td>
+</tr>
+<tr>
+<td>MON-007</td>
+<td>The platform must monitor disk, memory, CPU, network, and container health.</td>
+</tr>
+<tr>
+<td>MON-008</td>
+<td>Alerts must be configured for critical production failure conditions.</td>
+</tr>
+<tr>
+<td>MON-009</td>
+<td>Dashboards must provide operational visibility for engineering and support teams.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-flow">Monitoring Flow<a class="headerlink" href="#monitoring-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    App[Application] --&gt; Logs[Logs]
+    App --&gt; Metrics[Metrics]
+    App --&gt; Traces[Traces]
+    DB[(PostgreSQL)] --&gt; Metrics
+    Redis[(Redis)] --&gt; Metrics
+    Rabbit[(RabbitMQ)] --&gt; Metrics
+    Providers[External Providers] --&gt; Metrics
+
+    Logs --&gt; Observability[Observability Platform]
+    Metrics --&gt; Observability
+    Traces --&gt; Observability
+    Observability --&gt; Dashboards[Operational Dashboards]
+    Observability --&gt; Alerts[Alerts and Escalations]</code></pre>
+<h2 id="disaster-recovery">Disaster Recovery<a class="headerlink" href="#disaster-recovery" title="Permanent link">&para;</a></h2>
+<h3 id="disaster-recovery-requirements">Disaster Recovery Requirements<a class="headerlink" href="#disaster-recovery-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DR-001</td>
+<td>Production disaster recovery procedures must be documented and tested.</td>
+</tr>
+<tr>
+<td>DR-002</td>
+<td>Recovery Time Objective and Recovery Point Objective must be defined for production.</td>
+</tr>
+<tr>
+<td>DR-003</td>
+<td>Database backup restoration must be tested on a scheduled basis.</td>
+</tr>
+<tr>
+<td>DR-004</td>
+<td>Infrastructure must be reproducible from code or documented deployment procedures.</td>
+</tr>
+<tr>
+<td>DR-005</td>
+<td>Critical secrets, configuration, and deployment artifacts must be recoverable through controlled processes.</td>
+</tr>
+<tr>
+<td>DR-006</td>
+<td>Object storage recovery strategy must be documented.</td>
+</tr>
+<tr>
+<td>DR-007</td>
+<td>Incident communication procedures must identify internal owners and customer communication paths.</td>
+</tr>
+<tr>
+<td>DR-008</td>
+<td>Disaster recovery tests must capture findings and remediation actions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="initial-recovery-targets">Initial Recovery Targets<a class="headerlink" href="#initial-recovery-targets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RPO</td>
+<td>24 hours or better for initial production; improve as customer scale grows.</td>
+</tr>
+<tr>
+<td>RTO</td>
+<td>8 hours or better for initial production; improve as operational maturity grows.</td>
+</tr>
+<tr>
+<td>Backup restore test</td>
+<td>At least quarterly for production backups.</td>
+</tr>
+<tr>
+<td>DR review</td>
+<td>At least twice per year or after major architecture changes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backup">Backup<a class="headerlink" href="#backup" title="Permanent link">&para;</a></h2>
+<h3 id="backup-requirements">Backup Requirements<a class="headerlink" href="#backup-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BAK-001</td>
+<td>PostgreSQL production data must be backed up on a scheduled basis.</td>
+</tr>
+<tr>
+<td>BAK-002</td>
+<td>Backups must be encrypted at rest where supported by infrastructure.</td>
+</tr>
+<tr>
+<td>BAK-003</td>
+<td>Backup access must be restricted to authorized operational roles.</td>
+</tr>
+<tr>
+<td>BAK-004</td>
+<td>Backup retention must balance recovery requirements, compliance, and cost.</td>
+</tr>
+<tr>
+<td>BAK-005</td>
+<td>Backup restore procedures must be documented and tested.</td>
+</tr>
+<tr>
+<td>BAK-006</td>
+<td>AWS S3 stored documents must use versioning, lifecycle, or equivalent protection strategy where appropriate.</td>
+</tr>
+<tr>
+<td>BAK-007</td>
+<td>Backup failures must generate alerts.</td>
+</tr>
+<tr>
+<td>BAK-008</td>
+<td>Backup restoration must verify tenant data integrity and application compatibility.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compliance">Compliance<a class="headerlink" href="#compliance" title="Permanent link">&para;</a></h2>
+<p>EduSync must be designed with compliance readiness for Indian schools and future global expansion. This document does not provide legal advice; legal counsel must validate applicable regulatory obligations.</p>
+<h3 id="compliance-requirements">Compliance Requirements<a class="headerlink" href="#compliance-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COMP-001</td>
+<td>The system must support privacy-aware handling of student, guardian, staff, financial, and academic data.</td>
+</tr>
+<tr>
+<td>COMP-002</td>
+<td>Access to personal and financial data must be role-restricted.</td>
+</tr>
+<tr>
+<td>COMP-003</td>
+<td>Audit logs must support investigation of sensitive administrative, academic, financial, and security actions.</td>
+</tr>
+<tr>
+<td>COMP-004</td>
+<td>Data retention and deletion policies must be configurable or documented according to business and legal requirements.</td>
+</tr>
+<tr>
+<td>COMP-005</td>
+<td>Customer contracts, privacy policies, and terms must align with actual platform behavior.</td>
+</tr>
+<tr>
+<td>COMP-006</td>
+<td>The architecture must be capable of supporting future compliance requirements for global markets.</td>
+</tr>
+<tr>
+<td>COMP-007</td>
+<td>Production support access to customer data must be controlled, justified, and auditable.</td>
+</tr>
+<tr>
+<td>COMP-008</td>
+<td>Security incidents must follow documented response and communication procedures.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="api-standards">API Standards<a class="headerlink" href="#api-standards" title="Permanent link">&para;</a></h2>
+<h3 id="rest-api-requirements">REST API Requirements<a class="headerlink" href="#rest-api-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API-001</td>
+<td>APIs must follow REST principles using resource-oriented URLs.</td>
+</tr>
+<tr>
+<td>API-002</td>
+<td>APIs must use standard HTTP methods such as GET, POST, PUT, PATCH, and DELETE according to action semantics.</td>
+</tr>
+<tr>
+<td>API-003</td>
+<td>APIs must return consistent HTTP status codes.</td>
+</tr>
+<tr>
+<td>API-004</td>
+<td>APIs must use JSON request and response bodies unless a file or stream response is required.</td>
+</tr>
+<tr>
+<td>API-005</td>
+<td>APIs must use DTOs and must not expose JPA entities directly.</td>
+</tr>
+<tr>
+<td>API-006</td>
+<td>APIs must validate input and return structured validation errors.</td>
+</tr>
+<tr>
+<td>API-007</td>
+<td>APIs must enforce authentication, authorization, and tenant context.</td>
+</tr>
+<tr>
+<td>API-008</td>
+<td>List APIs must support pagination and appropriate filtering.</td>
+</tr>
+<tr>
+<td>API-009</td>
+<td>Sorting must be explicit and restricted to supported fields.</td>
+</tr>
+<tr>
+<td>API-010</td>
+<td>API errors must use a consistent error response structure.</td>
+</tr>
+<tr>
+<td>API-011</td>
+<td>Idempotency must be supported for payment callbacks and retry-sensitive operations.</td>
+</tr>
+<tr>
+<td>API-012</td>
+<td>APIs must be documented for frontend, mobile, QA, and integration consumers.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard-error-response">Standard Error Response<a class="headerlink" href="#standard-error-response" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>timestamp</td>
+<td>Server-side error timestamp.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>HTTP status code.</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Standard error category.</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Human-readable safe error message.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>API path.</td>
+</tr>
+<tr>
+<td>correlationId</td>
+<td>Request correlation identifier.</td>
+</tr>
+<tr>
+<td>validationErrors</td>
+<td>Field-level validation errors when applicable.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="coding-standards">Coding Standards<a class="headerlink" href="#coding-standards" title="Permanent link">&para;</a></h2>
+<h3 id="backend-coding-standards">Backend Coding Standards<a class="headerlink" href="#backend-coding-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language</td>
+<td>Java 21.</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Spring Boot with Spring Security, Spring Data JPA, Hibernate, Validation, MapStruct, and Lombok.</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>Clean Architecture, Domain Driven Design, SOLID principles, modular monolith, microservice-ready boundaries.</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>Handles routing, request validation entry point, authorization context, and response mapping.</td>
+</tr>
+<tr>
+<td>Service</td>
+<td>Owns domain workflows, business rules, transactions, and orchestration.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Owns persistence access and tenant-scoped queries.</td>
+</tr>
+<tr>
+<td>DTO</td>
+<td>Used for API request and response models.</td>
+</tr>
+<tr>
+<td>Mapper</td>
+<td>Uses MapStruct where appropriate for mapping between entities and DTOs.</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>Represents persistence model and must not be exposed directly to API consumers.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Uses Bean Validation plus explicit domain validation.</td>
+</tr>
+<tr>
+<td>Exception</td>
+<td>Uses consistent application exception hierarchy and error response format.</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Uses Spring Security and server-side authorization checks.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="frontend-coding-standards">Frontend Coding Standards<a class="headerlink" href="#frontend-coding-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language</td>
+<td>TypeScript.</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>React with Vite.</td>
+</tr>
+<tr>
+<td>Styling</td>
+<td>Tailwind and Shadcn components where appropriate.</td>
+</tr>
+<tr>
+<td>Server state</td>
+<td>React Query.</td>
+</tr>
+<tr>
+<td>Forms</td>
+<td>React Hook Form with schema or structured validation.</td>
+</tr>
+<tr>
+<td>Client state</td>
+<td>Zustand where shared client state is needed.</td>
+</tr>
+<tr>
+<td>API access</td>
+<td>Typed API client or consistent request abstraction.</td>
+</tr>
+<tr>
+<td>Components</td>
+<td>Role-specific, reusable, accessible, and testable components.</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>Consistent user-facing error and empty-state patterns.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobile-coding-standards">Mobile Coding Standards<a class="headerlink" href="#mobile-coding-standards" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework</td>
+<td>React Native with Expo.</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>TypeScript.</td>
+</tr>
+<tr>
+<td>Navigation</td>
+<td>Consistent role-aware navigation model.</td>
+</tr>
+<tr>
+<td>API access</td>
+<td>Shared typed API patterns where feasible.</td>
+</tr>
+<tr>
+<td>Offline behavior</td>
+<td>Explicit handling for network failures and retry where appropriate.</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td>Support platform accessibility labels and scalable UI patterns where feasible.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deployment-requirements">Deployment Requirements<a class="headerlink" href="#deployment-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="deployment-architecture-requirements">Deployment Architecture Requirements<a class="headerlink" href="#deployment-architecture-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEPLOY-001</td>
+<td>The application must be deployable using Docker containers.</td>
+</tr>
+<tr>
+<td>DEPLOY-002</td>
+<td>CI/CD must use GitHub Actions or approved equivalent.</td>
+</tr>
+<tr>
+<td>DEPLOY-003</td>
+<td>Nginx must be used for web serving, reverse proxy, or ingress responsibilities where applicable.</td>
+</tr>
+<tr>
+<td>DEPLOY-004</td>
+<td>Production deployments must use environment-specific configuration.</td>
+</tr>
+<tr>
+<td>DEPLOY-005</td>
+<td>Secrets must not be stored in source code or documentation.</td>
+</tr>
+<tr>
+<td>DEPLOY-006</td>
+<td>Database migrations must run through controlled deployment procedures.</td>
+</tr>
+<tr>
+<td>DEPLOY-007</td>
+<td>Deployments must support rollback or remediation strategy.</td>
+</tr>
+<tr>
+<td>DEPLOY-008</td>
+<td>Health checks must be available for deployment verification.</td>
+</tr>
+<tr>
+<td>DEPLOY-009</td>
+<td>Staging must be used to validate releases before production.</td>
+</tr>
+<tr>
+<td>DEPLOY-010</td>
+<td>Static frontend assets must be versioned or cache-managed to prevent stale client issues.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deployment-flow">Deployment Flow<a class="headerlink" href="#deployment-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Code[Code Commit] --&gt; CI[GitHub Actions CI]
+    CI --&gt; Tests[Automated Tests]
+    Tests --&gt; Build[Build Artifacts and Images]
+    Build --&gt; Scan[Security and Quality Checks]
+    Scan --&gt; Staging[Deploy to Staging]
+    Staging --&gt; Verify[Smoke and Regression Verification]
+    Verify --&gt; Approval[Release Approval]
+    Approval --&gt; Production[Deploy to Production]
+    Production --&gt; Monitor[Monitor Health and Metrics]</code></pre>
+<h2 id="browser-compatibility">Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Permanent link">&para;</a></h2>
+<h3 id="browser-support-requirements">Browser Support Requirements<a class="headerlink" href="#browser-support-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Support Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Chrome latest stable</td>
+<td>Fully supported.</td>
+</tr>
+<tr>
+<td>Microsoft Edge latest stable</td>
+<td>Fully supported.</td>
+</tr>
+<tr>
+<td>Mozilla Firefox latest stable</td>
+<td>Supported.</td>
+</tr>
+<tr>
+<td>Safari latest stable on macOS</td>
+<td>Supported for core workflows.</td>
+</tr>
+<tr>
+<td>Mobile Chrome latest stable</td>
+<td>Supported for responsive web workflows.</td>
+</tr>
+<tr>
+<td>Mobile Safari latest stable</td>
+<td>Supported for responsive web workflows.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="browser-requirements">Browser Requirements<a class="headerlink" href="#browser-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BROWSER-001</td>
+<td>The web application must support modern evergreen browsers.</td>
+</tr>
+<tr>
+<td>BROWSER-002</td>
+<td>The web application must provide responsive layouts for common desktop, tablet, and mobile viewport sizes.</td>
+</tr>
+<tr>
+<td>BROWSER-003</td>
+<td>The system must not depend on browser-specific behavior without fallback.</td>
+</tr>
+<tr>
+<td>BROWSER-004</td>
+<td>Critical forms must work reliably in supported browsers.</td>
+</tr>
+<tr>
+<td>BROWSER-005</td>
+<td>Browser compatibility must be verified before production release.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mobile-compatibility">Mobile Compatibility<a class="headerlink" href="#mobile-compatibility" title="Permanent link">&para;</a></h2>
+<h3 id="mobile-application-requirements">Mobile Application Requirements<a class="headerlink" href="#mobile-application-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MOBILE-001</td>
+<td>Mobile applications must be built with React Native and Expo.</td>
+</tr>
+<tr>
+<td>MOBILE-002</td>
+<td>Mobile applications must support Android and iOS according to product release scope.</td>
+</tr>
+<tr>
+<td>MOBILE-003</td>
+<td>Guardian, student, and teacher mobile workflows must be optimized for small screens.</td>
+</tr>
+<tr>
+<td>MOBILE-004</td>
+<td>Mobile apps must handle intermittent network connectivity gracefully.</td>
+</tr>
+<tr>
+<td>MOBILE-005</td>
+<td>Mobile apps must secure stored tokens and sensitive local data.</td>
+</tr>
+<tr>
+<td>MOBILE-006</td>
+<td>Push notification behavior must respect platform policies and user permissions where implemented.</td>
+</tr>
+<tr>
+<td>MOBILE-007</td>
+<td>Mobile apps must use the same authorization and tenant isolation rules as the web application.</td>
+</tr>
+<tr>
+<td>MOBILE-008</td>
+<td>Mobile releases must be tested on representative Android and iOS devices or simulators.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mobile-web-requirements">Mobile Web Requirements<a class="headerlink" href="#mobile-web-requirements" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MWEB-001</td>
+<td>Critical web workflows must remain usable on mobile browsers when users do not install the mobile app.</td>
+</tr>
+<tr>
+<td>MWEB-002</td>
+<td>Tables and reports must provide responsive alternatives or horizontal scrolling where required.</td>
+</tr>
+<tr>
+<td>MWEB-003</td>
+<td>Touch targets must be large enough for practical mobile use.</td>
+</tr>
+<tr>
+<td>MWEB-004</td>
+<td>Authentication, fee lookup, payment, homework, and notification views must be usable on mobile viewports.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schools will use modern browsers or mobile apps for daily workflows.</td>
+<td>Defines browser and mobile support scope.</td>
+</tr>
+<tr>
+<td>PostgreSQL is the system of record for transactional data.</td>
+<td>Drives data integrity and backup strategy.</td>
+</tr>
+<tr>
+<td>External providers will be used for payments, SMS, WhatsApp, and email.</td>
+<td>Requires resilient integration and monitoring.</td>
+</tr>
+<tr>
+<td>Schools will have varying data quality during onboarding.</td>
+<td>Requires validation, migration checks, and support workflows.</td>
+</tr>
+<tr>
+<td>Shared-database multi-tenancy is the selected SaaS model.</td>
+<td>Requires strict <code>school_id</code> enforcement.</td>
+</tr>
+<tr>
+<td>AWS is the initial target cloud platform.</td>
+<td>Guides deployment, storage, backup, and monitoring decisions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Required For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React, TypeScript, Vite</td>
+<td>Web application.</td>
+</tr>
+<tr>
+<td>Tailwind and Shadcn</td>
+<td>Frontend UI system.</td>
+</tr>
+<tr>
+<td>React Query</td>
+<td>Server state management.</td>
+</tr>
+<tr>
+<td>React Hook Form</td>
+<td>Form management and validation.</td>
+</tr>
+<tr>
+<td>Zustand</td>
+<td>Client state management.</td>
+</tr>
+<tr>
+<td>React Native and Expo</td>
+<td>Mobile applications.</td>
+</tr>
+<tr>
+<td>Java 21 and Spring Boot</td>
+<td>Backend services and REST APIs.</td>
+</tr>
+<tr>
+<td>Spring Security</td>
+<td>Authentication and authorization.</td>
+</tr>
+<tr>
+<td>Spring Data JPA and Hibernate</td>
+<td>Persistence layer.</td>
+</tr>
+<tr>
+<td>MapStruct</td>
+<td>DTO and entity mapping.</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>Primary database.</td>
+</tr>
+<tr>
+<td>Redis</td>
+<td>Cache and transient performance support.</td>
+</tr>
+<tr>
+<td>RabbitMQ</td>
+<td>Asynchronous messaging.</td>
+</tr>
+<tr>
+<td>AWS S3</td>
+<td>File storage.</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>Containerized deployment.</td>
+</tr>
+<tr>
+<td>AWS</td>
+<td>Cloud infrastructure.</td>
+</tr>
+<tr>
+<td>GitHub Actions</td>
+<td>CI/CD automation.</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>Web serving and reverse proxy.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="acceptance-criteria">Acceptance Criteria<a class="headerlink" href="#acceptance-criteria" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Acceptance Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Functional</td>
+<td>Critical functional requirements are implemented, tested, and traceable to product modules.</td>
+</tr>
+<tr>
+<td>Tenant Isolation</td>
+<td>Cross-tenant access tests pass for every module.</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Authentication, authorization, input validation, and audit logging pass security review.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Critical workflows meet defined performance targets under expected load.</td>
+</tr>
+<tr>
+<td>Reliability</td>
+<td>Payment, notification, fee, attendance, and examination workflows handle retries and failures safely.</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>Logs, metrics, traces, dashboards, and alerts are available for production operations.</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>Backup and restore procedures are documented and tested.</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>CI/CD, staging validation, production deployment, and rollback procedures are defined.</td>
+</tr>
+<tr>
+<td>Compatibility</td>
+<td>Supported browsers and mobile platforms pass release validation.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Relevant product, software, architecture, API, security, and operational documentation is updated.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="future-scope">Future Scope<a class="headerlink" href="#future-scope" title="Permanent link">&para;</a></h2>
+<p>Future software requirements may include multi-region deployment, stronger RPO and RTO targets, advanced autoscaling, data warehouse integration, event-driven module decomposition, GraphQL or specialized read APIs where justified, offline-first mobile workflows, enterprise SSO, MFA, advanced device management, enhanced AI governance, custom report builder infrastructure, multi-currency support, global compliance controls, and partner integration marketplace capabilities.</p>
+<p>Future scope must be evaluated through business value, customer demand, operational cost, security impact, and architectural readiness.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>EduSync <code>AI_INSTRUCTIONS.md</code>.</li>
+<li>EduSync Vision Document: <code>docs/getting-started/vision.md</code>.</li>
+<li>EduSync Business Requirements Document: <code>docs/business/business-requirements.md</code>.</li>
+<li>EduSync Product Requirements Document: <code>docs/product/product-requirements.md</code>.</li>
+<li>EduSync documentation structure under <code>docs/</code>.</li>
+</ul>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Status</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2026-07-02</td>
+<td>EduSync Product, Architecture, Engineering, Security, DevOps, and QA Office</td>
+<td>Draft for Architecture and Engineering Review</td>
+<td>Initial enterprise software requirements specification created.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/your-org/edusync-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

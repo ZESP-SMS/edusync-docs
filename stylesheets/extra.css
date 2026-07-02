@@ -1,0 +1,62 @@
+.hero-block {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  color: white;
+}
+
+.hero-block h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.hero-block p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-block .md-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-right: 0.75rem;
+  background: white;
+  color: var(--md-primary-fg-color);
+}
+
+.hero-block .md-button--primary {
+  background: var(--md-accent-fg-color);
+  color: white;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.feature-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.7rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-block,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

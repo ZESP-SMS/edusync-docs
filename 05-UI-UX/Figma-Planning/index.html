@@ -1,0 +1,4745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product, architecture, and engineering documentation for EduSync">
+      
+      
+        <meta name="author" content="EduSync Team">
+      
+      
+        <link rel="canonical" href="https://example.com/edusync-docs/05-UI-UX/Figma-Planning/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../06-Architecture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Figma Planning - EduSync Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#figma-uiux-planning-and-design-system-specification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduSync Documentation" class="md-header__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduSync Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Figma Planning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduSync Documentation" class="md-nav__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduSync Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Vision/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Business-Requirements/business-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/user-stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Stories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Product-Requirements/use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Software-Requirements/software-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UI/UX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma Planning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Out of Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-figma-file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Figma File Organization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Figma File Organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-navigation-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout Navigation Flow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-design-system-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Design System Specification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Design System Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-color-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Color Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-typography-specimen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Typography Specimen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-layout-grid-and-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Layout Grid and Breakpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-spacing-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Spacing Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-elevation-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Elevation &amp; Shape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-reusable-ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Reusable UI Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-screen-specifications-by-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Screen Specifications by Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Screen Specifications by Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-authentication-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Authentication Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1 Authentication Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-splash-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Splash Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-onboarding-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Onboarding Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-login-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Login Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-otp-verification-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: OTP Verification Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-5-password-reset-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 5: Password Reset Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-school-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 School Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2 School Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-school-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: School Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-academic-structure-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Academic Structure Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-student-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Student Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.3 Student Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-student-registration-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Student Registration Form
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-student-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Student Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-student-profile-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Student Profile View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-guardian-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Guardian Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.4 Guardian Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-guardian-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Guardian Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-guardian-profile-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Guardian Profile Detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-student-linkage-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Student Linkage Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-teacher-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Teacher Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.5 Teacher Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-teacher-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Teacher Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-teacher-profile-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Teacher Profile Detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-class-assignment-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Class Assignment Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-employee-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 Employee Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.6 Employee Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-employee-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Employee List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-role-assignment-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Role Assignment Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-attendance-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 Attendance Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7 Attendance Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-attendance-marking-roster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Attendance Marking Roster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-attendance-calendar-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Attendance Calendar Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-attendance-analytics-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Attendance Analytics Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#138-homework-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.8 Homework Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.8 Homework Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-homework-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Homework Creator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-homework-roster-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Homework Roster List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-homework-detail-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Homework Detail View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#139-examination-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.9 Examination Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.9 Examination Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-exam-term-setup-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Exam Term Setup Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-exam-schedule-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Exam Schedule Sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-exam-marks-entry-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Exam Marks Entry Grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-report-card-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: Report Card Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1310-fees-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.10 Fees Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10 Fees Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-fee-component-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Fee Component Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-fee-invoicing-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Fee Invoicing Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-payer-invoices-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Payer Invoices Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1311-payments-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.11 Payments Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.11 Payments Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-payment-gateway-checkout-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Payment Gateway Checkout Sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-transaction-receipt-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Transaction Receipt History
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312-reports-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.12 Reports Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.12 Reports Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-operational-reports-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Operational Reports Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313-dashboard-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.13 Dashboard Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13 Dashboard Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-owner-principal-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Owner &amp; Principal Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-finance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Finance Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-teacher-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Teacher Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-guardian-student-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: Guardian &amp; Student Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-5-super-admin-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 5: Super Admin Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1314-notification-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.14 Notification Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.14 Notification Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-multi-channel-logger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Multi-Channel Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-message-template-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Message Template Creator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1315-subscription-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.15 Subscription Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.15 Subscription Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-tenant-plan-configurator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Tenant Plan Configurator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1316-super-admin-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.16 Super Admin Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.16 Super Admin Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-super-admin-tenant-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Super Admin Tenant Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1317-audit-logs-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.17 Audit Logs Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.17 Audit Logs Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-system-audit-log-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: System Audit Log List
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1318-ai-services-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.18 AI Services Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.18 AI Services Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-ai-assistant-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: AI Assistant Sidebar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06-Architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C4 Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C4 Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-1-System-Context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 - System Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-2-Container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 - Container Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-3-Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 - Component Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../07-Database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-Database/Database-Schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-Backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-DevOps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-Roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-out-of-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Out of Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-figma-file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Figma File Organization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Figma File Organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-navigation-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout Navigation Flow Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-design-system-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Design System Specification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Design System Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-color-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Color Tokens
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-typography-specimen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Typography Specimen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-layout-grid-and-breakpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Layout Grid and Breakpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-spacing-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.4 Spacing Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-elevation-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.5 Elevation &amp; Shape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-reusable-ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.6 Reusable UI Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-screen-specifications-by-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Screen Specifications by Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Screen Specifications by Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-authentication-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Authentication Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1 Authentication Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-splash-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Splash Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-onboarding-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Onboarding Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-login-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Login Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-otp-verification-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: OTP Verification Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-5-password-reset-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 5: Password Reset Screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-school-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 School Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2 School Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-school-profile-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: School Profile Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-academic-structure-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Academic Structure Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-student-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Student Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.3 Student Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-student-registration-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Student Registration Form
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-student-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Student Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-student-profile-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Student Profile View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-guardian-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Guardian Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.4 Guardian Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-guardian-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Guardian Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-guardian-profile-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Guardian Profile Detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-student-linkage-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Student Linkage Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-teacher-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5 Teacher Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.5 Teacher Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-teacher-directory-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Teacher Directory List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-teacher-profile-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Teacher Profile Detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-class-assignment-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Class Assignment Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136-employee-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6 Employee Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.6 Employee Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-employee-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Employee List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-role-assignment-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Role Assignment Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137-attendance-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.7 Attendance Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7 Attendance Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-attendance-marking-roster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Attendance Marking Roster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-attendance-calendar-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Attendance Calendar Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-attendance-analytics-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Attendance Analytics Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#138-homework-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.8 Homework Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.8 Homework Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-homework-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Homework Creator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-homework-roster-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Homework Roster List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-homework-detail-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Homework Detail View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#139-examination-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.9 Examination Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.9 Examination Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-exam-term-setup-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Exam Term Setup Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-exam-schedule-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Exam Schedule Sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-exam-marks-entry-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Exam Marks Entry Grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-report-card-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: Report Card Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1310-fees-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.10 Fees Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10 Fees Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-fee-component-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Fee Component Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-fee-invoicing-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Fee Invoicing Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-payer-invoices-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Payer Invoices Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1311-payments-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.11 Payments Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.11 Payments Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-payment-gateway-checkout-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Payment Gateway Checkout Sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-transaction-receipt-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Transaction Receipt History
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1312-reports-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.12 Reports Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.12 Reports Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-operational-reports-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Operational Reports Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1313-dashboard-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.13 Dashboard Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13 Dashboard Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-owner-principal-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Owner &amp; Principal Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-finance-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Finance Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-3-teacher-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 3: Teacher Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-4-guardian-student-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 4: Guardian &amp; Student Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-5-super-admin-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 5: Super Admin Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1314-notification-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.14 Notification Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.14 Notification Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-multi-channel-logger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Multi-Channel Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-2-message-template-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 2: Message Template Creator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1315-subscription-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.15 Subscription Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.15 Subscription Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-tenant-plan-configurator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Tenant Plan Configurator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1316-super-admin-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.16 Super Admin Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.16 Super Admin Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-super-admin-tenant-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: Super Admin Tenant Console
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1317-audit-logs-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.17 Audit Logs Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.17 Audit Logs Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-system-audit-log-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: System Audit Log List
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1318-ai-services-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.18 AI Services Module
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.18 AI Services Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#screen-1-ai-assistant-sidebar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen 1: AI Assistant Sidebar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="figma-uiux-planning-and-design-system-specification">Figma UI/UX Planning and Design System Specification<a class="headerlink" href="#figma-uiux-planning-and-design-system-specification" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Figma UI/UX Planning and Design System Specification</td>
+</tr>
+<tr>
+<td>Document ID</td>
+<td>DOC-UX-FIGMA-001</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>EduSync UX and Product Team</td>
+</tr>
+<tr>
+<td>Created Date</td>
+<td>2026-07-02</td>
+</tr>
+<tr>
+<td>Last Updated</td>
+<td>2026-07-02</td>
+</tr>
+<tr>
+<td>Reviewers</td>
+<td>Principal Architect, Head of Product, Engineering Leads</td>
+</tr>
+<tr>
+<td>Approval Status</td>
+<td>Pending Review</td>
+</tr>
+<tr>
+<td>Confidentiality</td>
+<td>Internal</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-revision-history">1. Revision History<a class="headerlink" href="#1-revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Status</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2026-07-02</td>
+<td>EduSync UX and Product Team</td>
+<td>Draft</td>
+<td>Initial version of the Figma planning and Design System specification document.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#2-executive-summary">2. Executive Summary</a></li>
+<li><a href="#3-purpose">3. Purpose</a></li>
+<li><a href="#4-objectives">4. Objectives</a></li>
+<li><a href="#5-scope">5. Scope</a></li>
+<li><a href="#6-out-of-scope">6. Out of Scope</a></li>
+<li><a href="#7-audience">7. Audience</a></li>
+<li><a href="#8-definitions">8. Definitions</a></li>
+<li><a href="#9-assumptions">9. Assumptions</a></li>
+<li><a href="#10-dependencies">10. Dependencies</a></li>
+<li><a href="#11-figma-file-organization">11. Figma File Organization</a></li>
+<li><a href="#12-design-system-specification">12. Design System Specification</a></li>
+<li><a href="#121-color-tokens">12.1 Color Tokens</a></li>
+<li><a href="#122-typography-specimen">12.2 Typography Specimen</a></li>
+<li><a href="#123-layout-grid-and-breakpoints">12.3 Layout Grid and Breakpoints</a></li>
+<li><a href="#124-spacing-scale">12.4 Spacing Scale</a></li>
+<li><a href="#125-elevation--shape">12.5 Elevation &amp; Shape</a></li>
+<li><a href="#126-reusable-ui-components">12.6 Reusable UI Components</a></li>
+<li><a href="#13-screen-specifications-by-module">13. Screen Specifications by Module</a></li>
+<li><a href="#131-authentication-module">13.1 Authentication Module</a></li>
+<li><a href="#132-school-module">13.2 School Module</a></li>
+<li><a href="#133-student-module">13.3 Student Module</a></li>
+<li><a href="#134-guardian-module">13.4 Guardian Module</a></li>
+<li><a href="#135-teacher-module">13.5 Teacher Module</a></li>
+<li><a href="#136-employee-module">13.6 Employee Module</a></li>
+<li><a href="#137-attendance-module">13.7 Attendance Module</a></li>
+<li><a href="#138-homework-module">13.8 Homework Module</a></li>
+<li><a href="#139-examination-module">13.9 Examination Module</a></li>
+<li><a href="#1310-fees-module">13.10 Fees Module</a></li>
+<li><a href="#1311-payments-module">13.11 Payments Module</a></li>
+<li><a href="#1312-reports-module">13.12 Reports Module</a></li>
+<li><a href="#1313-dashboard-module">13.13 Dashboard Module</a></li>
+<li><a href="#1314-notification-module">13.14 Notification Module</a></li>
+<li><a href="#1315-subscription-module">13.15 Subscription Module</a></li>
+<li><a href="#1316-super-admin-module">13.16 Super Admin Module</a></li>
+<li><a href="#1317-audit-logs-module">13.17 Audit Logs Module</a></li>
+<li><a href="#1318-ai-services-module">13.18 AI Services Module</a></li>
+<li><a href="#14-references">14. References</a></li>
+<li><a href="#15-conclusion">15. Conclusion</a></li>
+</ul>
+<hr />
+<h2 id="2-executive-summary">2. Executive Summary<a class="headerlink" href="#2-executive-summary" title="Permanent link">&para;</a></h2>
+<p>This document defines the comprehensive user interface and experience (UI/UX) planning for the EduSync platform. It outlines the Figma file page structure, visual brand guidelines, design system components, and detailed layout specifications for every core product module. By detailing each user screen, interaction state, responsive behavior, and layout pattern, this specification acts as the design system of record that bridge product requirements and engineering implementation.</p>
+<hr />
+<h2 id="3-purpose">3. Purpose<a class="headerlink" href="#3-purpose" title="Permanent link">&para;</a></h2>
+<p>The purpose of this document is to catalog and describe the visual foundations, reusable component standards, and screen states for the entire EduSync SaaS platform. This planning document ensures visual alignment across product engineering, establishes strict layouts for multi-tenant and role-based views, and provides detailed reference schemas for frontend and mobile development teams.</p>
+<hr />
+<h2 id="4-objectives">4. Objectives<a class="headerlink" href="#4-objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Standardize UI Foundations</strong>: Document the colors, typography, spacing, grids, and visual elevations based on Material Design 3.</li>
+<li><strong>Map Screen States</strong>: Define the empty, error, loading, and success states for all screens across all modules.</li>
+<li><strong>Ensure Responsive Consistency</strong>: Outline the transition patterns between React (web/desktop) and React Native (mobile) layouts.</li>
+<li><strong>Define Navigation Archetype</strong>: Map the role-based bottom-tab and drawer navigation hierarchies.</li>
+<li><strong>Improve Component Reusability</strong>: Enforce modularity using twelve core primitive components.</li>
+</ul>
+<hr />
+<h2 id="5-scope">5. Scope<a class="headerlink" href="#5-scope" title="Permanent link">&para;</a></h2>
+<p>This document covers all user-facing panels, mobile app screens, web dashboards, and administrative systems for the 18 product modules:
+- Authentication, School, Student, Guardian, Teacher, Employee, Attendance, Homework, Examination, Fees, Payments, Reports, Dashboard, Notification, Subscription, Super Admin, Audit Logs, and AI Services.</p>
+<hr />
+<h2 id="6-out-of-scope">6. Out of Scope<a class="headerlink" href="#6-out-of-scope" title="Permanent link">&para;</a></h2>
+<p>This document does not define:
+- Concrete CSS or TypeScript styling code.
+- REST API endpoint contracts.
+- Database index configurations.
+- Testing frameworks (such as Jest or Playwright scripts).</p>
+<hr />
+<h2 id="7-audience">7. Audience<a class="headerlink" href="#7-audience" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>UI/UX Designers</strong>: To structure and link the Figma workspace.</li>
+<li><strong>Frontend Engineers</strong>: To implement the React web shell and styles.</li>
+<li><strong>Mobile Engineers</strong>: To build the React Native Expo app screens.</li>
+<li><strong>QA Engineers</strong>: To write test cases for edge cases, error states, and responsive views.</li>
+<li><strong>Product Owners</strong>: To verify visual flow matches business rules.</li>
+</ul>
+<hr />
+<h2 id="8-definitions">8. Definitions<a class="headerlink" href="#8-definitions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Material Design 3 (M3)</strong>: The default design framework guidelines from Google.</li>
+<li><strong>M3 Tokens</strong>: Semantic naming conventions (e.g., Primary, On-Primary, Surface) that map to CSS or NativeWind variables.</li>
+<li><strong>Tonal Colors</strong>: Soft, low-contrast background fills (e.g., Primary Container) designed to group content.</li>
+<li><strong>Bottom Navigation Tab</strong>: The main tab bar positioned at the bottom of mobile screens.</li>
+<li><strong>Drawer Navigation</strong>: A side menu container that slides out to reveal secondary views.</li>
+<li><strong>Skeleton Loader</strong>: Shaded placeholder blocks that represent content loading.</li>
+<li><strong>Idempotent State</strong>: Visual components that remain unchanged if a user performs the same action repeatedly.</li>
+</ul>
+<hr />
+<h2 id="9-assumptions">9. Assumptions<a class="headerlink" href="#9-assumptions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Inter Font Availability</strong>: The typography hierarchy assumes that the Inter font family is loaded via CDN or local assets.</li>
+<li><strong>Material Symbols Rounded</strong>: Icon naming follows the Google Material Symbols Rounded family.</li>
+<li><strong>Role Permissions Resolution</strong>: The app shell resolves user roles during bootstrapping to dynamically show tabs or drawers.</li>
+</ul>
+<hr />
+<h2 id="10-dependencies">10. Dependencies<a class="headerlink" href="#10-dependencies" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Design System Asset Library</strong>: Access to the WOFF2 font files (<code>Inter</code> and <code>Material Symbols Rounded</code>) is required for offline page rendering and design fidelity.</li>
+<li><strong>Product Requirements Alignment</strong>: This document depends directly on the core capabilities and rules specified in <code>docs/03-Product-Requirements/product-requirements.md</code>.</li>
+<li><strong>Figma Desktop or Web Client</strong>: Editing and rendering the specified Figma canvas frames requires the use of Figma Desktop or Web interface version 120 or higher.</li>
+</ul>
+<hr />
+<h2 id="11-figma-file-organization">11. Figma File Organization<a class="headerlink" href="#11-figma-file-organization" title="Permanent link">&para;</a></h2>
+<p>The Figma canvas must be partitioned into the following sequential pages to separate design contexts:</p>
+<table>
+<thead>
+<tr>
+<th>Page Number</th>
+<th>Page Name</th>
+<th>Scope &amp; Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page 1</td>
+<td>🗺️ Roadmap &amp; Changelog</td>
+<td>Change history log, layout patterns, color scopes, Figma system indicators.</td>
+</tr>
+<tr>
+<td>Page 2</td>
+<td>🎨 Design System Foundations</td>
+<td>Colors, Typography specimen, spacing grid, shadows, border radii.</td>
+</tr>
+<tr>
+<td>Page 3</td>
+<td>🧱 Reusable UI Primitives</td>
+<td>Primary, secondary, tonal buttons; input text fields; card structures, alerts, sheets.</td>
+</tr>
+<tr>
+<td>Page 4</td>
+<td>🔐 Identity &amp; Access</td>
+<td>Login forms, password reset slides, multi-tenant OTP verification.</td>
+</tr>
+<tr>
+<td>Page 5</td>
+<td>🏢 Directories &amp; Config</td>
+<td>School profile, student directory, teacher mapping console, employee assignments.</td>
+</tr>
+<tr>
+<td>Page 6</td>
+<td>📚 Academic Hub</td>
+<td>Attendance rosters, homework boards, exam configurations, marks grids.</td>
+</tr>
+<tr>
+<td>Page 7</td>
+<td>💳 Financial Center</td>
+<td>Fee setup panels, concessions, invoices, payment gateways, receipts.</td>
+</tr>
+<tr>
+<td>Page 8</td>
+<td>📊 Insights &amp; Comms</td>
+<td>Chat threads, announcements feeds, operational reports, role dashboards.</td>
+</tr>
+<tr>
+<td>Page 9</td>
+<td>🛠️ Platform Governance</td>
+<td>Subscription manager, super admin controls, audit logs console, AI sidebar.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout-navigation-flow-diagram">Layout Navigation Flow Diagram<a class="headerlink" href="#layout-navigation-flow-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    Login[Authentication Screen] --&gt;|Resolves Role| Shell[Main Application Shell]
+    Shell --&gt;|Principal / Owner| PrincipalDash[Principal Dashboard]
+    Shell --&gt;|School Admin| AdminConsole[Admin Configuration Console]
+    Shell --&gt;|Finance User| FeeConsole[Fee &amp; Payments Portal]
+    Shell --&gt;|Teacher| ClassRoster[Classroom Attendance &amp; Homework Grid]
+    Shell --&gt;|Guardian / Student| ParentPortal[Student Progress &amp; Fee Payment Hub]
+
+    AdminConsole --&gt; Directories[Directories &amp; School Profile]
+    ClassRoster --&gt; HomeworkBoard[Homework Assignments &amp; Submissions]
+    ClassRoster --&gt; GradingGrid[Grades &amp; Marks Grid]
+    FeeConsole --&gt; InvoiceBatch[Fee Invoice Batch Processing]
+    FeeConsole --&gt; PaymentLogs[Payments History &amp; Reconciliation]
+    ParentPortal --&gt; HomeworkView[View Homework]
+    ParentPortal --&gt; PayGateway[Initiate Fee Payment Gateway]</code></pre>
+<hr />
+<h2 id="12-design-system-specification">12. Design System Specification<a class="headerlink" href="#12-design-system-specification" title="Permanent link">&para;</a></h2>
+<h3 id="121-color-tokens">12.1 Color Tokens<a class="headerlink" href="#121-color-tokens" title="Permanent link">&para;</a></h3>
+<p>Every color token maps to a specific hex code in both Light and Dark modes:</p>
+<table>
+<thead>
+<tr>
+<th>Token Name</th>
+<th>Light Mode Hex</th>
+<th>Dark Mode Hex</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>primary</code></td>
+<td><code>#7C3AED</code></td>
+<td><code>#CFBCFF</code></td>
+<td>Violet primary accent for CTA fills, active states.</td>
+</tr>
+<tr>
+<td><code>on-primary</code></td>
+<td><code>#FFFFFF</code></td>
+<td><code>#341277</code></td>
+<td>High-contrast label/icon color placed on primary fills.</td>
+</tr>
+<tr>
+<td><code>primary-container</code></td>
+<td><code>#ECE0FF</code></td>
+<td><code>#4A2E8A</code></td>
+<td>Soft backdrop for grouping related actions or active tabs.</td>
+</tr>
+<tr>
+<td><code>on-primary-container</code></td>
+<td><code>#290055</code></td>
+<td><code>#EDDCFF</code></td>
+<td>Text or icon color inside a primary container.</td>
+</tr>
+<tr>
+<td><code>accent</code></td>
+<td><code>#0D9488</code></td>
+<td><code>#2DD4BF</code></td>
+<td>Teal color representing auxiliary features like metrics, success tags.</td>
+</tr>
+<tr>
+<td><code>accent-container</code></td>
+<td><code>#CFFAF4</code></td>
+<td><code>#0C4A43</code></td>
+<td>Tonal teal background.</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>#16A34A</code></td>
+<td><code>#4ADE80</code></td>
+<td>Green semantic color for positive states, present attendance.</td>
+</tr>
+<tr>
+<td><code>warning</code></td>
+<td><code>#F59E0B</code></td>
+<td><code>#FBBF24</code></td>
+<td>Amber semantic color for pending invoices, late arrivals.</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td><code>#DC2626</code></td>
+<td><code>#FF8A80</code></td>
+<td>Red semantic color for failed transactions, absent marks.</td>
+</tr>
+<tr>
+<td><code>surface</code></td>
+<td><code>#FFFFFF</code></td>
+<td><code>#1A1820</code></td>
+<td>Container cards, fields, sheets backdrops.</td>
+</tr>
+<tr>
+<td><code>surface-2</code></td>
+<td><code>#F3EFFA</code></td>
+<td><code>#221F2B</code></td>
+<td>Navigation bar backgrounds, inputs default states.</td>
+</tr>
+<tr>
+<td><code>surface-3</code></td>
+<td><code>#ECE5F7</code></td>
+<td><code>#2A2734</code></td>
+<td>Border lines, inactive select options.</td>
+</tr>
+<tr>
+<td><code>background</code></td>
+<td><code>#F6F3FC</code></td>
+<td><code>#121017</code></td>
+<td>Canvas background for the entire viewport.</td>
+</tr>
+<tr>
+<td><code>outline</code></td>
+<td><code>#CFC8DA</code></td>
+<td><code>#494351</code></td>
+<td>Divider line color, default border outlines.</td>
+</tr>
+<tr>
+<td><code>outline-variant</code></td>
+<td><code>#E8E2F1</code></td>
+<td><code>#332F3C</code></td>
+<td>Subtle secondary borders, card separations.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-typography-specimen">12.2 Typography Specimen<a class="headerlink" href="#122-typography-specimen" title="Permanent link">&para;</a></h3>
+<p>Font family is <strong>Inter</strong>. Standard Material Design 3 type-scaling is configured as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Style Class</th>
+<th>Font Size</th>
+<th>Weight</th>
+<th>Line Height</th>
+<th>Letter Spacing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Display Large</code></td>
+<td>57px</td>
+<td>800 (ExtraBold)</td>
+<td>64px</td>
+<td>-0.02em</td>
+</tr>
+<tr>
+<td><code>Headline Medium</code></td>
+<td>28px</td>
+<td>700 (Bold)</td>
+<td>36px</td>
+<td>-0.01em</td>
+</tr>
+<tr>
+<td><code>Title Large</code></td>
+<td>22px</td>
+<td>700 (Bold)</td>
+<td>28px</td>
+<td>0.00em</td>
+</tr>
+<tr>
+<td><code>Title Medium</code></td>
+<td>16px</td>
+<td>600 (SemiBold)</td>
+<td>24px</td>
+<td>0.00em</td>
+</tr>
+<tr>
+<td><code>Body Large</code></td>
+<td>16px</td>
+<td>400 (Regular)</td>
+<td>24px</td>
+<td>0.00em</td>
+</tr>
+<tr>
+<td><code>Body Medium</code></td>
+<td>14px</td>
+<td>400 (Regular)</td>
+<td>20px</td>
+<td>0.00em</td>
+</tr>
+<tr>
+<td><code>Label / Caption</code></td>
+<td>12px</td>
+<td>600 (SemiBold)</td>
+<td>16px</td>
+<td>0.04em (Uppercase)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-layout-grid-and-breakpoints">12.3 Layout Grid and Breakpoints<a class="headerlink" href="#123-layout-grid-and-breakpoints" title="Permanent link">&para;</a></h3>
+<p>To align web dashboards and mobile screens, designs are locked to the following grid containers:</p>
+<ul>
+<li><strong>Desktop (Web - Breakpoint &gt;= 1024px)</strong>:</li>
+<li>Width: 1440px canvas.</li>
+<li>Columns: 12-column grid.</li>
+<li>Gutter: 24px width.</li>
+<li>Margin: 80px side margins.</li>
+<li><strong>Mobile (React Native - Breakpoint &lt;= 600px)</strong>:</li>
+<li>Width: 375px canvas.</li>
+<li>Columns: 4-column grid.</li>
+<li>Gutter: 16px width.</li>
+<li>Margin: 16px side margins.</li>
+</ul>
+<h3 id="124-spacing-scale">12.4 Spacing Scale<a class="headerlink" href="#124-spacing-scale" title="Permanent link">&para;</a></h3>
+<p>The layout is anchored to an <strong>8pt grid</strong> (with a 4pt micro-scale for compact widgets):</p>
+<ul>
+<li><code>xs</code>: 4px (Padding inside badges, micro gaps)</li>
+<li><code>sm</code>: 8px (Inner component spacing, icon-to-label gaps)</li>
+<li><code>md</code>: 12px (Form vertical spacing, card inner item margins)</li>
+<li><code>lg</code>: 16px (Card paddings, mobile screen outer gutters)</li>
+<li><code>xl</code>: 24px (Section vertical margins, outer grid separation gaps)</li>
+<li><code>2xl</code>: 32px (Header bottom margins, login container offsets)</li>
+<li><code>3xl</code>: 48px (Hero component margins)</li>
+</ul>
+<h3 id="125-elevation-shape">12.5 Elevation &amp; Shape<a class="headerlink" href="#125-elevation-shape" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Level 1 (Default Cards)</strong>: Border radius <code>12px</code> / Box shadow <code>0px 1px 2px rgba(28, 20, 45, 0.1)</code>.</li>
+<li><strong>Level 2 (Dropdowns, Sheets)</strong>: Border radius <code>16px</code> / Box shadow <code>0px 4px 12px rgba(28, 20, 45, 0.15)</code>.</li>
+<li><strong>Level 3 (Modal Dialogs)</strong>: Border radius <code>24px</code> / Box shadow <code>0px 12px 32px rgba(28, 20, 45, 0.22)</code>.</li>
+<li><strong>Pill Shape</strong>: Fills with fully rounded edges (<code>999px</code> radius) used for tag badges and button outlines.</li>
+</ul>
+<h3 id="126-reusable-ui-components">12.6 Reusable UI Components<a class="headerlink" href="#126-reusable-ui-components" title="Permanent link">&para;</a></h3>
+<p>Designs must consume only these structured primitives:</p>
+<ol>
+<li><strong><code>AppButton</code></strong>: Consumes <code>Filled</code> (primary actions), <code>Tonal</code> (secondary actions), <code>Outlined</code> (actions needing boundaries), and <code>Text</code> (low priority) states.</li>
+<li><strong><code>AppInput</code></strong>: Handles email/password/text entries. Consumes <code>Default</code>, <code>Focused</code> (2px outline), <code>Error</code> (red outline), and <code>Disabled</code> states.</li>
+<li><strong><code>AppCard</code></strong>: Content wrapper implementing elevation layers.</li>
+<li><strong><code>AppAvatar</code></strong>: Circular representation of name/profile.</li>
+<li><strong><code>AppHeader</code></strong>: Layout bar for screen titles and actions.</li>
+<li><strong><code>Loader</code></strong>: Indeterminate circular loader or skeleton layout bars.</li>
+<li><strong><code>EmptyState</code></strong>: Fills empty boards with illustrative graphic and recovery actions.</li>
+<li><strong><code>ModalDialog</code></strong>: Level 3 container positioned over the scrim backdrop for critical confirmations.</li>
+<li><strong><code>BottomSheet</code></strong>: Slide-up pane for action options.</li>
+<li><strong><code>Badge</code></strong>: Tonal pill shapes indicating status (e.g., Paid, Pending).</li>
+<li><strong><code>NotificationBanner</code></strong>: Floating banner for real-time announcements.</li>
+<li><strong><code>StatusIndicator</code></strong>: Dot representing connectivity or online status.</li>
+</ol>
+<hr />
+<h2 id="13-screen-specifications-by-module">13. Screen Specifications by Module<a class="headerlink" href="#13-screen-specifications-by-module" title="Permanent link">&para;</a></h2>
+<h3 id="131-authentication-module">13.1 Authentication Module<a class="headerlink" href="#131-authentication-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-splash-screen">Screen 1: Splash Screen<a class="headerlink" href="#screen-1-splash-screen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Splash Screen</li>
+<li><strong>Screen Purpose</strong>: Initialize the session token, resolve tenant context, and authenticate credentials.</li>
+<li><strong>Components</strong>: Large central school icon badge, title label, subtitle label, circular loading indicator.</li>
+<li><strong>Layout</strong>: Centered single-column layout on an absolute gradient background.</li>
+<li><strong>Navigation</strong>: Transitions automatically to <code>Onboarding</code> if unauthenticated, or directly to <code>Dashboard</code> (with resolved role tabs) if authenticated.</li>
+<li><strong>User Flow</strong>: User opens the app -&gt; system checks session token -&gt; transitions to correct route.</li>
+<li><strong>Mobile Layout</strong>: Full-screen centered icon with a bottom loading indicator.</li>
+<li><strong>Desktop Layout</strong>: Stretched full-screen gradient with absolute middle centered container.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: Display error message banner "Failed to authenticate session" with a retry button.</li>
+<li><strong>Loading States</strong>: Display full-screen unpacking loader showing "Unpacking...".</li>
+<li><strong>Success States</strong>: Direct page transition to home.</li>
+</ul>
+<h4 id="screen-2-onboarding-screen">Screen 2: Onboarding Screen<a class="headerlink" href="#screen-2-onboarding-screen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Onboarding Screen</li>
+<li><strong>Screen Purpose</strong>: Introduce key platform benefits to newly registered users.</li>
+<li><strong>Components</strong>: Illustrative graphics, feature headings, descriptive body text, slider pagination dots, skip button, next arrow button.</li>
+<li><strong>Layout</strong>: Split screen. Top 60% dedicated to graphical illustrations, bottom 40% containing typography blocks and primary actions.</li>
+<li><strong>Navigation</strong>: Next button shifts slider index. Skip or final next button routes to <code>Login</code>.</li>
+<li><strong>User Flow</strong>: User swipes through pages or clicks next -&gt; reaches the final screen -&gt; clicks next -&gt; lands on Login.</li>
+<li><strong>Mobile Layout</strong>: Staged vertically, using full-width slides.</li>
+<li><strong>Desktop Layout</strong>: Wide split-screen with illustrations on the left, textual slides and actions on the right.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: Not applicable.</li>
+<li><strong>Loading States</strong>: Quick slide transitions with subtle opacity changes.</li>
+<li><strong>Success States</strong>: Transitions user to the Login layout.</li>
+</ul>
+<h4 id="screen-3-login-screen">Screen 3: Login Screen<a class="headerlink" href="#screen-3-login-screen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Login Screen</li>
+<li><strong>Screen Purpose</strong>: Capture user credentials and authenticate the school tenant session.</li>
+<li><strong>Components</strong>: Tenant input field (or school selection dropdown), identifier text field, password field with visibility toggle, forgot password action, primary login button, biometrics login button.</li>
+<li><strong>Layout</strong>: Vertical form container centered inside the screen. Logo card positioned at the top.</li>
+<li><strong>Navigation</strong>: Login button triggers credentials validation. Forgot password links to <code>Reset Password</code>.</li>
+<li><strong>User Flow</strong>: User inputs email/roll number and password -&gt; clicks Sign In -&gt; system requests verification -&gt; success redirects to home dashboard.</li>
+<li><strong>Mobile Layout</strong>: Single-column vertical scroll with wide inputs.</li>
+<li><strong>Desktop Layout</strong>: 12-column grid. Left side features a high-fidelity brand graphic, right side hosts the credentials card.</li>
+<li><strong>Empty States</strong>: Fields are empty by default; input validation displays inline validation states under fields.</li>
+<li><strong>Error States</strong>: Invalid credentials trigger a toast notification "Incorrect username or password".</li>
+<li><strong>Loading States</strong>: Login button displays an inline loading spinner; fields are disabled during the verification request.</li>
+<li><strong>Success States</strong>: Sets session token in storage, transitions user to the Dashboard.</li>
+</ul>
+<h4 id="screen-4-otp-verification-screen">Screen 4: OTP Verification Screen<a class="headerlink" href="#screen-4-otp-verification-screen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: OTP Verification Screen</li>
+<li><strong>Screen Purpose</strong>: Verify parent phone numbers or secure MFA login.</li>
+<li><strong>Components</strong>: Text header displaying the target phone number, 6-digit input blocks, countdown timer, resend link, verify button.</li>
+<li><strong>Layout</strong>: Centered card container with large numerical inputs.</li>
+<li><strong>Navigation</strong>: Back button returns to <code>Login</code>. Successful verification routes to <code>Dashboard</code>.</li>
+<li><strong>User Flow</strong>: User receives SMS -&gt; types the 6 numbers -&gt; clicks Verify -&gt; session active.</li>
+<li><strong>Mobile Layout</strong>: Compact form container optimized for virtual keypad entry.</li>
+<li><strong>Desktop Layout</strong>: Modal box overlays the login screen.</li>
+<li><strong>Empty States</strong>: 6 empty box fields with default grey outlines.</li>
+<li><strong>Error States</strong>: Incorrect inputs highlight the box borders in red with error text "Invalid code, please try again".</li>
+<li><strong>Loading States</strong>: Disables inputs and displays "Verifying OTP..." loading indicator.</li>
+<li><strong>Success States</strong>: Green checks on fields before loading the workspace.</li>
+</ul>
+<h4 id="screen-5-password-reset-screen">Screen 5: Password Reset Screen<a class="headerlink" href="#screen-5-password-reset-screen" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Password Reset Screen</li>
+<li><strong>Screen Purpose</strong>: Request a password reset link or token.</li>
+<li><strong>Components</strong>: Back navigation button, email text field, reset request button.</li>
+<li><strong>Layout</strong>: Single-column vertical stack with description banner.</li>
+<li><strong>Navigation</strong>: Back button transitions back to <code>Login</code>. Success state transitions to check-in alert page.</li>
+<li><strong>User Flow</strong>: User inputs email -&gt; clicks Request -&gt; email sent -&gt; user returns to Login.</li>
+<li><strong>Mobile Layout</strong>: Scroll container with text field and CTA at the bottom.</li>
+<li><strong>Desktop Layout</strong>: Centered card layout matching login screen dimensions.</li>
+<li><strong>Empty States</strong>: Email field displays a default placeholder value.</li>
+<li><strong>Error States</strong>: Non-registered email triggers error validation message "Email not registered".</li>
+<li><strong>Loading States</strong>: Button shows loading spinner, input disabled.</li>
+<li><strong>Success States</strong>: Success banner appears on screen showing "Reset link sent to your registered email".</li>
+</ul>
+<hr />
+<h3 id="132-school-module">13.2 School Module<a class="headerlink" href="#132-school-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-school-profile-configuration">Screen 1: School Profile Configuration<a class="headerlink" href="#screen-1-school-profile-configuration" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: School Profile Configuration</li>
+<li><strong>Screen Purpose</strong>: Configure the official school profile and tenant defaults.</li>
+<li><strong>Components</strong>: Input fields for school name, unique code, contact details, board affiliation dropdown, upload button for logo.</li>
+<li><strong>Layout</strong>: Form grid with section breaks for profile, contacts, and affiliations.</li>
+<li><strong>Navigation</strong>: Access via the Settings sidebar. Save changes commits configuration.</li>
+<li><strong>User Flow</strong>: Administrator navigates to Profile Configuration -&gt; changes fields -&gt; uploads new logo -&gt; clicks Save.</li>
+<li><strong>Mobile Layout</strong>: Multi-step vertical form with tab page groups.</li>
+<li><strong>Desktop Layout</strong>: 2-column layout. Left column hosts form controls, right column displays live mockup preview of the profile card.</li>
+<li><strong>Empty States</strong>: Shows blank form with placeholder helper text for new tenants.</li>
+<li><strong>Error States</strong>: Red validation outlines on missing mandatory inputs, showing warning message "School code is required and must be unique".</li>
+<li><strong>Loading States</strong>: Display skeleton form placeholders during data retrieval.</li>
+<li><strong>Success States</strong>: Display top floating toast "Configuration saved successfully" with green status badge.</li>
+</ul>
+<h4 id="screen-2-academic-structure-setup">Screen 2: Academic Structure Setup<a class="headerlink" href="#screen-2-academic-structure-setup" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Academic Structure Setup</li>
+<li><strong>Screen Purpose</strong>: Manage academic years, classes, sections, and subject configurations.</li>
+<li><strong>Components</strong>: Academic year selector, list of classes, add class button, modal popup for section creation, subject allocations list.</li>
+<li><strong>Layout</strong>: Structured tree-view layout or master-detail list configuration.</li>
+<li><strong>Navigation</strong>: Triggered from setup sidebar. Back navigates to settings dashboard.</li>
+<li><strong>User Flow</strong>: Admin clicks "Add Class" -&gt; inputs name and section -&gt; assigns subjects -&gt; clicks Submit -&gt; tree updates.</li>
+<li><strong>Mobile Layout</strong>: Full-width swipe lists for classes with sub-expansion lists for sections.</li>
+<li><strong>Desktop Layout</strong>: Three-pane master-detail view (Academic Year pane -&gt; Class pane -&gt; Subject allocation list).</li>
+<li><strong>Empty States</strong>: Displays an icon with a message "No classes configured. Click Add Class to begin setup".</li>
+<li><strong>Error States</strong>: Duplicate entries trigger a modal warning "A class with this name already exists in this academic year".</li>
+<li><strong>Loading States</strong>: Display inline loading progress bar over the class table.</li>
+<li><strong>Success States</strong>: Adds the new row to the class tree with a brief green highlight.</li>
+</ul>
+<hr />
+<h3 id="133-student-module">13.3 Student Module<a class="headerlink" href="#133-student-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-student-registration-form">Screen 1: Student Registration Form<a class="headerlink" href="#screen-1-student-registration-form" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Student Registration Form</li>
+<li><strong>Screen Purpose</strong>: Register a new student profile and assign class placements.</li>
+<li><strong>Components</strong>: Basic info forms (name, DOB, gender), unique admission number field, class-section selectors, guardian lookup field, file upload for student photo, submit CTA.</li>
+<li><strong>Layout</strong>: Segmented progressive form layout utilizing vertical navigation cards.</li>
+<li><strong>Navigation</strong>: Access via the Student Directory. Cancel returns to directory; Submit initiates validation.</li>
+<li><strong>User Flow</strong>: Admin enters details -&gt; links to an existing guardian using lookup -&gt; submits form -&gt; student profile created.</li>
+<li><strong>Mobile Layout</strong>: Tabbed form view with progressive "Next" and "Back" navigation buttons at the bottom.</li>
+<li><strong>Desktop Layout</strong>: Multi-column scroll panel with clear grouping borders.</li>
+<li><strong>Empty States</strong>: Form fields empty. Auto-generated admission number pre-filled.</li>
+<li><strong>Error States</strong>: Triggers red field boundaries with clear warnings, e.g., "Student must have at least one active guardian assigned".</li>
+<li><strong>Loading States</strong>: Submitting button changes to loading state and blocks input interactions.</li>
+<li><strong>Success States</strong>: Form clears and displays success dialogue "Student STU-4029 registered successfully".</li>
+</ul>
+<h4 id="screen-2-student-directory-list">Screen 2: Student Directory List<a class="headerlink" href="#screen-2-student-directory-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Student Directory List</li>
+<li><strong>Screen Purpose</strong>: Browse, search, filter, and export the student database.</li>
+<li><strong>Components</strong>: Global search bar, class filters, status pills (Active, Inactive, Alumni), student records table, export button.</li>
+<li><strong>Layout</strong>: Top action bar with tab-like status pills, followed by a list view or data table.</li>
+<li><strong>Navigation</strong>: Tap on student record routes to <code>Student Profile</code>.</li>
+<li><strong>User Flow</strong>: User enters search query -&gt; updates class filter -&gt; list narrows -&gt; clicks record to view detail.</li>
+<li><strong>Mobile Layout</strong>: Compact list view using list cards containing avatars, names, and class subtitles.</li>
+<li><strong>Desktop Layout</strong>: 12-column wide layout. Features a left-hand filter pane and a detailed right-hand records table.</li>
+<li><strong>Empty States</strong>: Displays search icon with the text "No students found matching the filter criteria".</li>
+<li><strong>Error States</strong>: Display error banner "Failed to load student records" with a retry button.</li>
+<li><strong>Loading States</strong>: Display full-height skeleton loader blocks for table rows.</li>
+<li><strong>Success States</strong>: Renders filtered or full list data.</li>
+</ul>
+<h4 id="screen-3-student-profile-view">Screen 3: Student Profile View<a class="headerlink" href="#screen-3-student-profile-view" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Student Profile View</li>
+<li><strong>Screen Purpose</strong>: Detailed overview of a student's personal, guardian, academic, attendance, and fee history.</li>
+<li><strong>Components</strong>: Header section with student photo, basic stats cards (Attendance %, Fee status, GPA), tabbed panels for detail views (Demographics, Guardian Details, Fee Invoices, Academic Records).</li>
+<li><strong>Layout</strong>: Top header profile container with a tabbed content panel below.</li>
+<li><strong>Navigation</strong>: Back button returns to directory. Edit button opens inline edit views.</li>
+<li><strong>User Flow</strong>: User clicks tabs to browse different record categories -&gt; clicks edit to modify specific demographic fields.</li>
+<li><strong>Mobile Layout</strong>: Vertical layout, tabs span horizontally at the top, content scrolls vertically below.</li>
+<li><strong>Desktop Layout</strong>: Split header layout. Left pane contains personal details card and quick action links; right pane contains a wide tabbed panel for transcripts and invoice lists.</li>
+<li><strong>Empty States</strong>: Missing sections (such as no active invoices) display standard inline text "No fee records available for this student".</li>
+<li><strong>Error States</strong>: Toast notification error "Unable to fetch student detail record from server".</li>
+<li><strong>Loading States</strong>: Shimmer loader applied to avatars and statistics blocks.</li>
+<li><strong>Success States</strong>: Profile renders with correct details and colored badge highlights.</li>
+</ul>
+<hr />
+<h3 id="134-guardian-module">13.4 Guardian Module<a class="headerlink" href="#134-guardian-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-guardian-directory-list">Screen 1: Guardian Directory List<a class="headerlink" href="#screen-1-guardian-directory-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Guardian Directory List</li>
+<li><strong>Screen Purpose</strong>: Browse and manage all parents and registered guardians.</li>
+<li><strong>Components</strong>: Search filter, contact information table, quick action buttons for messaging or editing.</li>
+<li><strong>Layout</strong>: Standard table layout on desktop, list card layout on mobile.</li>
+<li><strong>Navigation</strong>: Clicking records opens <code>Guardian Profile Detail</code>.</li>
+<li><strong>User Flow</strong>: User searches parent by phone -&gt; clicks name -&gt; views linked students.</li>
+<li><strong>Mobile Layout</strong>: Simple scroll list displaying parent names, phone numbers, and child names as badges.</li>
+<li><strong>Desktop Layout</strong>: Structured grid containing column sorting controls.</li>
+<li><strong>Empty States</strong>: Show informative text "No parent records configured".</li>
+<li><strong>Error States</strong>: Red toast display indicating database query failure.</li>
+<li><strong>Loading States</strong>: Table rows display grey skeleton animation.</li>
+<li><strong>Success States</strong>: Populates lists.</li>
+</ul>
+<h4 id="screen-2-guardian-profile-detail">Screen 2: Guardian Profile Detail<a class="headerlink" href="#screen-2-guardian-profile-detail" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Guardian Profile Detail</li>
+<li><strong>Screen Purpose</strong>: Detailed view of guardian contact details, security credentials, and linked students.</li>
+<li><strong>Components</strong>: Payer profile card, contact inputs, table of linked student records, edit action.</li>
+<li><strong>Layout</strong>: Two-column layout on desktop, stacked card layout on mobile.</li>
+<li><strong>Navigation</strong>: Back action to parent directory. Edit action to edit mode.</li>
+<li><strong>User Flow</strong>: User views contacts -&gt; clicks child name -&gt; routes to student's profile.</li>
+<li><strong>Mobile Layout</strong>: Linear list of details cards with list elements.</li>
+<li><strong>Desktop Layout</strong>: Balanced dashboard with contact info on the left, child cards on the right.</li>
+<li><strong>Empty States</strong>: Linked students list displays "No students linked to this guardian".</li>
+<li><strong>Error States</strong>: Warning prompt: "Could not update contact phone, check verification constraints".</li>
+<li><strong>Loading States</strong>: Shimmer text fields.</li>
+<li><strong>Success States</strong>: Saves edits with a green floating success confirmation.</li>
+</ul>
+<h4 id="screen-3-student-linkage-console">Screen 3: Student Linkage Console<a class="headerlink" href="#screen-3-student-linkage-console" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Student Linkage Console</li>
+<li><strong>Screen Purpose</strong>: Link parent/guardian accounts to student profiles.</li>
+<li><strong>Components</strong>: Guardian search bar, student search selector, relationship dropdown selector (Mother, Father, Guardian, Emergency), link confirmation trigger.</li>
+<li><strong>Layout</strong>: Side-by-side card container mapping the relationship link.</li>
+<li><strong>Navigation</strong>: Triggered from guardian profile page.</li>
+<li><strong>User Flow</strong>: User picks parent -&gt; searches student -&gt; sets relationship -&gt; clicks Link -&gt; system establishes foreign key linkage.</li>
+<li><strong>Mobile Layout</strong>: Progressive multi-step screen view.</li>
+<li><strong>Desktop Layout</strong>: Interactive drag-and-drop linking workspace.</li>
+<li><strong>Empty States</strong>: Shows prompt "Select a guardian and student to create connection".</li>
+<li><strong>Error States</strong>: Display warning "This student is already linked to this guardian with this role".</li>
+<li><strong>Loading States</strong>: Processing overlay blocking click interactions.</li>
+<li><strong>Success States</strong>: Success confirmation message with linked profile cards.</li>
+</ul>
+<hr />
+<h3 id="135-teacher-module">13.5 Teacher Module<a class="headerlink" href="#135-teacher-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-teacher-directory-list">Screen 1: Teacher Directory List<a class="headerlink" href="#screen-1-teacher-directory-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Teacher Directory List</li>
+<li><strong>Screen Purpose</strong>: Administrative list of academic staff.</li>
+<li><strong>Components</strong>: Staff list, search tool, subjects filters, add teacher trigger.</li>
+<li><strong>Layout</strong>: Horizontal master-detail setup on desktop, scroll cards on mobile.</li>
+<li><strong>Navigation</strong>: Click record to open <code>Teacher Profile Detail</code>.</li>
+<li><strong>User Flow</strong>: Admin filters by subject "Mathematics" -&gt; picks teacher -&gt; views profile.</li>
+<li><strong>Mobile Layout</strong>: Profile list with direct tap-to-call actions.</li>
+<li><strong>Desktop Layout</strong>: Filter panel on the left side, data tables in center.</li>
+<li><strong>Empty States</strong>: Display graphic showing "No teachers registered".</li>
+<li><strong>Error States</strong>: Display banner: "Unable to retrieve teacher listing".</li>
+<li><strong>Loading States</strong>: Full skeleton list overlays.</li>
+<li><strong>Success States</strong>: Direct listing render.</li>
+</ul>
+<h4 id="screen-2-teacher-profile-detail">Screen 2: Teacher Profile Detail<a class="headerlink" href="#screen-2-teacher-profile-detail" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Teacher Profile Detail</li>
+<li><strong>Screen Purpose</strong>: View profile details, credentials, class schedules, and subject allocations.</li>
+<li><strong>Components</strong>: Header panel, personal contacts details, subject list, classes allocation list.</li>
+<li><strong>Layout</strong>: Tabbed panel displaying personal, academic, and scheduling records.</li>
+<li><strong>Navigation</strong>: Back to teacher directory, class teacher assignments.</li>
+<li><strong>User Flow</strong>: Admin opens profile -&gt; views timetable -&gt; modifies class allocation.</li>
+<li><strong>Mobile Layout</strong>: Timetable tab displayed as a vertical list of periods.</li>
+<li><strong>Desktop Layout</strong>: Timetable presented in a 6-day grid format.</li>
+<li><strong>Empty States</strong>: Timetable tab displays "No classes allocated for this teacher".</li>
+<li><strong>Error States</strong>: Red outline on conflicts: "Teacher is already allocated to Grade 9-B during Period 2".</li>
+<li><strong>Loading States</strong>: Timetable cells show loading grids.</li>
+<li><strong>Success States</strong>: Saved updates highlight.</li>
+</ul>
+<h4 id="screen-3-class-assignment-panel">Screen 3: Class Assignment Panel<a class="headerlink" href="#screen-3-class-assignment-panel" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Class Assignment Panel</li>
+<li><strong>Screen Purpose</strong>: Assign teachers as class teachers or allocate subjects to classes.</li>
+<li><strong>Components</strong>: Class selector, teacher selector, subject dropdown, assignment history list, save CTA.</li>
+<li><strong>Layout</strong>: Balanced forms panel with side table lists showing current active assignments.</li>
+<li><strong>Navigation</strong>: Settings -&gt; Academic -&gt; Class Assignments.</li>
+<li><strong>User Flow</strong>: Admin selects Grade 9-A -&gt; selects Math -&gt; chooses Mr. Verma -&gt; clicks Assign.</li>
+<li><strong>Mobile Layout</strong>: Stacked selectors with a confirmation list below.</li>
+<li><strong>Desktop Layout</strong>: Grid configuration showing all classes with editable teacher cells.</li>
+<li><strong>Empty States</strong>: Class row cells are blank if no teacher is assigned.</li>
+<li><strong>Error States</strong>: Error alert "This subject teacher is already allocated to another class at the same time".</li>
+<li><strong>Loading States</strong>: Selector inputs are disabled while processing.</li>
+<li><strong>Success States</strong>: Background flashes green on successful assignment.</li>
+</ul>
+<hr />
+<h3 id="136-employee-module">13.6 Employee Module<a class="headerlink" href="#136-employee-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-employee-list">Screen 1: Employee List<a class="headerlink" href="#screen-1-employee-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Employee List</li>
+<li><strong>Screen Purpose</strong>: Management directory of non-teaching staff (HR, Admin, Finance, Super Admin).</li>
+<li><strong>Components</strong>: Search bar, department filters, active status column, role tags.</li>
+<li><strong>Layout</strong>: Simple master table.</li>
+<li><strong>Navigation</strong>: Drawer menu -&gt; Employees.</li>
+<li><strong>User Flow</strong>: Admin opens listing -&gt; edits employee role tags -&gt; clicks Save.</li>
+<li><strong>Mobile Layout</strong>: Standard list with phone icons for calling.</li>
+<li><strong>Desktop Layout</strong>: Admin table with column sorting.</li>
+<li><strong>Empty States</strong>: "No staff records found".</li>
+<li><strong>Error States</strong>: Toast notification: "Failed to update employee status".</li>
+<li><strong>Loading States</strong>: Skeleton line items.</li>
+<li><strong>Success States</strong>: Data populates.</li>
+</ul>
+<h4 id="screen-2-role-assignment-profile">Screen 2: Role Assignment Profile<a class="headerlink" href="#screen-2-role-assignment-profile" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Role Assignment Profile</li>
+<li><strong>Screen Purpose</strong>: Manage access permissions and system role mappings for employees.</li>
+<li><strong>Components</strong>: Staff card, role checkbox matrix, save CTA.</li>
+<li><strong>Layout</strong>: Card view with a list of system capabilities and toggle switches.</li>
+<li><strong>Navigation</strong>: Click on employee row to edit system access privileges.</li>
+<li><strong>User Flow</strong>: Admin selects Finance User role -&gt; toggles Fee Edit access -&gt; clicks Save.</li>
+<li><strong>Mobile Layout</strong>: Vertical listing of permissions with toggles.</li>
+<li><strong>Desktop Layout</strong>: Matrix grid where columns represent roles and rows represent modular permissions.</li>
+<li><strong>Empty States</strong>: Shows warning "Select at least one role to enable dashboard access".</li>
+<li><strong>Error States</strong>: Toast notification: "Insufficient platform privileges to assign super admin role".</li>
+<li><strong>Loading States</strong>: Inputs are locked.</li>
+<li><strong>Success States</strong>: Permission badge updates to reflect the new state.</li>
+</ul>
+<hr />
+<h3 id="137-attendance-module">13.7 Attendance Module<a class="headerlink" href="#137-attendance-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-attendance-marking-roster">Screen 1: Attendance Marking Roster<a class="headerlink" href="#screen-1-attendance-marking-roster" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Attendance Marking Roster</li>
+<li><strong>Screen Purpose</strong>: Mark daily attendance for students in a class-section.</li>
+<li><strong>Components</strong>: Class-section header display, date selector, student roster list with Swipe-to-Mark controls (Swipe right for Present, Swipe left for Absent), status check pill controls, confirmation button.</li>
+<li><strong>Layout</strong>: Full-width vertical list view with prominent touch targets.</li>
+<li><strong>Navigation</strong>: Access from Drawer or bottom tab path. Save button triggers the confirmation step.</li>
+<li><strong>User Flow</strong>: Teacher picks class -&gt; selects date -&gt; taps status pills for absent students -&gt; clicks Submit.</li>
+<li><strong>Mobile Layout</strong>: List layout optimized for thumb-swipes, featuring large green/red check icons.</li>
+<li><strong>Desktop Layout</strong>: Tabular grid with checkbox fields for Present, Absent, Late, and Leave statuses.</li>
+<li><strong>Empty States</strong>: Roster displays default status: "All present".</li>
+<li><strong>Error States</strong>: Red indicator popup "Attendance is already marked for this date. Click Edit to make changes".</li>
+<li><strong>Loading States</strong>: Roster displays full-length shimmer loaders during fetching.</li>
+<li><strong>Success States</strong>: Displays animation overlay showing a green checkmark indicating successful sync.</li>
+</ul>
+<h4 id="screen-2-attendance-calendar-dashboard">Screen 2: Attendance Calendar Dashboard<a class="headerlink" href="#screen-2-attendance-calendar-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Attendance Calendar Dashboard</li>
+<li><strong>Screen Purpose</strong>: Provide a detailed monthly calendar overview of a student's attendance.</li>
+<li><strong>Components</strong>: Metrics overview banner (Present %, Absences count, Late arrivals count), monthly calendar grid, color-coded date indicators (Green = Present, Red = Absent, Yellow = Late), scrollable list of absent dates.</li>
+<li><strong>Layout</strong>: Top header showing metrics dashboard, calendar grid positioned in the center, detailed scroll container below.</li>
+<li><strong>Navigation</strong>: Access via the Attendance bottom tab or student detail page.</li>
+<li><strong>User Flow</strong>: Guardian selects a child -&gt; reviews attendance calendar -&gt; taps an absent day to view notes.</li>
+<li><strong>Mobile Layout</strong>: Vertical layout. Compact grid display for calendar dates.</li>
+<li><strong>Desktop Layout</strong>: 12-column grid. Left panel shows monthly statistics, right panel hosts a full-size interactive calendar.</li>
+<li><strong>Empty States</strong>: Newly enrolled student calendar shows dates without indicators with message "No attendance recorded for this month".</li>
+<li><strong>Error States</strong>: Toast alert: "Unable to retrieve calendar statistics for this month".</li>
+<li><strong>Loading States</strong>: Shimmer overlays on calendar day cells.</li>
+<li><strong>Success States</strong>: Calendar updates with colored circles indicating attendance events.</li>
+</ul>
+<h4 id="screen-3-attendance-analytics-summary">Screen 3: Attendance Analytics Summary<a class="headerlink" href="#screen-3-attendance-analytics-summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Attendance Analytics Summary</li>
+<li><strong>Screen Purpose</strong>: Provide principals and admins with aggregate attendance summaries.</li>
+<li><strong>Components</strong>: Overall school attendance percentage metric card, class-wise performance bar chart, alarm panel showing classes falling below critical threshold (e.g. &lt; 75%).</li>
+<li><strong>Layout</strong>: Structured grid panel with chart wrappers.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Analytics -&gt; Attendance.</li>
+<li><strong>User Flow</strong>: Principal opens dashboard -&gt; views school-wide percentage -&gt; drills down into Class 9-A's monthly trend.</li>
+<li><strong>Mobile Layout</strong>: Stacked metrics charts with horizontal swipe controls for months.</li>
+<li><strong>Desktop Layout</strong>: Multi-widget analytics layout with sidebar filters.</li>
+<li><strong>Empty States</strong>: "No analytics data available for selected date range".</li>
+<li><strong>Error States</strong>: "Error loading metrics data".</li>
+<li><strong>Loading States</strong>: Skeleton loading boxes placeholder.</li>
+<li><strong>Success States</strong>: Visual charts render.</li>
+</ul>
+<hr />
+<h3 id="138-homework-module">13.8 Homework Module<a class="headerlink" href="#138-homework-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-homework-creator">Screen 1: Homework Creator<a class="headerlink" href="#screen-1-homework-creator" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Homework Creator</li>
+<li><strong>Screen Purpose</strong>: Enable teachers to create and assign homework tasks.</li>
+<li><strong>Components</strong>: Title input, description editor, class-section selector, subject dropdown, assignment date picker, due date picker, S3 file upload field, draft/publish actions.</li>
+<li><strong>Layout</strong>: Linear forms panel with structured card blocks.</li>
+<li><strong>Navigation</strong>: Triggered from academics hub. Submit returns to list views.</li>
+<li><strong>User Flow</strong>: Teacher types title -&gt; uploads worksheet -&gt; sets due date -&gt; clicks Publish.</li>
+<li><strong>Mobile Layout</strong>: Vertical form fields with standard file picking sheet.</li>
+<li><strong>Desktop Layout</strong>: Split form panel. Form fields on the left, interactive live preview of student mobile notification on the right.</li>
+<li><strong>Empty States</strong>: Fields blank. Draft state active by default.</li>
+<li><strong>Error States</strong>: Red borders with label "Due date cannot be before assignment date".</li>
+<li><strong>Loading States</strong>: Form disabled, file upload progress bar visible.</li>
+<li><strong>Success States</strong>: Toast notice "Homework published and notifications sent to 32 parents".</li>
+</ul>
+<h4 id="screen-2-homework-roster-list">Screen 2: Homework Roster List<a class="headerlink" href="#screen-2-homework-roster-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Homework Roster List</li>
+<li><strong>Screen Purpose</strong>: Roster listing of all homework assignments.</li>
+<li><strong>Components</strong>: Search filter, class filters, list of homework cards displaying subject, title, due date, submission status tag, attachment clip icon.</li>
+<li><strong>Layout</strong>: Vertical timeline style list.</li>
+<li><strong>Navigation</strong>: Clicking card opens detailed view / submission page.</li>
+<li><strong>User Flow</strong>: Student logs in -&gt; views homework feed -&gt; filters by "Pending" -&gt; selects task.</li>
+<li><strong>Mobile Layout</strong>: Standard list card with large colored tags (Green = Done, Red = Overdue, Yellow = Pending).</li>
+<li><strong>Desktop Layout</strong>: Two-column layout. Left column holds list cards, right column displays active homework details.</li>
+<li><strong>Empty States</strong>: "No assignments pending. Enjoy your day!".</li>
+<li><strong>Error States</strong>: "Failed to retrieve homework feed. Retry".</li>
+<li><strong>Loading States</strong>: Skeleton preview of timeline list cards.</li>
+<li><strong>Success States</strong>: Rendered listings.</li>
+</ul>
+<h4 id="screen-3-homework-detail-view">Screen 3: Homework Detail View<a class="headerlink" href="#screen-3-homework-detail-view" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Homework Detail View</li>
+<li><strong>Screen Purpose</strong>: Detailed view of homework task, attachments, and submission console.</li>
+<li><strong>Components</strong>: Header, assignment metadata block, description text, links to PDF attachments, submit file button, feedback notes.</li>
+<li><strong>Layout</strong>: Center aligned details container.</li>
+<li><strong>Navigation</strong>: Back to roster list.</li>
+<li><strong>User Flow</strong>: Student reads homework description -&gt; downloads PDF -&gt; uploads completed homework image -&gt; clicks Submit.</li>
+<li><strong>Mobile Layout</strong>: Stacked view with button locked to the bottom.</li>
+<li><strong>Desktop Layout</strong>: Centered card frame layout.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: "File size exceeds 10MB limit. Upload failed".</li>
+<li><strong>Loading States</strong>: Upload button showing progress percentage.</li>
+<li><strong>Success States</strong>: Changes status badge to "Submitted" with green text.</li>
+</ul>
+<hr />
+<h3 id="139-examination-module">13.9 Examination Module<a class="headerlink" href="#139-examination-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-exam-term-setup-panel">Screen 1: Exam Term Setup Panel<a class="headerlink" href="#screen-1-exam-term-setup-panel" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Exam Term Setup Panel</li>
+<li><strong>Screen Purpose</strong>: Configure examination terms, grading brackets, and class weightages.</li>
+<li><strong>Components</strong>: Add Term button, term list table, grading scales form (A+ to F limits), configure subjects matrix.</li>
+<li><strong>Layout</strong>: Tabbed panels dividing terms, scales, and rules.</li>
+<li><strong>Navigation</strong>: Settings -&gt; Academic -&gt; Exam Setup.</li>
+<li><strong>User Flow</strong>: Admin creates "Term 1" -&gt; adds grading rules -&gt; saves config.</li>
+<li><strong>Mobile Layout</strong>: Stacked form fields with list accordions.</li>
+<li><strong>Desktop Layout</strong>: Structured dashboard layouts.</li>
+<li><strong>Empty States</strong>: "No exam terms configured".</li>
+<li><strong>Error States</strong>: "Grading limits overlap".</li>
+<li><strong>Loading States</strong>: Shimmer blocks.</li>
+<li><strong>Success States</strong>: Success toast notification.</li>
+</ul>
+<h4 id="screen-2-exam-schedule-sheet">Screen 2: Exam Schedule Sheet<a class="headerlink" href="#screen-2-exam-schedule-sheet" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Exam Schedule Sheet</li>
+<li><strong>Screen Purpose</strong>: Schedule exam dates, sessions, and venues.</li>
+<li><strong>Components</strong>: Term dropdown filter, class selector, scheduler table (Subject, Date, Session, Max Marks, Passing Marks), save CTA.</li>
+<li><strong>Layout</strong>: Spreadsheet-style scheduling matrix.</li>
+<li><strong>Navigation</strong>: Click cells to input exam details.</li>
+<li><strong>User Flow</strong>: Coordinator selects Grade 9 -&gt; assigns English exam on Sep 15 -&gt; inputs max marks -&gt; saves.</li>
+<li><strong>Mobile Layout</strong>: List cards representing each scheduled exam.</li>
+<li><strong>Desktop Layout</strong>: Dense data entry grid.</li>
+<li><strong>Empty States</strong>: "No exams scheduled for this term".</li>
+<li><strong>Error States</strong>: Red highlighted fields showing "Room 204 is occupied by another exam at this time".</li>
+<li><strong>Loading States</strong>: Inputs locked.</li>
+<li><strong>Success States</strong>: Grid saves and updates status to "Scheduled".</li>
+</ul>
+<h4 id="screen-3-exam-marks-entry-grid">Screen 3: Exam Marks Entry Grid<a class="headerlink" href="#screen-3-exam-marks-entry-grid" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Exam Marks Entry Grid</li>
+<li><strong>Screen Purpose</strong>: Input student marks for exams.</li>
+<li><strong>Components</strong>: Exam and subject selectors, student marks entry table (Roll, Name, Marks field, Present/Absent toggle), class statistics summary card.</li>
+<li><strong>Layout</strong>: Spreadsheet-style layout.</li>
+<li><strong>Navigation</strong>: Navigates between fields using keyboard arrows.</li>
+<li><strong>User Flow</strong>: Teacher opens grid -&gt; inputs marks -&gt; clicks Save Draft -&gt; clicks Publish once verified.</li>
+<li><strong>Mobile Layout</strong>: Roster listing of students with a compact number keypad layout for entry.</li>
+<li><strong>Desktop Layout</strong>: Wide tabular grid optimized for fast data entry.</li>
+<li><strong>Empty States</strong>: Score cells show placeholder dashes.</li>
+<li><strong>Error States</strong>: "Entered marks cannot exceed maximum configured marks (50)".</li>
+<li><strong>Loading States</strong>: Locked cells with loading spinner.</li>
+<li><strong>Success States</strong>: Displays the class average statistic update.</li>
+</ul>
+<h4 id="screen-4-report-card-generator">Screen 4: Report Card Generator<a class="headerlink" href="#screen-4-report-card-generator" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Report Card Generator</li>
+<li><strong>Screen Purpose</strong>: Process and generate student report cards.</li>
+<li><strong>Components</strong>: Class selector, student checkbox selection roster, print/export format picker, generate CTA, download links list.</li>
+<li><strong>Layout</strong>: Dual-pane layout. Checkbox roster on the left, PDF preview panel on the right.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Exams -&gt; Report Cards.</li>
+<li><strong>User Flow</strong>: Admin checks student roster -&gt; selects PDF template -&gt; clicks Generate -&gt; downloads files.</li>
+<li><strong>Mobile Layout</strong>: List view with single-tap "Download PDF" links.</li>
+<li><strong>Desktop Layout</strong>: Side-by-side roster and interactive PDF layout.</li>
+<li><strong>Empty States</strong>: Preview panel shows "Select a student to preview their report card".</li>
+<li><strong>Error States</strong>: "Results must be published before report cards can be generated".</li>
+<li><strong>Loading States</strong>: Overlay showing progress: "Generating 38 report cards...".</li>
+<li><strong>Success States</strong>: List of PDF download links shown on screen.</li>
+</ul>
+<hr />
+<h3 id="1310-fees-module">13.10 Fees Module<a class="headerlink" href="#1310-fees-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-fee-component-manager">Screen 1: Fee Component Manager<a class="headerlink" href="#screen-1-fee-component-manager" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Fee Component Manager</li>
+<li><strong>Screen Purpose</strong>: Configure school fee components and payment plans.</li>
+<li><strong>Components</strong>: Add component button, component list table (Tuition, Transport, Exams, Library), configure frequency settings (Monthly, Termly, Annual).</li>
+<li><strong>Layout</strong>: Dual pane. Master list on left, editor drawer on right.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Finance -&gt; Fee Settings.</li>
+<li><strong>User Flow</strong>: Finance user clicks Add -&gt; selects "Tuition Fee" -&gt; sets frequency to "Termly" -&gt; clicks Save.</li>
+<li><strong>Mobile Layout</strong>: Single column with scroll cards.</li>
+<li><strong>Desktop Layout</strong>: Grid table layout.</li>
+<li><strong>Empty States</strong>: "No fee components defined. Click Add to create".</li>
+<li><strong>Error States</strong>: Warning message "Component code must be unique".</li>
+<li><strong>Loading States</strong>: Shimmer row cells.</li>
+<li><strong>Success States</strong>: Component added to list.</li>
+</ul>
+<h4 id="screen-2-fee-invoicing-panel">Screen 2: Fee Invoicing Panel<a class="headerlink" href="#screen-2-fee-invoicing-panel" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Fee Invoicing Panel</li>
+<li><strong>Screen Purpose</strong>: Generate and dispatch student fee invoices.</li>
+<li><strong>Components</strong>: Target class selector, fee structure picker, student selection checklist, bulk generate CTA.</li>
+<li><strong>Layout</strong>: Configuration form on the left, target student list on the right.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Finance -&gt; Invoicing.</li>
+<li><strong>User Flow</strong>: User picks Grade 9-A -&gt; selects "Term 2 Fee Structure" -&gt; clicks Generate Invoices.</li>
+<li><strong>Mobile Layout</strong>: Progressive multi-step screens.</li>
+<li><strong>Desktop Layout</strong>: Side-by-side select panels.</li>
+<li><strong>Empty States</strong>: Roster displays "No eligible students found".</li>
+<li><strong>Error States</strong>: "An invoice for Term 2 has already been generated for these students".</li>
+<li><strong>Loading States</strong>: Button shows "Generating invoices..." progress bar.</li>
+<li><strong>Success States</strong>: Invoices created and dispatched to parent dashboard.</li>
+</ul>
+<h4 id="screen-3-payer-invoices-dashboard">Screen 3: Payer Invoices Dashboard<a class="headerlink" href="#screen-3-payer-invoices-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Payer Invoices Dashboard</li>
+<li><strong>Screen Purpose</strong>: Dashboard showing fee invoices and outstanding dues.</li>
+<li><strong>Components</strong>: Student profile, total due amount display, list of fee invoice cards (Invoice ID, Term, Amount, Due Date, Status Tag), pay button.</li>
+<li><strong>Layout</strong>: Large outstanding balance display at the top, list of invoice cards below.</li>
+<li><strong>Navigation</strong>: Bottom Tab -&gt; Fees -&gt; click Invoice to pay.</li>
+<li><strong>User Flow</strong>: Parent logs in -&gt; views ₹12,500 due -&gt; clicks Pay -&gt; opens gateway.</li>
+<li><strong>Mobile Layout</strong>: Single column scroll container with floating footer button.</li>
+<li><strong>Desktop Layout</strong>: 2-column view. Dues overview on left, interactive invoices table on right.</li>
+<li><strong>Empty States</strong>: Displays "All fees paid! No outstanding dues. Thank you!".</li>
+<li><strong>Error States</strong>: "Failed to load fee ledger".</li>
+<li><strong>Loading States</strong>: Skeleton cards.</li>
+<li><strong>Success States</strong>: Invoice cards updated with colored status badges (Green = Paid, Red = Overdue, Yellow = Unpaid).</li>
+</ul>
+<hr />
+<h3 id="1311-payments-module">13.11 Payments Module<a class="headerlink" href="#1311-payments-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-payment-gateway-checkout-sheet">Screen 1: Payment Gateway Checkout Sheet<a class="headerlink" href="#screen-1-payment-gateway-checkout-sheet" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Payment Gateway Checkout Sheet</li>
+<li><strong>Screen Purpose</strong>: Initiate and complete online fee payment.</li>
+<li><strong>Components</strong>: Payment amount summary, payment method options (UPI, Net Banking, Cards), gateway interface, transaction status indicator.</li>
+<li><strong>Layout</strong>: Overlaid bottom sheet layout.</li>
+<li><strong>Navigation</strong>: Triggered from fees screen. Close action cancels transaction.</li>
+<li><strong>User Flow</strong>: User clicks Pay -&gt; sheet slides up -&gt; user enters UPI ID -&gt; approves payment in app -&gt; checkout completes.</li>
+<li><strong>Mobile Layout</strong>: Native overlay bottom sheet.</li>
+<li><strong>Desktop Layout</strong>: Modal dialog centered on screen with backdrop.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: Display error message "Transaction failed. No amount has been deducted. Please retry".</li>
+<li><strong>Loading States</strong>: Display spinning ring with text "Processing transaction...".</li>
+<li><strong>Success States</strong>: Display green checkmark with message "Payment successful. Receipt has been generated".</li>
+</ul>
+<h4 id="screen-2-transaction-receipt-history">Screen 2: Transaction Receipt History<a class="headerlink" href="#screen-2-transaction-receipt-history" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Transaction Receipt History</li>
+<li><strong>Screen Purpose</strong>: Browse past transaction receipts and download payment records.</li>
+<li><strong>Components</strong>: Date range filters, search, transaction table (Date, Receipt ID, Amount, Payment Method, Status), download receipt action button.</li>
+<li><strong>Layout</strong>: Standard search filter bar followed by a detailed transaction grid.</li>
+<li><strong>Navigation</strong>: Tap record to view full PDF receipt.</li>
+<li><strong>User Flow</strong>: Parent selects date range -&gt; locates Term 1 payment -&gt; clicks download -&gt; saves PDF.</li>
+<li><strong>Mobile Layout</strong>: Vertical history cards with instant download icons.</li>
+<li><strong>Desktop Layout</strong>: Dense data table with print options.</li>
+<li><strong>Empty States</strong>: "No transaction history matching selected filters".</li>
+<li><strong>Error States</strong>: "Error retrieving transaction records".</li>
+<li><strong>Loading States</strong>: Loading shimmer rows.</li>
+<li><strong>Success States</strong>: Population of transaction lines.</li>
+</ul>
+<hr />
+<h3 id="1312-reports-module">13.12 Reports Module<a class="headerlink" href="#1312-reports-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-operational-reports-board">Screen 1: Operational Reports Board<a class="headerlink" href="#screen-1-operational-reports-board" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Operational Reports Board</li>
+<li><strong>Screen Purpose</strong>: Main access dashboard for school analytics and PDF/Excel reports.</li>
+<li><strong>Components</strong>: Report category tabs (Finance, Academic, System), report cards list (e.g. Fee Collections Report, Roster List, Class Performance Report), download trigger.</li>
+<li><strong>Layout</strong>: Grid of cards organized by functional category.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Reports.</li>
+<li><strong>User Flow</strong>: Principal opens board -&gt; clicks Academic tab -&gt; selects Class Performance Report -&gt; sets filters -&gt; exports PDF.</li>
+<li><strong>Mobile Layout</strong>: Stacked vertical list categorizing reports.</li>
+<li><strong>Desktop Layout</strong>: 3-column dashboard with filter options.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: "Failed to generate report on the server".</li>
+<li><strong>Loading States</strong>: Button shows spinner during PDF generation.</li>
+<li><strong>Success States</strong>: Triggers automatic file download.</li>
+</ul>
+<hr />
+<h3 id="1313-dashboard-module">13.13 Dashboard Module<a class="headerlink" href="#1313-dashboard-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-owner-principal-dashboard">Screen 1: Owner &amp; Principal Dashboard<a class="headerlink" href="#screen-1-owner-principal-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Owner &amp; Principal Dashboard</li>
+<li><strong>Screen Purpose</strong>: Provide institutional owners and principals with a high-level operational overview.</li>
+<li><strong>Components</strong>: Total student count card, daily student/staff attendance percentage, collection metrics chart, notification approvals queue.</li>
+<li><strong>Layout</strong>: Multi-card responsive dashboard grid.</li>
+<li><strong>Navigation</strong>: Default landing screen for owners and principals.</li>
+<li><strong>User Flow</strong>: Principal views 91.4% attendance -&gt; clicks card to review low-attendance classes -&gt; approves outstanding notice template.</li>
+<li><strong>Mobile Layout</strong>: Stacked cards with vertical scroll and swipeable charts.</li>
+<li><strong>Desktop Layout</strong>: 12-column grid dashboard with side stats panel.</li>
+<li><strong>Empty States</strong>: Fresh system shows mock setup indicators.</li>
+<li><strong>Error States</strong>: Widget frames display "Unable to load metric".</li>
+<li><strong>Loading States</strong>: Skeleton cards.</li>
+<li><strong>Success States</strong>: Data populates.</li>
+</ul>
+<h4 id="screen-2-finance-dashboard">Screen 2: Finance Dashboard<a class="headerlink" href="#screen-2-finance-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Finance Dashboard</li>
+<li><strong>Screen Purpose</strong>: Financial overview for billing and collections staff.</li>
+<li><strong>Components</strong>: Dues summary tracker, collections chart (target vs. actual), invoice status count, recent transactions list.</li>
+<li><strong>Layout</strong>: Centered metrics panel with lists.</li>
+<li><strong>Navigation</strong>: Default landing page for Finance role.</li>
+<li><strong>User Flow</strong>: User reviews cash flow chart -&gt; drills down into Overdue list -&gt; sends bulk payment reminders.</li>
+<li><strong>Mobile Layout</strong>: Standard vertical metrics card set.</li>
+<li><strong>Desktop Layout</strong>: Double column layout showing collection charts.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: Metric blocks display error states.</li>
+<li><strong>Loading States</strong>: Shimmer loaders.</li>
+<li><strong>Success States</strong>: Populates charts.</li>
+</ul>
+<h4 id="screen-3-teacher-dashboard">Screen 3: Teacher Dashboard<a class="headerlink" href="#screen-3-teacher-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Teacher Dashboard</li>
+<li><strong>Screen Purpose</strong>: Daily tasks and class management hub for teachers.</li>
+<li><strong>Components</strong>: Today's schedule cards, pending attendance alerts, homework drafts list, student announcements block.</li>
+<li><strong>Layout</strong>: Vertical timeline of daily classes with alerts.</li>
+<li><strong>Navigation</strong>: Default landing page for Teachers.</li>
+<li><strong>User Flow</strong>: Mr. Verma views "Period 1 Maths" -&gt; clicks Take Attendance -&gt; completes roster -&gt; returns to dashboard.</li>
+<li><strong>Mobile Layout</strong>: Scroll list of schedule cards.</li>
+<li><strong>Desktop Layout</strong>: Split dashboard. Class schedule on left, student alerts and homework manager on right.</li>
+<li><strong>Empty States</strong>: "No classes scheduled for today. Enjoy your day!".</li>
+<li><strong>Error States</strong>: "Unable to sync schedule".</li>
+<li><strong>Loading States</strong>: Shimmer card lines.</li>
+<li><strong>Success States</strong>: Displays schedule items.</li>
+</ul>
+<h4 id="screen-4-guardian-student-dashboard">Screen 4: Guardian &amp; Student Dashboard<a class="headerlink" href="#screen-4-guardian-student-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Guardian &amp; Student Dashboard</li>
+<li><strong>Screen Purpose</strong>: Academic progress, calendar, and task center for parents and students.</li>
+<li><strong>Components</strong>: Student details summary, today's schedule, homework status card, pending dues warning, announcements feed.</li>
+<li><strong>Layout</strong>: Top profile card, followed by alerts and quick links.</li>
+<li><strong>Navigation</strong>: Default landing page for parents and students.</li>
+<li><strong>User Flow</strong>: Parent reviews today's homework -&gt; clicks card to read details -&gt; notes ₹12,500 due warning -&gt; transitions to Payments.</li>
+<li><strong>Mobile Layout</strong>: Compact swipeable cards optimized for quick scanning.</li>
+<li><strong>Desktop Layout</strong>: Wide grid containing separate panels for academics and finance.</li>
+<li><strong>Empty States</strong>: Shows welcome guides for new students.</li>
+<li><strong>Error States</strong>: Alert banner: "Offline mode. Showing cached data".</li>
+<li><strong>Loading States</strong>: Skeleton widgets.</li>
+<li><strong>Success States</strong>: Live updates loaded.</li>
+</ul>
+<h4 id="screen-5-super-admin-dashboard">Screen 5: Super Admin Dashboard<a class="headerlink" href="#screen-5-super-admin-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Super Admin Dashboard</li>
+<li><strong>Screen Purpose</strong>: System-level health and tenant management dashboard for EduSync platform administrators.</li>
+<li><strong>Components</strong>: Active tenants count, MRR metrics card, pending support tickets queue, subscription plans summary.</li>
+<li><strong>Layout</strong>: Grid layout of monitoring panels.</li>
+<li><strong>Navigation</strong>: Landing page for Super Admin.</li>
+<li><strong>User Flow</strong>: Super Admin reviews server load -&gt; approves tenant provisioning request -&gt; updates billing plan definitions.</li>
+<li><strong>Mobile Layout</strong>: Stacked text metric widgets.</li>
+<li><strong>Desktop Layout</strong>: 12-column grid system dashboard.</li>
+<li><strong>Empty States</strong>: Not applicable.</li>
+<li><strong>Error States</strong>: "System monitoring connection error".</li>
+<li><strong>Loading States</strong>: Grey loading placeholders.</li>
+<li><strong>Success States</strong>: Populates monitoring stats.</li>
+</ul>
+<hr />
+<h3 id="1314-notification-module">13.14 Notification Module<a class="headerlink" href="#1314-notification-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-multi-channel-logger">Screen 1: Multi-Channel Logger<a class="headerlink" href="#screen-1-multi-channel-logger" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Multi-Channel Logger</li>
+<li><strong>Screen Purpose</strong>: Browse log of all dispatched SMS, WhatsApp, and email messages.</li>
+<li><strong>Components</strong>: Status indicators (Sent, Delivered, Failed), recipient columns, search field, message preview tooltip.</li>
+<li><strong>Layout</strong>: Detailed audit log table.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Communications -&gt; Logs.</li>
+<li><strong>User Flow</strong>: User searches by student name -&gt; checks delivery status -&gt; views details.</li>
+<li><strong>Mobile Layout</strong>: List of delivery status cards.</li>
+<li><strong>Desktop Layout</strong>: Paginated logs grid table.</li>
+<li><strong>Empty States</strong>: "No logs matching selected filters".</li>
+<li><strong>Error States</strong>: "Error loading logs".</li>
+<li><strong>Loading States</strong>: Shimmer rows.</li>
+<li><strong>Success States</strong>: Logs list populate.</li>
+</ul>
+<h4 id="screen-2-message-template-creator">Screen 2: Message Template Creator<a class="headerlink" href="#screen-2-message-template-creator" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Message Template Creator</li>
+<li><strong>Screen Purpose</strong>: Configure message templates for automated notifications.</li>
+<li><strong>Components</strong>: Template name field, channel checkboxes, rich-text editor with merge tags (e.g. <code>{student_name}</code>, <code>{fee_amount}</code>), submit button.</li>
+<li><strong>Layout</strong>: Structured forms layout.</li>
+<li><strong>Navigation</strong>: Triggered from notification setup.</li>
+<li><strong>User Flow</strong>: Admin writes template -&gt; inserts merge tags -&gt; saves config -&gt; template sent to platform review.</li>
+<li><strong>Mobile Layout</strong>: Form fields stacked vertically.</li>
+<li><strong>Desktop Layout</strong>: Split panel. Editor on left, real-time message mockup on right.</li>
+<li><strong>Empty States</strong>: Editor is blank.</li>
+<li><strong>Error States</strong>: Red border around invalid merge tags.</li>
+<li><strong>Loading States</strong>: Form disabled.</li>
+<li><strong>Success States</strong>: Success toast: "Template saved and submitted for approval".</li>
+</ul>
+<hr />
+<h3 id="1315-subscription-module">13.15 Subscription Module<a class="headerlink" href="#1315-subscription-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-tenant-plan-configurator">Screen 1: Tenant Plan Configurator<a class="headerlink" href="#screen-1-tenant-plan-configurator" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Tenant Plan Configurator</li>
+<li><strong>Screen Purpose</strong>: Assign and configure SaaS plans for school tenants.</li>
+<li><strong>Components</strong>: Tenant profile info card, plan dropdown (Trial, Standard, Premium), start/end dates pickers, feature toggles list.</li>
+<li><strong>Layout</strong>: Double column dashboard layout.</li>
+<li><strong>Navigation</strong>: Super Admin Console -&gt; Tenant Subscription.</li>
+<li><strong>User Flow</strong>: Super Admin opens tenant card -&gt; upgrades plan to Premium -&gt; edits active features -&gt; clicks Save.</li>
+<li><strong>Mobile Layout</strong>: Vertical progressive form.</li>
+<li><strong>Desktop Layout</strong>: Centered config dashboard grid.</li>
+<li><strong>Empty States</strong>: "No active subscription plan configured".</li>
+<li><strong>Error States</strong>: Red alerts: "Entitlements mismatch".</li>
+<li><strong>Loading States</strong>: Inputs locked.</li>
+<li><strong>Success States</strong>: Success dialog "Premium plan assigned to Greenwood School".</li>
+</ul>
+<hr />
+<h3 id="1316-super-admin-module">13.16 Super Admin Module<a class="headerlink" href="#1316-super-admin-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-super-admin-tenant-console">Screen 1: Super Admin Tenant Console<a class="headerlink" href="#screen-1-super-admin-tenant-console" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: Super Admin Tenant Console</li>
+<li><strong>Screen Purpose</strong>: Manage and provision school tenants.</li>
+<li><strong>Components</strong>: Tenant registry table (School, Code, Status, Subscribed Plan), provision new school button, status edit action.</li>
+<li><strong>Layout</strong>: Tabular administrative registry.</li>
+<li><strong>Navigation</strong>: Default Super Admin workspace panel.</li>
+<li><strong>User Flow</strong>: Super Admin registers new tenant -&gt; sets school code -&gt; initializes defaults -&gt; clicks Provision.</li>
+<li><strong>Mobile Layout</strong>: Stacked tenant lists with phone/email contacts actions.</li>
+<li><strong>Desktop Layout</strong>: Full-width data table with quick filter sidebar.</li>
+<li><strong>Empty States</strong>: "No tenants registered on the platform".</li>
+<li><strong>Error States</strong>: Red prompt indicating registration failure.</li>
+<li><strong>Loading States</strong>: Full overlay progress loader showing "Provisioning tenant database...".</li>
+<li><strong>Success States</strong>: Tenant listing populates.</li>
+</ul>
+<hr />
+<h3 id="1317-audit-logs-module">13.17 Audit Logs Module<a class="headerlink" href="#1317-audit-logs-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-system-audit-log-list">Screen 1: System Audit Log List<a class="headerlink" href="#screen-1-system-audit-log-list" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: System Audit Log List</li>
+<li><strong>Screen Purpose</strong>: Display administrative and security event logs.</li>
+<li><strong>Components</strong>: Event date picker, user filters, module category dropdown, audit records grid (Actor, Role, Action, Module, Timestamp).</li>
+<li><strong>Layout</strong>: Tabular log sheet with filter controls.</li>
+<li><strong>Navigation</strong>: Drawer -&gt; Security -&gt; Audit Logs.</li>
+<li><strong>User Flow</strong>: Auditor filters by "Finance" -&gt; reviews fee discount approvals.</li>
+<li><strong>Mobile Layout</strong>: Scroll list of timeline events cards.</li>
+<li><strong>Desktop Layout</strong>: Dense database style grid table.</li>
+<li><strong>Empty States</strong>: "No logs matching filters".</li>
+<li><strong>Error States</strong>: "Unable to load logs".</li>
+<li><strong>Loading States</strong>: Shimmer row cells.</li>
+<li><strong>Success States</strong>: Data populates.</li>
+</ul>
+<hr />
+<h3 id="1318-ai-services-module">13.18 AI Services Module<a class="headerlink" href="#1318-ai-services-module" title="Permanent link">&para;</a></h3>
+<h4 id="screen-1-ai-assistant-sidebar">Screen 1: AI Assistant Sidebar<a class="headerlink" href="#screen-1-ai-assistant-sidebar" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Screen Name</strong>: AI Assistant Sidebar</li>
+<li><strong>Screen Purpose</strong>: Contextual AI assistant to draft documents, messages, and notices.</li>
+<li><strong>Components</strong>: Prompt text area, prompt templates list, draft editor panel, edit guidelines selector, insert action.</li>
+<li><strong>Layout</strong>: Collapsible side drawer.</li>
+<li><strong>Navigation</strong>: Click AI icon on any page.</li>
+<li><strong>User Flow</strong>: Teacher opens panel -&gt; clicks "Draft Assignment Notice" -&gt; inputs parameters -&gt; receives text -&gt; inserts in editor.</li>
+<li><strong>Mobile Layout</strong>: Full-screen modal wizard interface.</li>
+<li><strong>Desktop Layout</strong>: Overlay sidebar pane next to the main workspace.</li>
+<li><strong>Empty States</strong>: Prompts empty, displays template links.</li>
+<li><strong>Error States</strong>: "AI services connection timeout. Please try again".</li>
+<li><strong>Loading States</strong>: Display skeleton text lines pulsing while text is generated.</li>
+<li><strong>Success States</strong>: Populates editor with generated text.</li>
+</ul>
+<hr />
+<h2 id="14-references">14. References<a class="headerlink" href="#14-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="file:///Users/pushpraj/Work/edusync-docs/.ai/documentation.instructions.md">Documentation AI Instructions</a></li>
+<li><a href="../../03-Product-Requirements/product-requirements/">Product Requirements Document</a></li>
+<li><a href="../../03-Product-Requirements/user-personas/">User Personas Document</a></li>
+<li><a href="../../03-Product-Requirements/user-stories/">User Stories Document</a></li>
+<li><a href="../../03-Product-Requirements/use-cases/">Use Cases Document</a></li>
+</ul>
+<hr />
+<h2 id="15-conclusion">15. Conclusion<a class="headerlink" href="#15-conclusion" title="Permanent link">&para;</a></h2>
+<p>This Figma planning and Design System specification provides the blueprint for the user experience of the EduSync platform. By mapping each module's primary screens, responsive transitions, component primitives, and visual tokens, it ensures that developers and designers work from a single source of truth. Implementing these structured states and token foundations ensures a cohesive, high-fidelity experience across the web interfaces and mobile applications.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/your-org/edusync-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

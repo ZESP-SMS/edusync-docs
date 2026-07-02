@@ -1,0 +1,3571 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Product, architecture, and engineering documentation for EduSync">
+      
+      
+        <meta name="author" content="EduSync Team">
+      
+      
+        <link rel="canonical" href="https://example.com/edusync-docs/03-Product-Requirements/use-cases/">
+      
+      
+        <link rel="prev" href="../user-stories/">
+      
+      
+        <link rel="next" href="../../04-Software-Requirements/software-requirements/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Use Cases - EduSync Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-cases-for-edusync" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduSync Documentation" class="md-header__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduSync Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use Cases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduSync Documentation" class="md-nav__button md-logo" aria-label="EduSync Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduSync Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-org/edusync-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    edusync-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Vision/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Business-Requirements/business-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-stories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Stories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uc-001-user-authentication-and-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-001: User Authentication and Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-002-create-school-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-002: Create School Tenant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-003-configure-school-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-003: Configure School Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-004-create-student-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-004: Create Student Record
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-004: Create Student Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#student-admission-sequence-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student Admission Sequence Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-005-manage-guardian-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-005: Manage Guardian Relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-006-create-teacher-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-006: Create Teacher Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-007-record-daily-attendance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-007: Record Daily Attendance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-007: Record Daily Attendance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-attendance-capture-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Attendance Capture Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-008-correct-attendance-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-008: Correct Attendance Entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-009-create-homework-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-009: Create Homework Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-010-submit-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-010: Submit Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-011-grade-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-011: Grade Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-012-schedule-examination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-012: Schedule Examination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-013-enter-examination-marks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-013: Enter Examination Marks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-014-publish-examination-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-014: Publish Examination Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-015-define-fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-015: Define Fee Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-016-generate-invoice-and-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-016: Generate Invoice and Receipt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-016: Generate Invoice and Receipt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoice-receipt-generation-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice &amp; Receipt Generation Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-017-process-fee-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-017: Process Fee Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-018-generate-financial-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-018: Generate Financial Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-019-view-dashboard-and-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-019: View Dashboard and Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-020-send-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-020: Send Notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-021-view-student-academic-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-021: View Student Academic Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-022-manage-subscription-and-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-022: Manage Subscription and Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-023-review-audit-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-023: Review Audit Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-024-use-ai-assisted-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-024: Use AI-Assisted Insights
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Software-Requirements/software-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-UI-UX/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UI/UX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-UI-UX/Figma-Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Figma Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../06-Architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C4 Diagrams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C4 Diagrams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-1-System-Context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 1 - System Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-2-Container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 2 - Container Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Architecture/C4/C4-Level-3-Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Level 3 - Component Diagram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../07-Database/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Database
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-Database/Database-Schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09-Backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11-Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../12-DevOps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../13-Testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../14-Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../15-AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../16-Roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-functional-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non Functional Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assumptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uc-001-user-authentication-and-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-001: User Authentication and Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-002-create-school-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-002: Create School Tenant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-003-configure-school-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-003: Configure School Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-004-create-student-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-004: Create Student Record
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-004: Create Student Record">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#student-admission-sequence-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student Admission Sequence Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-005-manage-guardian-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-005: Manage Guardian Relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-006-create-teacher-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-006: Create Teacher Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-007-record-daily-attendance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-007: Record Daily Attendance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-007: Record Daily Attendance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daily-attendance-capture-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Attendance Capture Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-008-correct-attendance-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-008: Correct Attendance Entry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-009-create-homework-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-009: Create Homework Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-010-submit-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-010: Submit Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-011-grade-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-011: Grade Assignment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-012-schedule-examination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-012: Schedule Examination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-013-enter-examination-marks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-013: Enter Examination Marks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-014-publish-examination-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-014: Publish Examination Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-015-define-fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-015: Define Fee Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-016-generate-invoice-and-receipt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-016: Generate Invoice and Receipt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UC-016: Generate Invoice and Receipt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invoice-receipt-generation-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoice &amp; Receipt Generation Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-017-process-fee-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-017: Process Fee Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-018-generate-financial-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-018: Generate Financial Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-019-view-dashboard-and-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-019: View Dashboard and Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-020-send-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-020: Send Notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-021-view-student-academic-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-021: View Student Academic Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-022-manage-subscription-and-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-022: Manage Subscription and Plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-023-review-audit-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-023: Review Audit Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uc-024-use-ai-assisted-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UC-024: Use AI-Assisted Insights
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="use-cases-for-edusync">Use Cases for EduSync<a class="headerlink" href="#use-cases-for-edusync" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product</td>
+<td>EduSync</td>
+</tr>
+<tr>
+<td>Document Type</td>
+<td>Use Case Specification</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.0.0</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Draft for Product and Architecture Review</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>EduSync Product, Architecture, Engineering, Security, and UX Office</td>
+</tr>
+<tr>
+<td>Target Market</td>
+<td>India</td>
+</tr>
+<tr>
+<td>Future Market</td>
+<td>Global</td>
+</tr>
+<tr>
+<td>Last Updated</td>
+<td>2026-07-02</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>EduSync is a cloud-native, multi-tenant school management SaaS platform serving schools, coaching institutes, and education organizations. This document defines a complete set of use cases for the core functional modules of the platform. Each use case captures the relevant actor, preconditions, postconditions, main flow, alternative flow, exception flow, business rules, and validation criteria.</p>
+<p>The use cases in this document are designed to support product design, software requirements, workflow design, UX flows, security modeling, testing, and implementation planning.</p>
+<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
+<p>The purpose of this document is to describe how major actors interact with EduSync to complete important school operations. It ensures that business workflows are well understood, role-based behavior is explicit, tenant isolation is maintained, and system behavior can be validated end to end.</p>
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>This document covers the major functional modules of EduSync including:</p>
+<ul>
+<li>Authentication and access control</li>
+<li>School configuration and administration</li>
+<li>Student and guardian management</li>
+<li>Teacher and employee workflows</li>
+<li>Attendance management</li>
+<li>Homework and assignments</li>
+<li>Examinations and results</li>
+<li>Fees and payments</li>
+<li>Reporting and dashboards</li>
+<li>Notifications and communication</li>
+<li>Subscriptions and platform administration</li>
+<li>Audit and AI-assisted operations</li>
+</ul>
+<h2 id="business-rules">Business Rules<a class="headerlink" href="#business-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Every user must operate within a single school tenant context unless explicitly granted platform-level access.</li>
+<li>Every tenant-owned record must include school_id.</li>
+<li>Every read and write operation must enforce tenant isolation.</li>
+<li>User actions must conform to role-based permissions and least-privilege access.</li>
+<li>Sensitive actions must be logged for audit and traceability.</li>
+<li>Parent-facing data must be limited to the students linked to that parent.</li>
+<li>Financial and academic records must preserve historical integrity.</li>
+<li>Notifications must be traceable to the originating module and target recipient.</li>
+</ul>
+<h2 id="functional-requirements">Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permanent link">&para;</a></h2>
+<p>EduSync must support the following functional capabilities:</p>
+<ul>
+<li>Secure user authentication and authorization</li>
+<li>School tenant setup and configuration</li>
+<li>Student, teacher, guardian, and employee administration</li>
+<li>Attendance capture and management</li>
+<li>Homework and assignment delivery</li>
+<li>Examination scheduling and result management</li>
+<li>Fee setup, invoicing, payments, and reconciliation</li>
+<li>Reporting, dashboards, notifications, and communication</li>
+<li>Platform administration, support, and subscription control</li>
+</ul>
+<h2 id="non-functional-requirements">Non Functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security</td>
+<td>Access must be restricted by role, permission, and tenant context.</td>
+</tr>
+<tr>
+<td>Usability</td>
+<td>Core workflows must require minimal training and support fast task completion.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Common workflows must respond quickly under expected school operational load.</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>The system must support growth across tenants, users, students, and transactions.</td>
+</tr>
+<tr>
+<td>Maintainability</td>
+<td>Use clear domain boundaries, modular services, and role-aware workflows.</td>
+</tr>
+<tr>
+<td>Auditability</td>
+<td>Sensitive actions must be traceable by actor, timestamp, and record.</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Daily school operations must remain reliable during peak usage periods.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schools operate through a defined administrative hierarchy.</li>
+<li>Users access the platform through a secure web application and supported mobile experiences.</li>
+<li>Each school is assigned a tenant context and a role-based access model.</li>
+<li>Core operational data is stored centrally and shared across modules.</li>
+</ul>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Authentication and authorization services</li>
+<li>School configuration and tenant management services</li>
+<li>Student, teacher, guardian, attendance, homework, examination, fees, payment, reporting, notification, and subscription modules</li>
+<li>Audit logging and observability services</li>
+<li>Messaging, email, SMS, and WhatsApp provider integrations</li>
+</ul>
+<h2 id="future-scope">Future Scope<a class="headerlink" href="#future-scope" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AI-assisted recommendations for academic and financial workflows</li>
+<li>Advanced analytics and predictive insights</li>
+<li>Deeper workflow automation and approval chains</li>
+<li>Expanded mobile-first experiences for parents and students</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../product-requirements/">Product Requirements Document</a></li>
+<li><a href="../user-personas/">User Personas Document</a></li>
+<li><a href="../user-stories/">User Stories Document</a></li>
+<li><a href="../../04-Software-Requirements/software-requirements/">Software Requirements Specification</a></li>
+</ul>
+<h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2026-07-02</td>
+<td>Initial draft of use cases for EduSync</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<h3 id="uc-001-user-authentication-and-login">UC-001: User Authentication and Login<a class="headerlink" href="#uc-001-user-authentication-and-login" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin, Teacher, Parent, Student, Accountant, Principal, Super Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The user has an active account, a valid school tenant association, and a registered password or recovery method.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The user is authenticated and redirected to the appropriate dashboard or module based on role and tenant context.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The user enters their credentials. 2. The system validates the username and password. 3. The system checks tenant context and role assignment. 4. The system authenticates the session and creates an audit log entry. 5. The system redirects the user to the appropriate home page.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The user selects password recovery. 2. The system verifies identity through the configured recovery method. 3. The system creates a new password and notifies the user.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the credentials are invalid, the system denies access and increments the failed-login count. 2. If the account is inactive or locked, the system blocks access and displays the appropriate status message.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Authentication is required for all protected features. Inactive and suspended accounts must not authenticate.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify successful login, password recovery, failed login handling, tenant-aware routing, and audit logging.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-002-create-school-tenant">UC-002: Create School Tenant<a class="headerlink" href="#uc-002-create-school-tenant" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Super Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The super admin is authenticated and has platform-level privileges.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>A new school tenant is created with default configuration, subscription status, and administrative access.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The super admin submits new school registration details. 2. The system validates the input and checks for tenant uniqueness. 3. The system creates the school tenant and default configuration records. 4. The system assigns initial access to the designated school administrator. 5. The system records the provisioning action in audit logs.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The super admin creates the tenant from a template. 2. The system applies the selected configuration package.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If required fields are missing, the system prevents creation and displays validation errors. 2. If the tenant identifier already exists, the system rejects the request.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Each school must be isolated as its own tenant. Each tenant must have a unique school identifier.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify tenant creation, default setup, access assignment, tenant isolation, and audit logging.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-003-configure-school-profile">UC-003: Configure School Profile<a class="headerlink" href="#uc-003-configure-school-profile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school admin is authenticated and assigned to a valid school tenant.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>School profile information and operational settings are updated for the tenant.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The school admin opens the school configuration page. 2. The system loads the current school profile and settings. 3. The admin updates school details such as name, address, academic calendar, and contact information. 4. The system validates the changes. 5. The system saves the updates and updates the tenant configuration.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The admin uploads school branding or policy documents. 2. The system stores the files and links them to the school profile.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the submitted data is invalid, the system prevents save and shows validation feedback. 2. If the school is suspended, the system blocks updates.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>School configuration changes must be restricted to authorized administrative users.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify profile update, validation behavior, persistence, and restricted access.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-004-create-student-record">UC-004: Create Student Record<a class="headerlink" href="#uc-004-create-student-record" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school admin is authenticated and authorized to manage student records.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>A student record is created and linked to the correct school, grade, section, and guardian relationships where applicable.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The admin enters student details. 2. The system validates the required fields. 3. The system creates the student profile. 4. The system links the student to the selected class and guardian records. 5. The system records the action in audit logs.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The admin imports multiple student records from a file. 2. The system validates and creates the records in bulk.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If duplicate student records are detected, the system prompts for review. 2. If mandatory fields are missing, the system blocks submission.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Student records must be tenant-scoped and linked to the correct school.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify student creation, guardian linkage, class assignment, bulk import, and audit logging.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="student-admission-sequence-flow">Student Admission Sequence Flow<a class="headerlink" href="#student-admission-sequence-flow" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Admin as School Administrator
+    participant System as EduSync Platform
+    participant DB as PostgreSQL Database
+    participant S3 as AWS S3 Storage
+
+    Admin-&gt;&gt;System: Input Student Details &amp; Upload Documents
+    System-&gt;&gt;System: Validate fields &amp; duplicate check
+    System-&gt;&gt;S3: Upload Birth Certificate / Identity Document
+    S3--&gt;&gt;System: Return File URL
+    System-&gt;&gt;DB: Save Student Profile, Class Assignment &amp; Guardian Link
+    DB--&gt;&gt;System: Return success &amp; generated UUIDs
+    System-&gt;&gt;System: Log Audit Event (Student Created)
+    System--&gt;&gt;Admin: Display Registration Success</code></pre>
+<h3 id="uc-005-manage-guardian-relationship">UC-005: Manage Guardian Relationship<a class="headerlink" href="#uc-005-manage-guardian-relationship" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin, Parent</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The guardian or parent account exists and the student record exists.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The guardian relationship is established or updated and the parent can access the permitted view of the student.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The admin links a parent account to a student profile. 2. The system validates the relationship. 3. The system stores the relationship and creates access permissions for the parent. 4. The parent can then view the relevant student information.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The parent requests a relationship update. 2. The school admin reviews and approves the change.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the parent is already linked to the student, the system prevents duplicate entries. 2. If the relationship is invalid, the system rejects the request.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Parent access must be restricted to authorized student relationships only.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify linkage, permission assignment, and restriction of cross-student access.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-006-create-teacher-profile">UC-006: Create Teacher Profile<a class="headerlink" href="#uc-006-create-teacher-profile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school admin is authenticated and has teacher management rights.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>A teacher profile is created and assigned to the correct department, class, and subject scope.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The admin enters teacher details. 2. The system checks for duplicate account or profile data. 3. The system creates the teacher record. 4. The teacher is assigned to classes and subjects. 5. The system saves the role and access configuration.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The admin imports teacher data in bulk. 2. The system maps imported fields and creates the profiles.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If required fields are missing, the system blocks creation. 2. If the user account already exists, the system prompts for reconciliation.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Teacher records must remain isolated by tenant and subject to role-based access.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify profile creation, class assignment, role setup, and audit logging.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-007-record-daily-attendance">UC-007: Record Daily Attendance<a class="headerlink" href="#uc-007-record-daily-attendance" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Teacher</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The teacher is assigned to the class and the attendance session is active for the day.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Attendance is recorded for the relevant students and stored for reporting and parent visibility.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The teacher opens the attendance page for the assigned class. 2. The system loads the current class roster. 3. The teacher marks student attendance. 4. The system validates and saves the attendance records. 5. The system updates dashboards, reports, and notifications.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The teacher marks attendance in bulk for a section. 2. The system applies the selected attendance state to all students.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the attendance window is closed, the system blocks modification. 2. If a device or network issue occurs, the system preserves the draft and allows recovery.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Attendance must be linked to the correct class, date, and school tenant. Attendance corrections must be auditable.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify attendance entry, bulk update, correction handling, and visibility to parents and reports.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="daily-attendance-capture-flow">Daily Attendance Capture Flow<a class="headerlink" href="#daily-attendance-capture-flow" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Teacher
+    participant System as EduSync Platform
+    participant DB as PostgreSQL Database
+    participant Queue as RabbitMQ Message Broker
+
+    Teacher-&gt;&gt;System: Open Attendance Page for Class Section
+    System-&gt;&gt;DB: Query Active Student Roster
+    DB--&gt;&gt;System: Return student list
+    System--&gt;&gt;Teacher: Render Roster Grid
+    Teacher-&gt;&gt;System: Submit marked attendance states
+    System-&gt;&gt;System: Validate attendance session &amp; date
+    System-&gt;&gt;DB: Save Attendance Records (schools context)
+    DB--&gt;&gt;System: Return Success
+    System-&gt;&gt;Queue: Publish Attendance Marked Event
+    Queue--&gt;&gt;System: Acknowledge Event
+    System--&gt;&gt;Teacher: Render Submission Confirmed</code></pre>
+<h3 id="uc-008-correct-attendance-entry">UC-008: Correct Attendance Entry<a class="headerlink" href="#uc-008-correct-attendance-entry" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Teacher, School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>An attendance record exists and the correction window is valid.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The attendance record is updated and the correction is logged for audit purposes.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor selects the attendance record to correct. 2. The system displays the current state and history. 3. The actor submits the correction reason and new value. 4. The system validates the change. 5. The system updates the record and records the audit trail.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor submits a correction request for approval. 2. The admin reviews and approves or rejects it.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the correction is outside the allowed window, the system rejects the request. 2. If the actor lacks permission, the system blocks the action.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Attendance corrections require an audit trail and the appropriate authorization.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify correction workflow, audit entry, permission enforcement, and reporting updates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-009-create-homework-assignment">UC-009: Create Homework Assignment<a class="headerlink" href="#uc-009-create-homework-assignment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Teacher</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The teacher is assigned to the class and the subject.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Homework is published to the relevant students and visible to parents where permitted.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The teacher creates a homework entry with title, description, deadline, and attachments. 2. The system validates the fields. 3. The system publishes the homework to the selected class. 4. The system sends notifications to students and parents where configured.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The teacher creates a recurring homework schedule for the week or month. 2. The system generates multiple instances based on the pattern.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the deadline is invalid, the system prevents submission. 2. If the selected class is invalid, the system blocks publishing.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Homework must be tied to a valid class, teacher, and school tenant.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify creation, publication, notification dispatch, and visibility to relevant stakeholders.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-010-submit-assignment">UC-010: Submit Assignment<a class="headerlink" href="#uc-010-submit-assignment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Student</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The student is enrolled in the class and the assignment is active.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The assignment submission is recorded and available for teacher review.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The student opens the assignment. 2. The system displays the details and submission deadline. 3. The student uploads the submission and adds comments if required. 4. The system validates the submission. 5. The system stores the document and marks the assignment as submitted.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The student saves a draft before final submission. 2. The system stores the draft and allows later completion.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the deadline is passed, the system prevents late submission unless the policy allows it. 2. If the file type is unsupported, the system rejects the upload.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Submissions must be linked to the correct student and assignment.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify submission, draft handling, file validation, deadline enforcement, and status updates.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-011-grade-assignment">UC-011: Grade Assignment<a class="headerlink" href="#uc-011-grade-assignment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Teacher</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The assignment was submitted and is available for review.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The assignment receives a grade and feedback, and the result is visible to the student and parent where permitted.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The teacher opens the submitted assignments list. 2. The system displays the student submission and evaluation criteria. 3. The teacher enters marks, grade, and feedback. 4. The system validates and saves the result. 5. The system updates the student record and notification history.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The teacher applies a rubric or bulk grade set. 2. The system assigns marks based on the configured rubric.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the grade is outside the expected range, the system warns the teacher. 2. If the submission is missing, the system blocks grading.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Grading must follow configured evaluation rules and school policies.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify grading, feedback storage, visibility, and rule enforcement.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-012-schedule-examination">UC-012: Schedule Examination<a class="headerlink" href="#uc-012-schedule-examination" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school admin is authenticated and has examination management rights.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>An examination schedule is created and distributed to teachers, students, and parents where permitted.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The admin defines the examination details, dates, and subjects. 2. The system validates the schedule against academic calendar rules. 3. The system saves the schedule and publishes it. 4. The system sends notifications to relevant stakeholders.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The admin imports an examination timetable from a file. 2. The system maps the input and creates the schedule.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If there is a scheduling conflict, the system prompts for resolution. 2. If the academic year is invalid, the system blocks creation.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Examination schedules must align with the configured academic calendar and school rules.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify schedule creation, conflict detection, publication, and notifications.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-013-enter-examination-marks">UC-013: Enter Examination Marks<a class="headerlink" href="#uc-013-enter-examination-marks" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Teacher</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The examination is active and students are assigned to the subject.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Examination marks are stored and used to compute results and reports.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The teacher opens the marks entry page for the examination. 2. The system loads the roster and grade scheme. 3. The teacher enters marks for each student. 4. The system validates the values and saves the results. 5. The system updates academic reports and dashboards.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The teacher uploads marks from a spreadsheet. 2. The system imports the values into the relevant examination records.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the marks exceed the allowed range, the system rejects them. 2. If a student is missing from the roster, the system warns the teacher.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Marks must follow configured mark schemes and be tied to the correct exam and school tenant.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify marks entry, validation, import support, and report generation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-014-publish-examination-results">UC-014: Publish Examination Results<a class="headerlink" href="#uc-014-publish-examination-results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin, Principal</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>Examination marks are finalized and approved.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Results are published to the appropriate student and parent views.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor opens the result approval page. 2. The system displays the finalized marks and computed results. 3. The actor approves publishing. 4. The system publishes the results and sends notifications.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor publishes results in phases, such as by class or section. 2. The system applies the selected rollout scope.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If results are incomplete, the system blocks publication. 2. If the actor lacks approval rights, the system rejects the request.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Result publication must follow school policy and approval workflow.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify approval control, publication, notification delivery, and tenant restriction.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-015-define-fee-structure">UC-015: Define Fee Structure<a class="headerlink" href="#uc-015-define-fee-structure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin, Accountant</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school admin or accountant is authenticated and authorized for fee configuration.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Fee structures, categories, and installment rules are created or updated.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor opens the fee configuration page. 2. The system loads existing fee structures. 3. The actor defines fee categories, amounts, and installment rules. 4. The system validates the configuration. 5. The system saves the fee structure for future billing.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor applies a fee template from a previous academic year. 2. The system copies the structure and adjusts the values.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the fees conflict with existing rules, the system warns the actor. 2. If the student group is invalid, the system blocks creation.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Fee structures must be tenant-scoped and consistent with school policy.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify configuration, validation, installment rules, and correct association with student groups.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-016-generate-invoice-and-receipt">UC-016: Generate Invoice and Receipt<a class="headerlink" href="#uc-016-generate-invoice-and-receipt" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Accountant</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>Fee structures are available and student records exist.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>An invoice and receipt are created and tied to the payment record.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The accountant selects the student or billing group. 2. The system generates the invoice based on the active fee structure. 3. The accountant reviews the invoice. 4. The system creates a receipt after payment confirmation.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The accountant creates a manual invoice. 2. The system stores it as a customized financial record.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the student is not eligible for the selected fee policy, the system blocks generation. 2. If the payment gateway fails, the status remains pending and the user is notified.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Financial documents must preserve immutable history and support corrections through controlled workflow.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify invoice generation, receipt creation, payment status updates, and audit history.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="invoice-receipt-generation-flow">Invoice &amp; Receipt Generation Flow<a class="headerlink" href="#invoice-receipt-generation-flow" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor Accountant as Finance User
+    participant System as EduSync Platform
+    participant DB as PostgreSQL Database
+
+    Accountant-&gt;&gt;System: Initiate Invoice Generation for Grade Section
+    System-&gt;&gt;DB: Query Active Students &amp; Applicable Fee Structures
+    DB--&gt;&gt;System: Return Data
+    System-&gt;&gt;System: Calculate installment amounts &amp; due dates
+    System-&gt;&gt;DB: Save Fee Invoices &amp; Invoice Items
+    DB--&gt;&gt;System: Return Success
+    System-&gt;&gt;System: Log Audit Event (Invoices Generated)
+    System--&gt;&gt;Accountant: Display Invoice Batch Generated</code></pre>
+<h3 id="uc-017-process-fee-payment">UC-017: Process Fee Payment<a class="headerlink" href="#uc-017-process-fee-payment" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Parent, Accountant</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The parent or accountant has access to the relevant invoice and payment method.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The payment is recorded, the invoice is updated, and a confirmation is issued.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor opens the invoice or fee summary. 2. The system displays amount due and payment options. 3. The actor selects a payment method and submits the payment. 4. The payment gateway processes the payment. 5. The system updates the invoice, creates a receipt, and notifies the relevant parties.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The parent chooses a partial payment. 2. The system updates the outstanding balance accordingly.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the payment fails, the system displays the failure cause and preserves the pending status. 2. If the payment is duplicate, the system flags it for review.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Payments must be traceable, tenant-scoped, and reconciled against invoices.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify payment processing, receipt issuance, duplicate handling, and reconciliation state.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-018-generate-financial-reports">UC-018: Generate Financial Reports<a class="headerlink" href="#uc-018-generate-financial-reports" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Accountant, Principal, School Owner</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>Financial data exists for the selected school and time range.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>A financial report is generated for review or distribution.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor selects the report type and date range. 2. The system gathers relevant fee, invoice, receipt, and payment data. 3. The system calculates the summary metrics. 4. The system renders the report and provides export options.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor schedules recurring reports. 2. The system delivers the report automatically on the selected cadence.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If no data exists for the selected period, the system displays an empty report with a clear message. 2. If the user lacks permission, the system denies access.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Financial reports must reflect authorized data only and preserve audit integrity.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify report generation, filtering, export, role restriction, and calculation accuracy.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-019-view-dashboard-and-analytics">UC-019: View Dashboard and Analytics<a class="headerlink" href="#uc-019-view-dashboard-and-analytics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Owner, Principal, Teacher, Accountant, Parent, Student, School Admin, Super Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The user is authenticated and assigned to a valid role.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>A personalized dashboard is displayed with relevant metrics, alerts, and tasks.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The user opens the dashboard. 2. The system loads role-specific widgets and metrics. 3. The system displays pending tasks, summaries, and alerts. 4. The user reviews the information and takes action as needed.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The user customizes the dashboard layout or filters. 2. The system saves the selected preferences.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the user has no relevant data, the system shows an empty state with guidance. 2. If the dashboard data is unavailable, the system reports the issue.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Dashboards must show only authorized and tenant-scoped information.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify role-based dashboard rendering, widget loading, and data isolation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-020-send-notification">UC-020: Send Notification<a class="headerlink" href="#uc-020-send-notification" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Admin, Teacher, Accountant, Principal</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The actor is authenticated and has permission to send a notification.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The notification is delivered to the selected recipients through the configured channel.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor creates a message with recipient scope and channel. 2. The system validates the content and recipients. 3. The system queues the notification. 4. The provider sends the message. 5. The system updates delivery status and logs the event.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor schedules the notification for a later time. 2. The system queues the message and delivers it at the scheduled time.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the provider is unavailable, the system marks the notification as failed and retries based on policy. 2. If the recipients are invalid, the system blocks dispatch.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Notifications must be traceable by recipient, channel, status, and originating module.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify message creation, recipient validation, delivery tracking, and audit logging.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-021-view-student-academic-progress">UC-021: View Student Academic Progress<a class="headerlink" href="#uc-021-view-student-academic-progress" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Parent, Student, Teacher, Principal</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The user is authenticated and linked to the appropriate student or class context.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Academic progress information is displayed for the relevant student or class.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The user opens the academic progress view. 2. The system collects attendance, homework, assignment, exam, and performance data. 3. The system calculates the summary and displays it in a readable format.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The user filters the view by subject, term, or period. 2. The system recalculates the view based on the selected filter.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If there is no academic data, the system displays a clear empty state. 2. If the user is unauthorized, the system blocks access.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Academic views must respect user role and relationship-based access.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify data aggregation, filtering, access restriction, and clarity of presentation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-022-manage-subscription-and-plan">UC-022: Manage Subscription and Plan<a class="headerlink" href="#uc-022-manage-subscription-and-plan" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>School Owner, Super Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The school tenant exists and billing information is available.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>The subscription plan and entitlement state are updated for the tenant.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The school owner or super admin selects a subscription plan. 2. The system validates tenant eligibility and plan constraints. 3. The system updates the plan and entitlements. 4. The system records activation or renewal history.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The school owner requests a plan upgrade. 2. The super admin reviews and approves the change.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the payment or renewal fails, the system suspends or limits features according to policy. 2. If the plan is unavailable, the system rejects the request.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Subscription status must control feature availability and service access.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify plan update, entitlements, renewal history, and enforcement of feature limits.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-023-review-audit-logs">UC-023: Review Audit Logs<a class="headerlink" href="#uc-023-review-audit-logs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Super Admin, School Admin</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The actor has permission to view audit records.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>Audit logs are available for investigation or compliance review.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The actor opens the audit log view. 2. The system filters records by user, date range, module, or action. 3. The actor reviews the history. 4. The system displays relevant details including actor, timestamp, and result.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The actor exports the audit log for an incident report. 2. The system generates a downloadable report.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the actor lacks permission, the system denies access. 2. If the logs are unavailable, the system displays an error state.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>Sensitive actions must be recorded with actor, timestamp, action, and outcome.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify filtering, visibility, export functionality, and restriction of unauthorized access.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uc-024-use-ai-assisted-insights">UC-024: Use AI-Assisted Insights<a class="headerlink" href="#uc-024-use-ai-assisted-insights" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actor</td>
+<td>Principal, Teacher, School Owner, Accountant, Parent, Student</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>The user is authenticated and the AI feature is enabled for the tenant.</td>
+</tr>
+<tr>
+<td>Postconditions</td>
+<td>AI-generated insights are displayed to the user, with clear indication that review is required when applicable.</td>
+</tr>
+<tr>
+<td>Main Flow</td>
+<td>1. The user opens an AI-enabled module. 2. The system collects relevant data from the current context. 3. The system generates insights or recommendations. 4. The system presents the results to the user.</td>
+</tr>
+<tr>
+<td>Alternative Flow</td>
+<td>1. The user requests a different type of insight or time range. 2. The system regenerates the recommendations based on the request.</td>
+</tr>
+<tr>
+<td>Exception Flow</td>
+<td>1. If the AI service is unavailable, the system displays a graceful fallback message. 2. If data is insufficient, the system returns a concise explanation.</td>
+</tr>
+<tr>
+<td>Business Rules</td>
+<td>AI-generated recommendations must remain reviewable and must not override human decisions without approval.</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Verify insight generation, controlled presentation, fallback behavior, and data protection.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/your-org/edusync-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.sections", "navigation.top", "navigation.instant", "search.highlight", "search.share", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
