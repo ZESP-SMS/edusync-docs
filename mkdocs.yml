@@ -1,0 +1,99 @@
+site_name: EduSync Documentation
+site_description: Product, architecture, and engineering documentation for EduSync
+site_author: EduSync Team
+site_url: https://example.com/edusync-docs/
+
+repo_name: edusync-docs
+repo_url: https://github.com/your-org/edusync-docs
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    logo: material/library
+  favicon: assets/favicon.svg
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Vision: 01-Vision/vision.md
+  - Business Requirements: 02-Business-Requirements/business-requirements.md
+  - Product Requirements:
+      - Overview: 03-Product-Requirements/product-requirements.md
+      - Personas: 03-Product-Requirements/user-personas.md
+      - User Stories: 03-Product-Requirements/user-stories.md
+      - Use Cases: 03-Product-Requirements/use-cases.md
+  - Software Requirements: 04-Software-Requirements/software-requirements.md
+  - UI/UX:
+      - Overview: 05-UI-UX/README.md
+      - Figma Planning: 05-UI-UX/Figma-Planning.md
+  - Architecture:
+      - Overview: 06-Architecture/README.md
+      - C4 Diagrams:
+          - Level 1 - System Context: 06-Architecture/C4/C4-Level-1-System-Context.md
+          - Level 2 - Container Diagram: 06-Architecture/C4/C4-Level-2-Container.md
+          - Level 3 - Component Diagram: 06-Architecture/C4/C4-Level-3-Component.md
+  - Database:
+      - Overview: 07-Database/README.md
+      - Database Schema: 07-Database/Database-Schema.md
+  - API: 08-API/README.md
+  - Backend: 09-Backend/README.md
+  - Frontend: 10-Frontend/README.md
+  - Mobile: 11-Mobile/README.md
+  - DevOps: 12-DevOps/README.md
+  - Testing: 13-Testing/README.md
+  - Security: 14-Security/README.md
+  - AI: 15-AI/README.md
+  - Roadmap: 16-Roadmap/README.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org/edusync-docs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      guess_lang: false
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true

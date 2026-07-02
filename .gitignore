@@ -1,0 +1,16 @@
+# Build output
+site/
+site_env/
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+.DS_Store
+
+# Large standalone mockups
+EduSync - Standalone.html
