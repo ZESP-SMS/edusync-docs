@@ -64,7 +64,10 @@ nav:
       - Database Schema: 07-Database/Database-Schema.md
       - Phase 1 - Identity & RBAC: 07-Database/Identity-RBAC-Phase-1.md
   - API: 08-API/README.md
-  - Backend: 09-Backend/README.md
+  - Backend:
+      - Overview: 09-Backend/README.md
+      - Phase 1 - Identity & Authentication:
+          - Epic Overview: 09-Backend/Identity-Authentication/Epic-01-Identity-Authentication.md
   - Frontend: 10-Frontend/README.md
   - Mobile: 11-Mobile/README.md
   - DevOps: 12-DevOps/README.md
