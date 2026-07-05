@@ -68,6 +68,7 @@ nav:
       - Overview: 09-Backend/README.md
       - Phase 1 - Identity & Authentication:
           - Epic Overview: 09-Backend/Identity-Authentication/Epic-01-Identity-Authentication.md
+          - Sprint Plan: 09-Backend/Identity-Authentication/Sprint-01-Plan.md
   - Frontend: 10-Frontend/README.md
   - Mobile: 11-Mobile/README.md
   - DevOps: 12-DevOps/README.md
