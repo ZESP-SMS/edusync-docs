@@ -2,186 +2,206 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/edusync-docs/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/01-Vision/vision/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/02-Business-Requirements/business-requirements/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/03-Product-Requirements/product-requirements/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/03-Product-Requirements/use-cases/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/03-Product-Requirements/user-personas/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/03-Product-Requirements/user-stories/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/04-Software-Requirements/software-requirements/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/05-UI-UX/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/05-UI-UX/Figma-Planning/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/06-Architecture/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/06-Architecture/C4/C4-Level-1-System-Context/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/06-Architecture/C4/C4-Level-2-Container/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/06-Architecture/C4/C4-Level-3-Component/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/07-Database/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/07-Database/Database-Schema/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/edusync-docs/07-Database/Identity-RBAC-Phase-1/</loc>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/08-API/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/09-Backend/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/edusync-docs/09-Backend/Identity-Authentication/Authentication-API/</loc>
+         <lastmod>2026-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/edusync-docs/09-Backend/Identity-Authentication/Epic-01-Identity-Authentication/</loc>
+         <lastmod>2026-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/edusync-docs/09-Backend/Identity-Authentication/Identity-Database/</loc>
+         <lastmod>2026-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/edusync-docs/09-Backend/Identity-Authentication/Sprint-01-Plan/</loc>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/10-Frontend/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/11-Mobile/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/12-DevOps/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/13-Testing/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/14-Security/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/15-AI/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/16-Roadmap/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/Diagram-Review/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/Missing-Diagrams/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/api/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/architecture/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/business/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/database/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/deployment/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/exports/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/security/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/business-context.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/module-dependency-map.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/monitoring-flow.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/product-architecture-context.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/proposed-future-workflow.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/software-system-context.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/swot-analysis.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/vision-model.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/specifications/vision-opportunity-map.drawio-spec/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
     <url>
          <loc>https://example.com/edusync-docs/assets/diagrams/wireframes/</loc>
-         <lastmod>2026-07-02</lastmod>
+         <lastmod>2026-07-05</lastmod>
     </url>
 </urlset>
